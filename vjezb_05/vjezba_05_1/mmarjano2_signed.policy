@@ -1,0 +1,9 @@
+/* AUTOMATICALLY GENERATED ON Mon Apr 10 14:07:21 CEST 2017*/
+/* DO NOT EDIT */
+
+keystore "http://161.53.120.205/NWTiS/NWTiS.jks", "jks";
+
+grant signedBy "mmarjano2" {
+  permission java.io.FilePermission "<<ALL FILES>>", "read";
+};
+
