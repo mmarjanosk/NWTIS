@@ -1,0 +1,20 @@
+INFO  10:16:24,166 | james.pop3server | POP3 Service bound to: 0.0.0.0:110
+INFO  10:16:24,187 | james.pop3server | POP3 Service is running on: DESKTOP-4FK5MIK
+INFO  10:16:24,189 | james.pop3server | POP3 Service handler hello name is: DESKTOP-4FK5MIK
+INFO  10:16:24,191 | james.pop3server | POP3 Service handler connection timeout is: 1200
+INFO  10:16:24,193 | james.pop3server | POP3 Service connection backlog is: 200
+INFO  10:16:24,330 | james.pop3server | Init POP3 Service done
+INFO  11:35:34,867 | james.pop3server | Dispose POP3 Service
+INFO  11:35:34,873 | james.pop3server | Dispose POP3 Service done
+INFO  11:36:13,857 | james.pop3server | POP3 Service bound to: 0.0.0.0:110
+INFO  11:36:13,859 | james.pop3server | POP3 Service is running on: DESKTOP-4FK5MIK
+INFO  11:36:13,868 | james.pop3server | POP3 Service handler hello name is: DESKTOP-4FK5MIK
+INFO  11:36:13,872 | james.pop3server | POP3 Service handler connection timeout is: 1200
+INFO  11:36:13,874 | james.pop3server | POP3 Service connection backlog is: 200
+INFO  11:36:14,010 | james.pop3server | Init POP3 Service done
+INFO  11:41:28,956 | james.pop3server | POP3 Service bound to: 0.0.0.0:110
+INFO  11:41:28,961 | james.pop3server | POP3 Service is running on: DESKTOP-4FK5MIK
+INFO  11:41:28,964 | james.pop3server | POP3 Service handler hello name is: DESKTOP-4FK5MIK
+INFO  11:41:28,967 | james.pop3server | POP3 Service handler connection timeout is: 1200
+INFO  11:41:28,973 | james.pop3server | POP3 Service connection backlog is: 200
+INFO  11:41:29,140 | james.pop3server | Init POP3 Service done

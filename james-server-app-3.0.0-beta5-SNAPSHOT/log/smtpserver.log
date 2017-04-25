@@ -1,0 +1,82 @@
+INFO  09:06:39,247 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
+INFO  09:06:39,247 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
+INFO  09:06:39,263 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
+INFO  09:06:39,263 | james.smtpserver | SMTP Service handler connection timeout is: 360
+INFO  09:06:39,263 | james.smtpserver | SMTP Service connection backlog is: 200
+INFO  09:06:39,263 | james.smtpserver | This SMTP server requires authentication.
+INFO  09:06:39,263 | james.smtpserver | No maximum message size is enforced for this server.
+INFO  09:06:39,700 | james.smtpserver | Init SMTP Service done
+INFO  10:35:34,067 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
+INFO  10:35:34,067 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
+INFO  10:35:34,067 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
+INFO  10:35:34,067 | james.smtpserver | SMTP Service handler connection timeout is: 360
+INFO  10:35:34,067 | james.smtpserver | SMTP Service connection backlog is: 200
+INFO  10:35:34,083 | james.smtpserver | This SMTP server requires authentication.
+INFO  10:35:34,083 | james.smtpserver | No maximum message size is enforced for this server.
+INFO  10:35:34,503 | james.smtpserver | Init SMTP Service done
+INFO  10:49:04,802 | james.smtpserver | Id='1335511958' User='' Connection established from 127.0.0.1
+INFO  10:49:04,932 | james.smtpserver | Id='1335511958' User='' Successfully spooled mail Mail1493110144874-2d80a3d0-4323-4aca-bec6-d83c57390ba9 from msq@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  10:49:04,966 | james.smtpserver | Id='1335511958' User='' Connection closed for 127.0.0.1
+INFO  10:59:32,509 | james.smtpserver | Id='2034817572' User='' Connection established from 127.0.0.1
+INFO  10:59:32,526 | james.smtpserver | Id='2034817572' User='' Successfully spooled mail Mail1493110772523-94abed2f-89d1-43dd-8720-a725180a2dad from ne@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  10:59:32,532 | james.smtpserver | Id='2034817572' User='' Connection closed for 127.0.0.1
+INFO  11:08:33,797 | james.smtpserver | Id='1373586241' User='' Connection established from 127.0.0.1
+INFO  11:08:33,822 | james.smtpserver | Id='1373586241' User='' Successfully spooled mail Mail1493111313816-44338886-5f9a-4f41-b27a-cfe994e8aa0b from netko@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  11:08:33,826 | james.smtpserver | Id='1373586241' User='' Connection closed for 127.0.0.1
+INFO  11:11:53,900 | james.smtpserver | Id='2132277544' User='' Connection established from 127.0.0.1
+INFO  11:11:53,960 | james.smtpserver | Id='2132277544' User='' Successfully spooled mail Mail1493111513950-69aa3dbc-6788-4c04-904d-602ca06820aa from neto@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  11:11:53,992 | james.smtpserver | Id='2132277544' User='' Connection closed for 127.0.0.1
+INFO  11:20:20,529 | james.smtpserver | Dispose SMTP Service
+INFO  11:20:20,531 | james.smtpserver | Dispose SMTP Service done
+INFO  11:23:54,946 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
+INFO  11:23:54,962 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
+INFO  11:23:54,962 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
+INFO  11:23:54,962 | james.smtpserver | SMTP Service handler connection timeout is: 360
+INFO  11:23:54,962 | james.smtpserver | SMTP Service connection backlog is: 200
+INFO  11:23:54,962 | james.smtpserver | This SMTP server requires authentication.
+INFO  11:23:54,962 | james.smtpserver | No maximum message size is enforced for this server.
+INFO  11:23:55,782 | james.smtpserver | Init SMTP Service done
+INFO  18:33:37,348 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
+INFO  18:33:37,354 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
+INFO  18:33:37,357 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
+INFO  18:33:37,359 | james.smtpserver | SMTP Service handler connection timeout is: 360
+INFO  18:33:37,369 | james.smtpserver | SMTP Service connection backlog is: 200
+INFO  18:33:37,372 | james.smtpserver | This SMTP server requires authentication.
+INFO  18:33:37,375 | james.smtpserver | No maximum message size is enforced for this server.
+INFO  18:33:37,842 | james.smtpserver | Init SMTP Service done
+INFO  21:27:53,851 | james.smtpserver | Id='211121079' User='' Connection established from 127.0.0.1
+INFO  21:27:53,961 | james.smtpserver | Id='211121079' User='' Successfully spooled mail Mail1493148473917-87902478-64a0-4a56-bd08-c2ad29b8ef90 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  21:27:53,974 | james.smtpserver | Id='211121079' User='' Connection closed for 127.0.0.1
+INFO  21:29:45,764 | james.smtpserver | Id='918352631' User='' Connection established from 127.0.0.1
+INFO  21:29:45,790 | james.smtpserver | Id='918352631' User='' Successfully spooled mail Mail1493148585785-ed7b3ee8-c9ac-4d56-a47d-f88c5c48e243 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  21:29:45,795 | james.smtpserver | Id='918352631' User='' Connection closed for 127.0.0.1
+INFO  21:33:12,978 | james.smtpserver | Id='739453563' User='' Connection established from 127.0.0.1
+INFO  21:33:13,010 | james.smtpserver | Id='739453563' User='' Successfully spooled mail Mail1493148793001-8ed4559d-0f2b-4ae7-aa16-933abcf3fa40 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  21:33:13,034 | james.smtpserver | Id='739453563' User='' Connection closed for 127.0.0.1
+INFO  21:34:58,840 | james.smtpserver | Id='1655399268' User='' Connection established from 127.0.0.1
+INFO  21:34:58,863 | james.smtpserver | Id='1655399268' User='' Successfully spooled mail Mail1493148898859-01d6a6b3-7448-4a89-8e0e-bbb4e94c7fdc from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  21:34:58,867 | james.smtpserver | Id='1655399268' User='' Connection closed for 127.0.0.1
+INFO  22:01:11,033 | james.smtpserver | Id='955392153' User='' Connection established from 127.0.0.1
+INFO  22:01:11,064 | james.smtpserver | Id='955392153' User='' Successfully spooled mail Mail1493150471059-3055eb9f-607c-44b0-8263-1b59573f6342 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:01:11,070 | james.smtpserver | Id='955392153' User='' Connection closed for 127.0.0.1
+INFO  22:30:45,613 | james.smtpserver | Id='317415112' User='' Connection established from 127.0.0.1
+INFO  22:30:45,638 | james.smtpserver | Id='317415112' User='' Successfully spooled mail Mail1493152245633-ee29fcd5-05cd-493c-95cc-9ef31a1bbd17 from TEST1@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:30:45,647 | james.smtpserver | Id='317415112' User='' Connection closed for 127.0.0.1
+INFO  22:31:33,647 | james.smtpserver | Id='1922862256' User='' Connection established from 127.0.0.1
+INFO  22:31:33,668 | james.smtpserver | Id='1922862256' User='' Successfully spooled mail Mail1493152293665-886ca512-3342-43ce-ad83-ffa7c09e6a82 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:31:33,674 | james.smtpserver | Id='1922862256' User='' Connection closed for 127.0.0.1
+INFO  22:36:49,041 | james.smtpserver | Id='947079853' User='' Connection established from 127.0.0.1
+INFO  22:36:49,084 | james.smtpserver | Id='947079853' User='' Successfully spooled mail Mail1493152609077-1138632a-d662-4b54-af2f-0ffe28e718fe from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:36:49,125 | james.smtpserver | Id='947079853' User='' Connection closed for 127.0.0.1
+INFO  22:39:24,653 | james.smtpserver | Id='1928214656' User='' Connection established from 127.0.0.1
+INFO  22:39:24,688 | james.smtpserver | Id='1928214656' User='' Successfully spooled mail Mail1493152764679-c2c0eff9-c810-424a-ac67-d6c6817edb6d from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:39:24,700 | james.smtpserver | Id='1928214656' User='' Connection closed for 127.0.0.1
+INFO  22:39:48,917 | james.smtpserver | Id='39084716' User='' Connection established from 127.0.0.1
+INFO  22:39:48,942 | james.smtpserver | Id='39084716' User='' Successfully spooled mail Mail1493152788932-32fe27e4-312e-49f1-a6b8-16701458919d from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:39:48,946 | james.smtpserver | Id='39084716' User='' Connection closed for 127.0.0.1
+INFO  22:43:44,411 | james.smtpserver | Id='1123773888' User='' Connection established from 127.0.0.1
+INFO  22:43:44,434 | james.smtpserver | Id='1123773888' User='' Successfully spooled mail Mail1493153024431-44b316ae-1ac3-4c40-be52-c4014667d804 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:43:44,438 | james.smtpserver | Id='1123773888' User='' Connection closed for 127.0.0.1
+INFO  22:47:27,526 | james.smtpserver | Id='163561070' User='' Connection established from 127.0.0.1
+INFO  22:47:27,577 | james.smtpserver | Id='163561070' User='' Successfully spooled mail Mail1493153247572-3d780b36-d489-4da4-8874-64006164fa62 from sds@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
+INFO  22:47:27,602 | james.smtpserver | Id='163561070' User='' Connection closed for 127.0.0.1

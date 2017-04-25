@@ -1,0 +1,15 @@
+INFO  10:16:13,083 | james.dnsservice | Autodiscovery is enabled - trying to discover your system's DNS Servers
+INFO  10:16:13,099 | james.dnsservice | Adding autodiscovered server 192.168.1.254
+INFO  10:16:13,099 | james.dnsservice | Adding autodiscovered search path lan.
+INFO  10:16:13,099 | james.dnsservice | DNS Server is: 192.168.1.254
+INFO  10:16:13,118 | james.dnsservice | Registered cache, resolver and search paths as DNSJava defaults
+INFO  11:36:04,589 | james.dnsservice | Autodiscovery is enabled - trying to discover your system's DNS Servers
+INFO  11:36:04,598 | james.dnsservice | Adding autodiscovered server 192.168.1.254
+INFO  11:36:04,598 | james.dnsservice | Adding autodiscovered search path lan.
+INFO  11:36:04,605 | james.dnsservice | DNS Server is: 192.168.1.254
+INFO  11:36:04,616 | james.dnsservice | Registered cache, resolver and search paths as DNSJava defaults
+INFO  11:41:19,441 | james.dnsservice | Autodiscovery is enabled - trying to discover your system's DNS Servers
+INFO  11:41:19,450 | james.dnsservice | Adding autodiscovered server 192.168.1.254
+INFO  11:41:19,451 | james.dnsservice | Adding autodiscovered search path lan.
+INFO  11:41:19,451 | james.dnsservice | DNS Server is: 192.168.1.254
+INFO  11:41:19,540 | james.dnsservice | Registered cache, resolver and search paths as DNSJava defaults

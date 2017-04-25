@@ -30,6 +30,8 @@ public class BP_Konfiguracija implements BP_Sucelje {
     private static final String drive_database = "driver.database";
     private String driverDatabase;
 
+    
+
     public BP_Konfiguracija(String datoteka) {
         try {
             konfig = KonfiguracijaApstraktna.preuzmiKonfiguraciju(datoteka);
@@ -117,6 +119,14 @@ public class BP_Konfiguracija implements BP_Sucelje {
     @Override
     public String getUserUsername() {
         return this.userUsername;
+    }
+    
+    public String getServerDB() {
+        return serverDB;
+    }
+
+    public void setServerDB(String serverDB) {
+        this.serverDB = serverDB;
     }
 
 }
