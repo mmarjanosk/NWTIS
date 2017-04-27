@@ -42,7 +42,12 @@ public class PregledPoruka {
     private ArrayList<Poruka> poruke = new ArrayList<>();
     private int ukupnoPorukaMapa = 0;
     private Message[] messages;
-
+    static int str = 1;
+    private Folder folder;
+    static Store store;
+    private boolean min = true;
+    private boolean max = false;
+    private boolean seek = true;
     private String traziPoruke;
 
     HttpServletRequest context = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
@@ -63,13 +68,13 @@ public class PregledPoruka {
     public PregledPoruka() throws MessagingException, IOException {
         properties.put("mail.smtp.host", server);
         Session session = Session.getInstance(properties, null);
-        Store store;
         try {
             store = session.getStore("imap");
             store.connect(server, korisnik, lozinka);
-            Folder folder = store.getFolder(odabranaMapa);
-            folder.open(Folder.READ_WRITE);
-            messages = folder.getMessages();
+//            folder = store.getFolder(odabranaMapa);
+//            folder.open(Folder.READ_WRITE);
+
+            //messages = folder.getMessages();
             preuzmiMape(store);
             preuzmiPoruke(odabranaMapa);
 
@@ -93,38 +98,60 @@ public class PregledPoruka {
 
     void preuzmiPoruke(String mapa) throws NoSuchProviderException, MessagingException, IOException {
         poruke.clear();
-       
-        if (pozicijaDoPoruke > messages.length) {
-            pozicijaDoPoruke = messages.length;
-        }
-
-        System.out.println(pozicijaOdPoruke);
-        System.out.println(pozicijaDoPoruke);
-        for (int i = pozicijaOdPoruke; i < pozicijaDoPoruke; i++) {
-            Message message = messages[i];
-            Date sdat = message.getSentDate();
-            Date rdat = message.getReceivedDate();
-
-            Address[] sa = message.getFrom();
-            String salje = sa[0].toString();
-            salje = salje.split(":;")[0];
-            String sadrzaj = message.getContent().toString();
-            String predmet = message.getSubject();
-            String vrsta = message.getContentType();
-            System.out.println("Poruka " + i);
-             
-
-            poruke.add(new Poruka(Integer.toString(i), rdat, sdat, salje, predmet, sadrzaj, vrsta));
-
-        }
+        folder = store.getFolder(odabranaMapa);
+        folder.open(Folder.READ_WRITE);
+        ukupnoPorukaMapa = folder.getMessageCount();
         
-        ukupnoPorukaMapa = messages.length;
+        if (pozicijaDoPoruke >= folder.getMessageCount()) {
+            pozicijaDoPoruke = folder.getMessageCount();
+            setMax(true);
+        } else {
+            setMax(false);
+        }
+        if (str == 1) {
+            setMin(true);
+        } else {
+            setMin(false);
+        }
+
+        if (folder.getMessageCount() > 0) {
+            messages = folder.getMessages(pozicijaOdPoruke + 1, pozicijaDoPoruke);
+        }
+        int br = brojPrikazanihPoruka * (str - 1);
+        if (messages != null) {
+
+            System.out.println(pozicijaOdPoruke);
+            System.out.println(pozicijaDoPoruke);
+            for (int i = 0; i < messages.length; i++) {
+                Message message = messages[i];
+                Date sdat = message.getSentDate();
+                Date rdat = message.getReceivedDate();
+                br++;
+                Address[] sa = message.getFrom();
+                String salje = sa[0].toString();
+                salje = salje.split(":;")[0];
+                String sadrzaj = message.getContent().toString();
+                String predmet = message.getSubject();
+                String vrsta = message.getContentType();
+                if(!isSeek()){
+                    if(sadrzaj.contains(traziPoruke)){
+                         poruke.add(new Poruka(Integer.toString(br), rdat, sdat, salje, predmet, sadrzaj, vrsta));
+                    }
+                } else {
+                     poruke.add(new Poruka(Integer.toString(br), rdat, sdat, salje, predmet, sadrzaj, vrsta));
+                }
+               
+            }
+        }
+        folder.close(true);
     }
 
     public String promjenaMape() throws MessagingException, NoSuchProviderException, IOException {
-        this.preuzmiPoruke(odabranaMapa);
+
         this.pozicijaOdPoruke = 0;
         this.pozicijaDoPoruke = brojPrikazanihPoruka;
+        this.str = 1;
+        this.preuzmiPoruke(odabranaMapa);
         return "PromjenaMape";
     }
 
@@ -134,21 +161,22 @@ public class PregledPoruka {
     }
 
     public String prethodnePoruke() throws MessagingException, NoSuchProviderException, IOException {
-        if (pozicijaOdPoruke != 0) {
-            this.pozicijaDoPoruke = this.pozicijaDoPoruke - this.brojPrikazanihPoruka;
-            this.pozicijaOdPoruke = this.pozicijaOdPoruke - this.brojPrikazanihPoruka;
+        if (!min) {
+            this.str--;
+            this.pozicijaOdPoruke = this.brojPrikazanihPoruka * (this.str - 1);
+            this.pozicijaDoPoruke = this.brojPrikazanihPoruka * this.str;
             this.preuzmiPoruke(odabranaMapa);
         }
         return "PrethodnePoruke";
     }
 
     public String sljedecePoruke() throws MessagingException, NoSuchProviderException, IOException {
-        if (pozicijaDoPoruke == ukupnoPorukaMapa) {
+        if (max) {
 
         } else {
-
-            this.pozicijaOdPoruke = this.pozicijaOdPoruke + this.brojPrikazanihPoruka;
-            this.pozicijaDoPoruke = this.pozicijaDoPoruke + this.brojPrikazanihPoruka;
+            this.str++;
+            this.pozicijaOdPoruke = this.brojPrikazanihPoruka * (this.str - 1);
+            this.pozicijaDoPoruke = this.brojPrikazanihPoruka * this.str;
             this.preuzmiPoruke(odabranaMapa);
         }
         return "SljedecePoruke";
@@ -182,8 +210,10 @@ public class PregledPoruka {
         return traziPoruke;
     }
 
-    public void setTraziPoruke(String traziPoruke) {
+    public void setTraziPoruke(String traziPoruke) throws MessagingException, NoSuchProviderException, IOException{
         this.traziPoruke = traziPoruke;
+        preuzmiPoruke(odabranaMapa);
+        seek=false;
     }
 
     public ArrayList<Izbornik> getMape() {
@@ -194,4 +224,34 @@ public class PregledPoruka {
         return poruke;
     }
 
+    public boolean isMin() {
+        return min;
+    }
+
+    public void setMin(boolean min) {
+        this.min = min;
+    }
+
+    public boolean isMax() {
+        return max;
+    }
+
+    public void setMax(boolean max) {
+        this.max = max;
+    }
+
+    public boolean isSeek() {
+        return seek;
+    }
+
+    public void setSeek(boolean seek) throws MessagingException, NoSuchProviderException, IOException {
+        this.seek = seek;
+        preuzmiPoruke(odabranaMapa);
+    }
+
+    
+    
+    
+    
+    
 }

@@ -1,82 +1,486 @@
-INFO  09:06:39,247 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
-INFO  09:06:39,247 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
-INFO  09:06:39,263 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
-INFO  09:06:39,263 | james.smtpserver | SMTP Service handler connection timeout is: 360
-INFO  09:06:39,263 | james.smtpserver | SMTP Service connection backlog is: 200
-INFO  09:06:39,263 | james.smtpserver | This SMTP server requires authentication.
-INFO  09:06:39,263 | james.smtpserver | No maximum message size is enforced for this server.
-INFO  09:06:39,700 | james.smtpserver | Init SMTP Service done
-INFO  10:35:34,067 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
-INFO  10:35:34,067 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
-INFO  10:35:34,067 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
-INFO  10:35:34,067 | james.smtpserver | SMTP Service handler connection timeout is: 360
-INFO  10:35:34,067 | james.smtpserver | SMTP Service connection backlog is: 200
-INFO  10:35:34,083 | james.smtpserver | This SMTP server requires authentication.
-INFO  10:35:34,083 | james.smtpserver | No maximum message size is enforced for this server.
-INFO  10:35:34,503 | james.smtpserver | Init SMTP Service done
-INFO  10:49:04,802 | james.smtpserver | Id='1335511958' User='' Connection established from 127.0.0.1
-INFO  10:49:04,932 | james.smtpserver | Id='1335511958' User='' Successfully spooled mail Mail1493110144874-2d80a3d0-4323-4aca-bec6-d83c57390ba9 from msq@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  10:49:04,966 | james.smtpserver | Id='1335511958' User='' Connection closed for 127.0.0.1
-INFO  10:59:32,509 | james.smtpserver | Id='2034817572' User='' Connection established from 127.0.0.1
-INFO  10:59:32,526 | james.smtpserver | Id='2034817572' User='' Successfully spooled mail Mail1493110772523-94abed2f-89d1-43dd-8720-a725180a2dad from ne@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  10:59:32,532 | james.smtpserver | Id='2034817572' User='' Connection closed for 127.0.0.1
-INFO  11:08:33,797 | james.smtpserver | Id='1373586241' User='' Connection established from 127.0.0.1
-INFO  11:08:33,822 | james.smtpserver | Id='1373586241' User='' Successfully spooled mail Mail1493111313816-44338886-5f9a-4f41-b27a-cfe994e8aa0b from netko@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  11:08:33,826 | james.smtpserver | Id='1373586241' User='' Connection closed for 127.0.0.1
-INFO  11:11:53,900 | james.smtpserver | Id='2132277544' User='' Connection established from 127.0.0.1
-INFO  11:11:53,960 | james.smtpserver | Id='2132277544' User='' Successfully spooled mail Mail1493111513950-69aa3dbc-6788-4c04-904d-602ca06820aa from neto@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  11:11:53,992 | james.smtpserver | Id='2132277544' User='' Connection closed for 127.0.0.1
-INFO  11:20:20,529 | james.smtpserver | Dispose SMTP Service
-INFO  11:20:20,531 | james.smtpserver | Dispose SMTP Service done
-INFO  11:23:54,946 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
-INFO  11:23:54,962 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
-INFO  11:23:54,962 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
-INFO  11:23:54,962 | james.smtpserver | SMTP Service handler connection timeout is: 360
-INFO  11:23:54,962 | james.smtpserver | SMTP Service connection backlog is: 200
-INFO  11:23:54,962 | james.smtpserver | This SMTP server requires authentication.
-INFO  11:23:54,962 | james.smtpserver | No maximum message size is enforced for this server.
-INFO  11:23:55,782 | james.smtpserver | Init SMTP Service done
-INFO  18:33:37,348 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
-INFO  18:33:37,354 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
-INFO  18:33:37,357 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
-INFO  18:33:37,359 | james.smtpserver | SMTP Service handler connection timeout is: 360
-INFO  18:33:37,369 | james.smtpserver | SMTP Service connection backlog is: 200
-INFO  18:33:37,372 | james.smtpserver | This SMTP server requires authentication.
-INFO  18:33:37,375 | james.smtpserver | No maximum message size is enforced for this server.
-INFO  18:33:37,842 | james.smtpserver | Init SMTP Service done
-INFO  21:27:53,851 | james.smtpserver | Id='211121079' User='' Connection established from 127.0.0.1
-INFO  21:27:53,961 | james.smtpserver | Id='211121079' User='' Successfully spooled mail Mail1493148473917-87902478-64a0-4a56-bd08-c2ad29b8ef90 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  21:27:53,974 | james.smtpserver | Id='211121079' User='' Connection closed for 127.0.0.1
-INFO  21:29:45,764 | james.smtpserver | Id='918352631' User='' Connection established from 127.0.0.1
-INFO  21:29:45,790 | james.smtpserver | Id='918352631' User='' Successfully spooled mail Mail1493148585785-ed7b3ee8-c9ac-4d56-a47d-f88c5c48e243 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  21:29:45,795 | james.smtpserver | Id='918352631' User='' Connection closed for 127.0.0.1
-INFO  21:33:12,978 | james.smtpserver | Id='739453563' User='' Connection established from 127.0.0.1
-INFO  21:33:13,010 | james.smtpserver | Id='739453563' User='' Successfully spooled mail Mail1493148793001-8ed4559d-0f2b-4ae7-aa16-933abcf3fa40 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  21:33:13,034 | james.smtpserver | Id='739453563' User='' Connection closed for 127.0.0.1
-INFO  21:34:58,840 | james.smtpserver | Id='1655399268' User='' Connection established from 127.0.0.1
-INFO  21:34:58,863 | james.smtpserver | Id='1655399268' User='' Successfully spooled mail Mail1493148898859-01d6a6b3-7448-4a89-8e0e-bbb4e94c7fdc from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  21:34:58,867 | james.smtpserver | Id='1655399268' User='' Connection closed for 127.0.0.1
-INFO  22:01:11,033 | james.smtpserver | Id='955392153' User='' Connection established from 127.0.0.1
-INFO  22:01:11,064 | james.smtpserver | Id='955392153' User='' Successfully spooled mail Mail1493150471059-3055eb9f-607c-44b0-8263-1b59573f6342 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:01:11,070 | james.smtpserver | Id='955392153' User='' Connection closed for 127.0.0.1
-INFO  22:30:45,613 | james.smtpserver | Id='317415112' User='' Connection established from 127.0.0.1
-INFO  22:30:45,638 | james.smtpserver | Id='317415112' User='' Successfully spooled mail Mail1493152245633-ee29fcd5-05cd-493c-95cc-9ef31a1bbd17 from TEST1@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:30:45,647 | james.smtpserver | Id='317415112' User='' Connection closed for 127.0.0.1
-INFO  22:31:33,647 | james.smtpserver | Id='1922862256' User='' Connection established from 127.0.0.1
-INFO  22:31:33,668 | james.smtpserver | Id='1922862256' User='' Successfully spooled mail Mail1493152293665-886ca512-3342-43ce-ad83-ffa7c09e6a82 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:31:33,674 | james.smtpserver | Id='1922862256' User='' Connection closed for 127.0.0.1
-INFO  22:36:49,041 | james.smtpserver | Id='947079853' User='' Connection established from 127.0.0.1
-INFO  22:36:49,084 | james.smtpserver | Id='947079853' User='' Successfully spooled mail Mail1493152609077-1138632a-d662-4b54-af2f-0ffe28e718fe from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:36:49,125 | james.smtpserver | Id='947079853' User='' Connection closed for 127.0.0.1
-INFO  22:39:24,653 | james.smtpserver | Id='1928214656' User='' Connection established from 127.0.0.1
-INFO  22:39:24,688 | james.smtpserver | Id='1928214656' User='' Successfully spooled mail Mail1493152764679-c2c0eff9-c810-424a-ac67-d6c6817edb6d from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:39:24,700 | james.smtpserver | Id='1928214656' User='' Connection closed for 127.0.0.1
-INFO  22:39:48,917 | james.smtpserver | Id='39084716' User='' Connection established from 127.0.0.1
-INFO  22:39:48,942 | james.smtpserver | Id='39084716' User='' Successfully spooled mail Mail1493152788932-32fe27e4-312e-49f1-a6b8-16701458919d from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:39:48,946 | james.smtpserver | Id='39084716' User='' Connection closed for 127.0.0.1
-INFO  22:43:44,411 | james.smtpserver | Id='1123773888' User='' Connection established from 127.0.0.1
-INFO  22:43:44,434 | james.smtpserver | Id='1123773888' User='' Successfully spooled mail Mail1493153024431-44b316ae-1ac3-4c40-be52-c4014667d804 from mmarjano2@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:43:44,438 | james.smtpserver | Id='1123773888' User='' Connection closed for 127.0.0.1
-INFO  22:47:27,526 | james.smtpserver | Id='163561070' User='' Connection established from 127.0.0.1
-INFO  22:47:27,577 | james.smtpserver | Id='163561070' User='' Successfully spooled mail Mail1493153247572-3d780b36-d489-4da4-8874-64006164fa62 from sds@localhost on lmlicenses.wip4.adobe.com/127.0.0.1 for [servis@nwtis.nastava.foi.hr]
-INFO  22:47:27,602 | james.smtpserver | Id='163561070' User='' Connection closed for 127.0.0.1
+INFO  00:00:02,782 | james.smtpserver | Id='1938319552' User='' Connection established from 127.0.0.1
+INFO  00:00:02,811 | james.smtpserver | Id='1938319552' User='' Successfully spooled mail Mail1493330402808-4aeb4b05-648e-47e5-b746-8e1ee280348d from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:00:02,816 | james.smtpserver | Id='1938319552' User='' Connection closed for 127.0.0.1
+INFO  00:00:12,877 | james.smtpserver | Id='1958430691' User='' Connection established from 127.0.0.1
+INFO  00:00:12,912 | james.smtpserver | Id='1958430691' User='' Successfully spooled mail Mail1493330412903-71a492ba-9fb6-4c9b-a22a-153b89e23964 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:00:12,923 | james.smtpserver | Id='1958430691' User='' Connection closed for 127.0.0.1
+INFO  00:00:22,989 | james.smtpserver | Id='2131455978' User='' Connection established from 127.0.0.1
+INFO  00:00:23,016 | james.smtpserver | Id='2131455978' User='' Successfully spooled mail Mail1493330423014-868b72cd-58ac-4a4c-be65-6220aad6dc33 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:00:23,020 | james.smtpserver | Id='2131455978' User='' Connection closed for 127.0.0.1
+INFO  00:00:33,076 | james.smtpserver | Id='820974464' User='' Connection established from 127.0.0.1
+INFO  00:00:33,102 | james.smtpserver | Id='820974464' User='' Successfully spooled mail Mail1493330433100-45489e70-ed18-4351-822c-63c46ef9b432 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:00:33,106 | james.smtpserver | Id='820974464' User='' Connection closed for 127.0.0.1
+INFO  00:00:43,170 | james.smtpserver | Id='1965954171' User='' Connection established from 127.0.0.1
+INFO  00:00:43,198 | james.smtpserver | Id='1965954171' User='' Successfully spooled mail Mail1493330443194-2f1844a2-0b76-4386-b7e2-51521f301c61 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:00:43,206 | james.smtpserver | Id='1965954171' User='' Connection closed for 127.0.0.1
+INFO  00:00:53,270 | james.smtpserver | Id='230654946' User='' Connection established from 127.0.0.1
+INFO  00:00:53,304 | james.smtpserver | Id='230654946' User='' Successfully spooled mail Mail1493330453296-a747b513-1b5d-45ad-8fbe-a57af1281781 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:00:53,329 | james.smtpserver | Id='230654946' User='' Connection closed for 127.0.0.1
+INFO  00:01:17,664 | james.smtpserver | Id='726030823' User='' Connection established from 127.0.0.1
+INFO  00:01:17,705 | james.smtpserver | Id='726030823' User='' Successfully spooled mail Mail1493330477696-9a886a30-4002-4e0f-91cf-9fa62e7d8d66 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:01:17,729 | james.smtpserver | Id='726030823' User='' Connection closed for 127.0.0.1
+INFO  00:01:27,768 | james.smtpserver | Id='942661619' User='' Connection established from 127.0.0.1
+INFO  00:01:27,793 | james.smtpserver | Id='942661619' User='' Successfully spooled mail Mail1493330487790-735ad874-a10d-4001-b673-5af91a3e14aa from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:01:27,800 | james.smtpserver | Id='942661619' User='' Connection closed for 127.0.0.1
+INFO  00:01:37,852 | james.smtpserver | Id='2143505254' User='' Connection established from 127.0.0.1
+INFO  00:01:37,876 | james.smtpserver | Id='2143505254' User='' Successfully spooled mail Mail1493330497873-94a5475b-ae06-4605-9389-394ecc04f090 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:01:37,882 | james.smtpserver | Id='2143505254' User='' Connection closed for 127.0.0.1
+INFO  00:01:47,937 | james.smtpserver | Id='129537471' User='' Connection established from 127.0.0.1
+INFO  00:01:47,966 | james.smtpserver | Id='129537471' User='' Successfully spooled mail Mail1493330507963-a1b6c604-2924-4581-98a0-b62de7ca8662 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:01:47,973 | james.smtpserver | Id='129537471' User='' Connection closed for 127.0.0.1
+INFO  00:01:58,044 | james.smtpserver | Id='420756509' User='' Connection established from 127.0.0.1
+INFO  00:01:58,075 | james.smtpserver | Id='420756509' User='' Successfully spooled mail Mail1493330518069-6aca54ba-3672-4762-a767-3cca81a93274 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:01:58,080 | james.smtpserver | Id='420756509' User='' Connection closed for 127.0.0.1
+INFO  00:02:08,160 | james.smtpserver | Id='1795999522' User='' Connection established from 127.0.0.1
+INFO  00:02:08,192 | james.smtpserver | Id='1795999522' User='' Successfully spooled mail Mail1493330528186-45b742a8-eabc-44a8-a793-10389cb2a053 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:02:08,203 | james.smtpserver | Id='1795999522' User='' Connection closed for 127.0.0.1
+INFO  00:02:18,266 | james.smtpserver | Id='1629467781' User='' Connection established from 127.0.0.1
+INFO  00:02:18,292 | james.smtpserver | Id='1629467781' User='' Successfully spooled mail Mail1493330538290-85feaee8-8887-4ac5-a689-8f92c0c3ddd3 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:02:18,295 | james.smtpserver | Id='1629467781' User='' Connection closed for 127.0.0.1
+INFO  00:02:28,363 | james.smtpserver | Id='290956999' User='' Connection established from 127.0.0.1
+INFO  00:02:28,388 | james.smtpserver | Id='290956999' User='' Successfully spooled mail Mail1493330548386-e533fa12-00ce-4965-9f5b-5e49b05c46b2 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:02:28,391 | james.smtpserver | Id='290956999' User='' Connection closed for 127.0.0.1
+INFO  00:02:38,463 | james.smtpserver | Id='1209867818' User='' Connection established from 127.0.0.1
+INFO  00:02:38,488 | james.smtpserver | Id='1209867818' User='' Successfully spooled mail Mail1493330558484-0c112aec-8be7-4776-b105-e13da4c48821 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:02:38,504 | james.smtpserver | Id='1209867818' User='' Connection closed for 127.0.0.1
+INFO  00:02:48,562 | james.smtpserver | Id='48496693' User='' Connection established from 127.0.0.1
+INFO  00:02:48,590 | james.smtpserver | Id='48496693' User='' Successfully spooled mail Mail1493330568588-fc245df9-bd92-4ede-b570-a17860492388 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:02:48,597 | james.smtpserver | Id='48496693' User='' Connection closed for 127.0.0.1
+INFO  00:02:58,663 | james.smtpserver | Id='663356994' User='' Connection established from 127.0.0.1
+INFO  00:02:58,686 | james.smtpserver | Id='663356994' User='' Successfully spooled mail Mail1493330578684-b5c23988-7b76-4ffa-9d39-2f5b1c8ea638 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:02:58,690 | james.smtpserver | Id='663356994' User='' Connection closed for 127.0.0.1
+INFO  00:03:08,753 | james.smtpserver | Id='1691388263' User='' Connection established from 127.0.0.1
+INFO  00:03:08,774 | james.smtpserver | Id='1691388263' User='' Successfully spooled mail Mail1493330588772-8992d58f-4e5d-41d9-af59-f1018b0ea588 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:03:08,780 | james.smtpserver | Id='1691388263' User='' Connection closed for 127.0.0.1
+INFO  00:03:18,842 | james.smtpserver | Id='567088499' User='' Connection established from 127.0.0.1
+INFO  00:03:18,870 | james.smtpserver | Id='567088499' User='' Successfully spooled mail Mail1493330598868-2223b5c4-d49c-4821-99d8-6ddd85d9eb65 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:03:18,873 | james.smtpserver | Id='567088499' User='' Connection closed for 127.0.0.1
+INFO  00:03:28,936 | james.smtpserver | Id='959994368' User='' Connection established from 127.0.0.1
+INFO  00:03:28,970 | james.smtpserver | Id='959994368' User='' Successfully spooled mail Mail1493330608961-9e2aeea8-220a-4781-b0ba-d051c8738326 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:03:28,976 | james.smtpserver | Id='959994368' User='' Connection closed for 127.0.0.1
+INFO  00:03:39,039 | james.smtpserver | Id='869907817' User='' Connection established from 127.0.0.1
+INFO  00:03:39,062 | james.smtpserver | Id='869907817' User='' Successfully spooled mail Mail1493330619060-6fce22f6-7137-49f0-b170-5a97e1528ea8 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:03:39,066 | james.smtpserver | Id='869907817' User='' Connection closed for 127.0.0.1
+INFO  00:03:49,140 | james.smtpserver | Id='177475741' User='' Connection established from 127.0.0.1
+INFO  00:03:49,166 | james.smtpserver | Id='177475741' User='' Successfully spooled mail Mail1493330629164-ad779150-1e75-4553-a90f-a0335f8da2df from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:03:49,169 | james.smtpserver | Id='177475741' User='' Connection closed for 127.0.0.1
+INFO  00:03:59,237 | james.smtpserver | Id='1017702215' User='' Connection established from 127.0.0.1
+INFO  00:03:59,259 | james.smtpserver | Id='1017702215' User='' Successfully spooled mail Mail1493330639257-12d4626e-2030-4641-8dcb-dcdf9cd3ab59 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:03:59,263 | james.smtpserver | Id='1017702215' User='' Connection closed for 127.0.0.1
+INFO  00:04:09,352 | james.smtpserver | Id='1522430532' User='' Connection established from 127.0.0.1
+INFO  00:04:09,378 | james.smtpserver | Id='1522430532' User='' Successfully spooled mail Mail1493330649375-22fb6a0d-5334-48f0-a0a7-af32513e47f9 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:04:09,394 | james.smtpserver | Id='1522430532' User='' Connection closed for 127.0.0.1
+INFO  00:04:19,460 | james.smtpserver | Id='1108607779' User='' Connection established from 127.0.0.1
+INFO  00:04:19,485 | james.smtpserver | Id='1108607779' User='' Successfully spooled mail Mail1493330659483-00edad07-09f9-4e75-90b4-1580100f4f43 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:04:19,488 | james.smtpserver | Id='1108607779' User='' Connection closed for 127.0.0.1
+INFO  00:04:29,554 | james.smtpserver | Id='1071664662' User='' Connection established from 127.0.0.1
+INFO  00:04:29,577 | james.smtpserver | Id='1071664662' User='' Successfully spooled mail Mail1493330669575-9918bb84-0871-4c45-a8fc-f20541fde426 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:04:29,581 | james.smtpserver | Id='1071664662' User='' Connection closed for 127.0.0.1
+INFO  00:04:39,645 | james.smtpserver | Id='242063919' User='' Connection established from 127.0.0.1
+INFO  00:04:39,666 | james.smtpserver | Id='242063919' User='' Successfully spooled mail Mail1493330679663-948d19b2-b0c7-4170-bac9-be70c02919ac from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:04:39,670 | james.smtpserver | Id='242063919' User='' Connection closed for 127.0.0.1
+INFO  00:04:49,732 | james.smtpserver | Id='202166832' User='' Connection established from 127.0.0.1
+INFO  00:04:49,783 | james.smtpserver | Id='202166832' User='' Successfully spooled mail Mail1493330689780-6747b2a1-b67d-4a72-92f0-ebd5b209a9b0 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:04:49,787 | james.smtpserver | Id='202166832' User='' Connection closed for 127.0.0.1
+INFO  00:04:59,853 | james.smtpserver | Id='379892829' User='' Connection established from 127.0.0.1
+INFO  00:04:59,880 | james.smtpserver | Id='379892829' User='' Successfully spooled mail Mail1493330699877-df1efddf-3d29-4559-b4ed-76ad57b6aa5b from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:04:59,886 | james.smtpserver | Id='379892829' User='' Connection closed for 127.0.0.1
+INFO  00:05:09,945 | james.smtpserver | Id='1083789328' User='' Connection established from 127.0.0.1
+INFO  00:05:09,968 | james.smtpserver | Id='1083789328' User='' Successfully spooled mail Mail1493330709966-9ef322c4-9e63-4cf4-a07f-0d8d4801d044 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:05:09,971 | james.smtpserver | Id='1083789328' User='' Connection closed for 127.0.0.1
+INFO  00:05:20,036 | james.smtpserver | Id='1347770477' User='' Connection established from 127.0.0.1
+INFO  00:05:20,063 | james.smtpserver | Id='1347770477' User='' Successfully spooled mail Mail1493330720060-a50e7b49-a71f-4552-9628-1f4e2de526d8 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:05:20,068 | james.smtpserver | Id='1347770477' User='' Connection closed for 127.0.0.1
+INFO  00:05:30,131 | james.smtpserver | Id='78104380' User='' Connection established from 127.0.0.1
+INFO  00:05:30,156 | james.smtpserver | Id='78104380' User='' Successfully spooled mail Mail1493330730154-aaa8f0ff-d69b-496f-bb03-b9baf517565a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:05:30,160 | james.smtpserver | Id='78104380' User='' Connection closed for 127.0.0.1
+INFO  00:05:40,231 | james.smtpserver | Id='498627329' User='' Connection established from 127.0.0.1
+INFO  00:05:40,258 | james.smtpserver | Id='498627329' User='' Successfully spooled mail Mail1493330740254-e16e01ea-a3e9-416f-8ecf-6266169c5521 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:05:40,264 | james.smtpserver | Id='498627329' User='' Connection closed for 127.0.0.1
+INFO  00:05:50,342 | james.smtpserver | Id='167759283' User='' Connection established from 127.0.0.1
+INFO  00:05:50,368 | james.smtpserver | Id='167759283' User='' Successfully spooled mail Mail1493330750366-d022f030-0687-4634-977d-fd2a2ed8075c from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:05:50,372 | james.smtpserver | Id='167759283' User='' Connection closed for 127.0.0.1
+INFO  00:06:00,437 | james.smtpserver | Id='383385261' User='' Connection established from 127.0.0.1
+INFO  00:06:00,463 | james.smtpserver | Id='383385261' User='' Successfully spooled mail Mail1493330760460-996c8be8-4822-408b-9ebc-636f72c4565f from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:06:00,466 | james.smtpserver | Id='383385261' User='' Connection closed for 127.0.0.1
+INFO  00:06:10,530 | james.smtpserver | Id='161055590' User='' Connection established from 127.0.0.1
+INFO  00:06:10,550 | james.smtpserver | Id='161055590' User='' Successfully spooled mail Mail1493330770548-8fe325ab-a91b-49b9-84c1-b63a0836ed1a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:06:10,557 | james.smtpserver | Id='161055590' User='' Connection closed for 127.0.0.1
+INFO  00:06:20,648 | james.smtpserver | Id='626573836' User='' Connection established from 127.0.0.1
+INFO  00:06:20,680 | james.smtpserver | Id='626573836' User='' Successfully spooled mail Mail1493330780673-9bd81aa6-2343-40c8-b9c4-f3ff8fc6c022 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:06:20,686 | james.smtpserver | Id='626573836' User='' Connection closed for 127.0.0.1
+INFO  00:06:30,757 | james.smtpserver | Id='2082829602' User='' Connection established from 127.0.0.1
+INFO  00:06:30,786 | james.smtpserver | Id='2082829602' User='' Successfully spooled mail Mail1493330790783-092fd9eb-7de7-4ce6-a4c7-1f59424b38e4 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:06:30,795 | james.smtpserver | Id='2082829602' User='' Connection closed for 127.0.0.1
+INFO  00:06:40,842 | james.smtpserver | Id='134867625' User='' Connection established from 127.0.0.1
+INFO  00:06:40,867 | james.smtpserver | Id='134867625' User='' Successfully spooled mail Mail1493330800864-ff6c8b3a-705d-42fd-ba70-0278b63e1a4f from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:06:40,872 | james.smtpserver | Id='134867625' User='' Connection closed for 127.0.0.1
+INFO  00:06:50,934 | james.smtpserver | Id='1954898260' User='' Connection established from 127.0.0.1
+INFO  00:06:50,966 | james.smtpserver | Id='1954898260' User='' Successfully spooled mail Mail1493330810963-a2df6507-e97e-4165-9801-ec44d42d066c from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:06:50,984 | james.smtpserver | Id='1954898260' User='' Connection closed for 127.0.0.1
+INFO  00:07:01,040 | james.smtpserver | Id='1210862687' User='' Connection established from 127.0.0.1
+INFO  00:07:01,077 | james.smtpserver | Id='1210862687' User='' Successfully spooled mail Mail1493330821070-1259ec1d-d869-4acc-a811-0cd6001e0410 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:07:01,081 | james.smtpserver | Id='1210862687' User='' Connection closed for 127.0.0.1
+INFO  00:07:11,136 | james.smtpserver | Id='1075210627' User='' Connection established from 127.0.0.1
+INFO  00:07:11,160 | james.smtpserver | Id='1075210627' User='' Successfully spooled mail Mail1493330831156-f6992243-c705-4178-8ff5-9928d251eed1 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:07:11,167 | james.smtpserver | Id='1075210627' User='' Connection closed for 127.0.0.1
+INFO  00:07:21,220 | james.smtpserver | Id='1483344954' User='' Connection established from 127.0.0.1
+INFO  00:07:21,246 | james.smtpserver | Id='1483344954' User='' Successfully spooled mail Mail1493330841244-6d4702eb-e468-4d9f-baf9-d0a9d23c3a93 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:07:21,249 | james.smtpserver | Id='1483344954' User='' Connection closed for 127.0.0.1
+INFO  00:07:31,309 | james.smtpserver | Id='84711211' User='' Connection established from 127.0.0.1
+INFO  00:07:31,334 | james.smtpserver | Id='84711211' User='' Successfully spooled mail Mail1493330851331-a8923336-911a-455a-8760-4072634aa4c2 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:07:31,338 | james.smtpserver | Id='84711211' User='' Connection closed for 127.0.0.1
+INFO  00:07:41,396 | james.smtpserver | Id='146862620' User='' Connection established from 127.0.0.1
+INFO  00:07:41,421 | james.smtpserver | Id='146862620' User='' Successfully spooled mail Mail1493330861419-d671d9e7-69ec-4197-8804-05a0e3d74449 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:07:41,427 | james.smtpserver | Id='146862620' User='' Connection closed for 127.0.0.1
+INFO  00:07:51,483 | james.smtpserver | Id='846916818' User='' Connection established from 127.0.0.1
+INFO  00:07:51,509 | james.smtpserver | Id='846916818' User='' Successfully spooled mail Mail1493330871506-3d0cb86b-82bd-45de-bc45-a28eea14213b from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:07:51,513 | james.smtpserver | Id='846916818' User='' Connection closed for 127.0.0.1
+INFO  00:08:01,571 | james.smtpserver | Id='609285285' User='' Connection established from 127.0.0.1
+INFO  00:08:01,605 | james.smtpserver | Id='609285285' User='' Successfully spooled mail Mail1493330881599-064ebf14-1a56-4278-bb7b-dd2b98ef2972 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:08:01,611 | james.smtpserver | Id='609285285' User='' Connection closed for 127.0.0.1
+INFO  00:08:11,662 | james.smtpserver | Id='1715656881' User='' Connection established from 127.0.0.1
+INFO  00:08:11,686 | james.smtpserver | Id='1715656881' User='' Successfully spooled mail Mail1493330891684-487b2693-3a84-4cf1-93d7-1378f6d3e8bf from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:08:11,694 | james.smtpserver | Id='1715656881' User='' Connection closed for 127.0.0.1
+INFO  00:08:21,754 | james.smtpserver | Id='324208937' User='' Connection established from 127.0.0.1
+INFO  00:08:21,782 | james.smtpserver | Id='324208937' User='' Successfully spooled mail Mail1493330901779-4c33b5a5-717c-4199-a3f9-84cd50a8d619 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:08:21,787 | james.smtpserver | Id='324208937' User='' Connection closed for 127.0.0.1
+INFO  00:08:31,846 | james.smtpserver | Id='1031947660' User='' Connection established from 127.0.0.1
+INFO  00:08:31,872 | james.smtpserver | Id='1031947660' User='' Successfully spooled mail Mail1493330911869-feee8592-874a-4ec3-9d4b-5d98f81fc170 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:08:31,880 | james.smtpserver | Id='1031947660' User='' Connection closed for 127.0.0.1
+INFO  00:08:41,932 | james.smtpserver | Id='800951479' User='' Connection established from 127.0.0.1
+INFO  00:08:41,958 | james.smtpserver | Id='800951479' User='' Successfully spooled mail Mail1493330921955-72241571-056f-4089-ac73-9d0f706037a6 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:08:41,962 | james.smtpserver | Id='800951479' User='' Connection closed for 127.0.0.1
+INFO  00:08:52,018 | james.smtpserver | Id='1643557863' User='' Connection established from 127.0.0.1
+INFO  00:08:52,046 | james.smtpserver | Id='1643557863' User='' Successfully spooled mail Mail1493330932043-1acd554f-8103-4b28-8878-dfb28235a41d from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:08:52,049 | james.smtpserver | Id='1643557863' User='' Connection closed for 127.0.0.1
+INFO  00:09:02,105 | james.smtpserver | Id='1620697699' User='' Connection established from 127.0.0.1
+INFO  00:09:02,129 | james.smtpserver | Id='1620697699' User='' Successfully spooled mail Mail1493330942127-40db8840-1e00-4716-a06c-76d712272d33 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:09:02,132 | james.smtpserver | Id='1620697699' User='' Connection closed for 127.0.0.1
+INFO  00:09:12,187 | james.smtpserver | Id='1135105103' User='' Connection established from 127.0.0.1
+INFO  00:09:12,210 | james.smtpserver | Id='1135105103' User='' Successfully spooled mail Mail1493330952207-c4ca075d-647c-404e-aec4-c0d946418635 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:09:12,213 | james.smtpserver | Id='1135105103' User='' Connection closed for 127.0.0.1
+INFO  00:09:22,265 | james.smtpserver | Id='1600716320' User='' Connection established from 127.0.0.1
+INFO  00:09:22,290 | james.smtpserver | Id='1600716320' User='' Successfully spooled mail Mail1493330962288-f77ae05a-593c-4aff-a1a7-74f1d21181fa from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:09:22,296 | james.smtpserver | Id='1600716320' User='' Connection closed for 127.0.0.1
+INFO  00:09:32,353 | james.smtpserver | Id='1684685039' User='' Connection established from 127.0.0.1
+INFO  00:09:32,377 | james.smtpserver | Id='1684685039' User='' Successfully spooled mail Mail1493330972374-e3a01c2b-d71e-446d-9c32-48e41b82719b from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:09:32,380 | james.smtpserver | Id='1684685039' User='' Connection closed for 127.0.0.1
+INFO  00:09:42,440 | james.smtpserver | Id='1614769291' User='' Connection established from 127.0.0.1
+INFO  00:09:42,468 | james.smtpserver | Id='1614769291' User='' Successfully spooled mail Mail1493330982462-51d324cf-80db-4b78-be19-a00b18d5e897 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:09:42,471 | james.smtpserver | Id='1614769291' User='' Connection closed for 127.0.0.1
+INFO  00:09:52,529 | james.smtpserver | Id='943353437' User='' Connection established from 127.0.0.1
+INFO  00:09:52,553 | james.smtpserver | Id='943353437' User='' Successfully spooled mail Mail1493330992551-349180a8-50da-4326-a596-f1e544e16fff from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:09:52,557 | james.smtpserver | Id='943353437' User='' Connection closed for 127.0.0.1
+INFO  00:10:02,619 | james.smtpserver | Id='728635558' User='' Connection established from 127.0.0.1
+INFO  00:10:02,647 | james.smtpserver | Id='728635558' User='' Successfully spooled mail Mail1493331002643-138ed9df-9384-4d6c-9914-9191eea10b4f from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:10:02,667 | james.smtpserver | Id='728635558' User='' Connection closed for 127.0.0.1
+INFO  00:10:12,730 | james.smtpserver | Id='1207562071' User='' Connection established from 127.0.0.1
+INFO  00:10:12,762 | james.smtpserver | Id='1207562071' User='' Successfully spooled mail Mail1493331012756-c8ef8f89-8bb5-4477-8223-736e000453e4 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:10:12,778 | james.smtpserver | Id='1207562071' User='' Connection closed for 127.0.0.1
+INFO  00:10:22,824 | james.smtpserver | Id='1609323304' User='' Connection established from 127.0.0.1
+INFO  00:10:22,850 | james.smtpserver | Id='1609323304' User='' Successfully spooled mail Mail1493331022848-89803de0-8e85-44d0-abda-f4831b23b869 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:10:22,853 | james.smtpserver | Id='1609323304' User='' Connection closed for 127.0.0.1
+INFO  00:10:32,939 | james.smtpserver | Id='710966931' User='' Connection established from 127.0.0.1
+INFO  00:10:32,978 | james.smtpserver | Id='710966931' User='' Successfully spooled mail Mail1493331032972-94d2b9cb-d55a-48d9-aaee-f2c5669336dd from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:10:32,985 | james.smtpserver | Id='710966931' User='' Connection closed for 127.0.0.1
+INFO  00:10:43,044 | james.smtpserver | Id='1968660794' User='' Connection established from 127.0.0.1
+INFO  00:10:43,069 | james.smtpserver | Id='1968660794' User='' Successfully spooled mail Mail1493331043067-09107dea-f218-48f2-8611-e1b46914e6bc from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:10:43,080 | james.smtpserver | Id='1968660794' User='' Connection closed for 127.0.0.1
+INFO  00:10:53,137 | james.smtpserver | Id='587751203' User='' Connection established from 127.0.0.1
+INFO  00:10:53,164 | james.smtpserver | Id='587751203' User='' Successfully spooled mail Mail1493331053162-982cc5c3-6a8a-4bc8-898a-69d3837bbdce from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:10:53,170 | james.smtpserver | Id='587751203' User='' Connection closed for 127.0.0.1
+INFO  00:11:03,234 | james.smtpserver | Id='1564989359' User='' Connection established from 127.0.0.1
+INFO  00:11:03,260 | james.smtpserver | Id='1564989359' User='' Successfully spooled mail Mail1493331063257-0719e4f9-91a4-4705-9132-41837387f636 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:11:03,265 | james.smtpserver | Id='1564989359' User='' Connection closed for 127.0.0.1
+INFO  00:11:13,320 | james.smtpserver | Id='530680841' User='' Connection established from 127.0.0.1
+INFO  00:11:13,345 | james.smtpserver | Id='530680841' User='' Successfully spooled mail Mail1493331073342-84d465d8-3621-486c-834b-0a8373242a2e from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:11:13,348 | james.smtpserver | Id='530680841' User='' Connection closed for 127.0.0.1
+INFO  00:11:23,405 | james.smtpserver | Id='1444348872' User='' Connection established from 127.0.0.1
+INFO  00:11:23,434 | james.smtpserver | Id='1444348872' User='' Successfully spooled mail Mail1493331083431-749a8678-2323-4001-bcfa-c98f6c59dd3a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:11:23,437 | james.smtpserver | Id='1444348872' User='' Connection closed for 127.0.0.1
+INFO  00:11:33,501 | james.smtpserver | Id='850323886' User='' Connection established from 127.0.0.1
+INFO  00:11:33,525 | james.smtpserver | Id='850323886' User='' Successfully spooled mail Mail1493331093521-bbc87f2f-3129-4e2e-b55f-8a200a1d6baa from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:11:33,535 | james.smtpserver | Id='850323886' User='' Connection closed for 127.0.0.1
+INFO  00:11:43,586 | james.smtpserver | Id='453197485' User='' Connection established from 127.0.0.1
+INFO  00:11:43,612 | james.smtpserver | Id='453197485' User='' Successfully spooled mail Mail1493331103609-939986e7-bd06-440c-b64e-7261f76466b7 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:11:43,616 | james.smtpserver | Id='453197485' User='' Connection closed for 127.0.0.1
+INFO  00:11:53,677 | james.smtpserver | Id='408807937' User='' Connection established from 127.0.0.1
+INFO  00:11:53,706 | james.smtpserver | Id='408807937' User='' Successfully spooled mail Mail1493331113703-c2ca981f-23fd-47ce-83dd-13d4eb3cc6f5 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:11:53,711 | james.smtpserver | Id='408807937' User='' Connection closed for 127.0.0.1
+INFO  00:12:03,779 | james.smtpserver | Id='1288657558' User='' Connection established from 127.0.0.1
+INFO  00:12:03,806 | james.smtpserver | Id='1288657558' User='' Successfully spooled mail Mail1493331123802-fee7dd42-86a1-4850-aa2b-b5c765c419d1 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:12:03,811 | james.smtpserver | Id='1288657558' User='' Connection closed for 127.0.0.1
+INFO  00:12:13,869 | james.smtpserver | Id='982733211' User='' Connection established from 127.0.0.1
+INFO  00:12:13,892 | james.smtpserver | Id='982733211' User='' Successfully spooled mail Mail1493331133889-a779eae7-e123-49f0-ad59-aa73ef4b0b1c from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:12:13,897 | james.smtpserver | Id='982733211' User='' Connection closed for 127.0.0.1
+INFO  00:12:23,958 | james.smtpserver | Id='495564616' User='' Connection established from 127.0.0.1
+INFO  00:12:23,997 | james.smtpserver | Id='495564616' User='' Successfully spooled mail Mail1493331143987-0daf533d-47d3-4f8d-ac5b-4bf16a151919 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:12:24,007 | james.smtpserver | Id='495564616' User='' Connection closed for 127.0.0.1
+INFO  00:12:34,070 | james.smtpserver | Id='1029826826' User='' Connection established from 127.0.0.1
+INFO  00:12:34,093 | james.smtpserver | Id='1029826826' User='' Successfully spooled mail Mail1493331154087-10503d45-67f2-4921-b242-e3f766105986 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:12:34,097 | james.smtpserver | Id='1029826826' User='' Connection closed for 127.0.0.1
+INFO  00:12:44,154 | james.smtpserver | Id='1681215760' User='' Connection established from 127.0.0.1
+INFO  00:12:44,179 | james.smtpserver | Id='1681215760' User='' Successfully spooled mail Mail1493331164175-32094ba2-3cb2-4da6-8b2b-4989261bc5ba from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:12:44,183 | james.smtpserver | Id='1681215760' User='' Connection closed for 127.0.0.1
+INFO  00:12:54,238 | james.smtpserver | Id='947618750' User='' Connection established from 127.0.0.1
+INFO  00:12:54,263 | james.smtpserver | Id='947618750' User='' Successfully spooled mail Mail1493331174260-e4fbf9b3-774e-44ab-b6ce-86f84ff51a06 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:12:54,267 | james.smtpserver | Id='947618750' User='' Connection closed for 127.0.0.1
+INFO  00:13:04,327 | james.smtpserver | Id='1984400360' User='' Connection established from 127.0.0.1
+INFO  00:13:04,351 | james.smtpserver | Id='1984400360' User='' Successfully spooled mail Mail1493331184346-b4153607-1976-4aa9-9462-b2c8e6b071c9 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:13:04,359 | james.smtpserver | Id='1984400360' User='' Connection closed for 127.0.0.1
+INFO  00:13:14,420 | james.smtpserver | Id='415102897' User='' Connection established from 127.0.0.1
+INFO  00:13:14,444 | james.smtpserver | Id='415102897' User='' Successfully spooled mail Mail1493331194441-2d8b9110-c304-420c-9b90-9d607883c770 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:13:14,450 | james.smtpserver | Id='415102897' User='' Connection closed for 127.0.0.1
+INFO  00:13:24,505 | james.smtpserver | Id='1296374464' User='' Connection established from 127.0.0.1
+INFO  00:13:24,534 | james.smtpserver | Id='1296374464' User='' Successfully spooled mail Mail1493331204532-3710e499-1ec2-405e-af89-af2572a99d77 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:13:24,539 | james.smtpserver | Id='1296374464' User='' Connection closed for 127.0.0.1
+INFO  00:13:34,600 | james.smtpserver | Id='962695338' User='' Connection established from 127.0.0.1
+INFO  00:13:34,624 | james.smtpserver | Id='962695338' User='' Successfully spooled mail Mail1493331214622-7d157b09-e04c-411b-938a-7dd56f60610f from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:13:34,632 | james.smtpserver | Id='962695338' User='' Connection closed for 127.0.0.1
+INFO  00:13:44,695 | james.smtpserver | Id='1701941388' User='' Connection established from 127.0.0.1
+INFO  00:13:44,723 | james.smtpserver | Id='1701941388' User='' Successfully spooled mail Mail1493331224720-a1c515ef-8a3b-47a6-917f-a2a7a2eaae4a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:13:44,728 | james.smtpserver | Id='1701941388' User='' Connection closed for 127.0.0.1
+INFO  00:13:54,785 | james.smtpserver | Id='695885357' User='' Connection established from 127.0.0.1
+INFO  00:13:54,814 | james.smtpserver | Id='695885357' User='' Successfully spooled mail Mail1493331234811-82931a29-d65d-4a20-b918-fd5b401aa60f from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:13:54,819 | james.smtpserver | Id='695885357' User='' Connection closed for 127.0.0.1
+INFO  00:14:04,871 | james.smtpserver | Id='2014525488' User='' Connection established from 127.0.0.1
+INFO  00:14:04,896 | james.smtpserver | Id='2014525488' User='' Successfully spooled mail Mail1493331244894-0947469e-3c86-478b-80cb-6ee08229e5ac from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:14:04,900 | james.smtpserver | Id='2014525488' User='' Connection closed for 127.0.0.1
+INFO  00:14:14,955 | james.smtpserver | Id='1153532260' User='' Connection established from 127.0.0.1
+INFO  00:14:14,980 | james.smtpserver | Id='1153532260' User='' Successfully spooled mail Mail1493331254978-95bf9f21-03ab-471e-b1c2-e03b32956660 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:14:14,985 | james.smtpserver | Id='1153532260' User='' Connection closed for 127.0.0.1
+INFO  00:14:25,040 | james.smtpserver | Id='1307461061' User='' Connection established from 127.0.0.1
+INFO  00:14:25,066 | james.smtpserver | Id='1307461061' User='' Successfully spooled mail Mail1493331265064-0d03afd5-e1ce-4e57-ae6a-0e43d1befef1 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:14:25,071 | james.smtpserver | Id='1307461061' User='' Connection closed for 127.0.0.1
+INFO  00:14:35,131 | james.smtpserver | Id='859252257' User='' Connection established from 127.0.0.1
+INFO  00:14:35,159 | james.smtpserver | Id='859252257' User='' Successfully spooled mail Mail1493331275158-0569bb10-2d93-4eec-af1a-ad91aa4b6593 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:14:35,164 | james.smtpserver | Id='859252257' User='' Connection closed for 127.0.0.1
+INFO  00:14:45,228 | james.smtpserver | Id='1233519356' User='' Connection established from 127.0.0.1
+INFO  00:14:45,254 | james.smtpserver | Id='1233519356' User='' Successfully spooled mail Mail1493331285249-86fcedcb-18dc-4972-be93-1fb0245cdb27 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:14:45,260 | james.smtpserver | Id='1233519356' User='' Connection closed for 127.0.0.1
+INFO  00:14:55,317 | james.smtpserver | Id='310002461' User='' Connection established from 127.0.0.1
+INFO  00:14:55,345 | james.smtpserver | Id='310002461' User='' Successfully spooled mail Mail1493331295342-9efde243-b28f-413b-9699-25dcfefd5bde from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:14:55,350 | james.smtpserver | Id='310002461' User='' Connection closed for 127.0.0.1
+INFO  00:15:05,404 | james.smtpserver | Id='1356638984' User='' Connection established from 127.0.0.1
+INFO  00:15:05,427 | james.smtpserver | Id='1356638984' User='' Successfully spooled mail Mail1493331305424-a81411f6-fb04-4ff1-8854-eac605a69166 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:15:05,431 | james.smtpserver | Id='1356638984' User='' Connection closed for 127.0.0.1
+INFO  00:15:15,500 | james.smtpserver | Id='996362569' User='' Connection established from 127.0.0.1
+INFO  00:15:15,524 | james.smtpserver | Id='996362569' User='' Successfully spooled mail Mail1493331315522-ccbe9bcd-04f0-4a31-8bf7-be777d45ebb4 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:15:15,531 | james.smtpserver | Id='996362569' User='' Connection closed for 127.0.0.1
+INFO  00:15:25,584 | james.smtpserver | Id='25179965' User='' Connection established from 127.0.0.1
+INFO  00:15:25,613 | james.smtpserver | Id='25179965' User='' Successfully spooled mail Mail1493331325611-abccfb4a-fe68-4f5e-9ff4-36a805b827a7 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:15:25,617 | james.smtpserver | Id='25179965' User='' Connection closed for 127.0.0.1
+INFO  00:15:35,679 | james.smtpserver | Id='1463982892' User='' Connection established from 127.0.0.1
+INFO  00:15:35,705 | james.smtpserver | Id='1463982892' User='' Successfully spooled mail Mail1493331335700-f6bf7fae-c5a2-435a-a2b2-f5b6e307f56d from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:15:35,710 | james.smtpserver | Id='1463982892' User='' Connection closed for 127.0.0.1
+INFO  00:15:45,768 | james.smtpserver | Id='1770436567' User='' Connection established from 127.0.0.1
+INFO  00:15:45,793 | james.smtpserver | Id='1770436567' User='' Successfully spooled mail Mail1493331345789-7d8285b7-d112-42e2-a1b0-01a58136f7ec from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:15:45,796 | james.smtpserver | Id='1770436567' User='' Connection closed for 127.0.0.1
+INFO  00:15:55,851 | james.smtpserver | Id='165323144' User='' Connection established from 127.0.0.1
+INFO  00:15:55,880 | james.smtpserver | Id='165323144' User='' Successfully spooled mail Mail1493331355877-6978c0e7-8742-4852-aad3-dd7147f373b1 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:15:55,883 | james.smtpserver | Id='165323144' User='' Connection closed for 127.0.0.1
+INFO  00:16:05,943 | james.smtpserver | Id='1190270967' User='' Connection established from 127.0.0.1
+INFO  00:16:05,966 | james.smtpserver | Id='1190270967' User='' Successfully spooled mail Mail1493331365964-79693fe2-6b0d-44d1-bb1f-0c87c4bc9573 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:16:05,976 | james.smtpserver | Id='1190270967' User='' Connection closed for 127.0.0.1
+INFO  00:16:30,609 | james.smtpserver | Id='1189501362' User='' Connection established from 127.0.0.1
+INFO  00:16:30,637 | james.smtpserver | Id='1189501362' User='' Successfully spooled mail Mail1493331390634-2399b047-9122-4510-92e9-87230a09c507 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:16:30,643 | james.smtpserver | Id='1189501362' User='' Connection closed for 127.0.0.1
+INFO  00:16:40,730 | james.smtpserver | Id='1004234792' User='' Connection established from 127.0.0.1
+INFO  00:16:40,757 | james.smtpserver | Id='1004234792' User='' Successfully spooled mail Mail1493331400754-d930ca35-7ba8-4a79-95ac-a77226dc6b5e from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:16:40,759 | james.smtpserver | Id='1004234792' User='' Connection closed for 127.0.0.1
+INFO  00:16:50,824 | james.smtpserver | Id='914216999' User='' Connection established from 127.0.0.1
+INFO  00:16:50,846 | james.smtpserver | Id='914216999' User='' Successfully spooled mail Mail1493331410844-bbe8026f-c2b2-472f-8a75-bc39a13fba83 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:16:50,850 | james.smtpserver | Id='914216999' User='' Connection closed for 127.0.0.1
+INFO  00:17:00,915 | james.smtpserver | Id='1058070026' User='' Connection established from 127.0.0.1
+INFO  00:17:00,951 | james.smtpserver | Id='1058070026' User='' Successfully spooled mail Mail1493331420948-9cb743f6-028c-4115-8ca0-804e4b94a868 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:17:00,967 | james.smtpserver | Id='1058070026' User='' Connection closed for 127.0.0.1
+INFO  00:17:11,027 | james.smtpserver | Id='882231515' User='' Connection established from 127.0.0.1
+INFO  00:17:11,050 | james.smtpserver | Id='882231515' User='' Successfully spooled mail Mail1493331431049-e850d043-60b3-4a4b-8a2e-884e73787717 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:17:11,055 | james.smtpserver | Id='882231515' User='' Connection closed for 127.0.0.1
+INFO  00:17:21,129 | james.smtpserver | Id='18197996' User='' Connection established from 127.0.0.1
+INFO  00:17:21,155 | james.smtpserver | Id='18197996' User='' Successfully spooled mail Mail1493331441152-9f3e5a85-9f03-4473-9d83-6710dd2ef177 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:17:21,160 | james.smtpserver | Id='18197996' User='' Connection closed for 127.0.0.1
+INFO  00:17:31,224 | james.smtpserver | Id='2063713975' User='' Connection established from 127.0.0.1
+INFO  00:17:31,258 | james.smtpserver | Id='2063713975' User='' Successfully spooled mail Mail1493331451254-eb360645-f754-4310-9297-bafd262aa522 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:17:31,273 | james.smtpserver | Id='2063713975' User='' Connection closed for 127.0.0.1
+INFO  00:17:41,335 | james.smtpserver | Id='157735421' User='' Connection established from 127.0.0.1
+INFO  00:17:41,360 | james.smtpserver | Id='157735421' User='' Successfully spooled mail Mail1493331461356-a6cdc98c-3648-4f07-a740-da37e47c35dc from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:17:41,364 | james.smtpserver | Id='157735421' User='' Connection closed for 127.0.0.1
+INFO  00:17:51,430 | james.smtpserver | Id='1568945380' User='' Connection established from 127.0.0.1
+INFO  00:17:51,453 | james.smtpserver | Id='1568945380' User='' Successfully spooled mail Mail1493331471451-4983442a-f9f9-41da-b899-46664273537e from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:17:51,465 | james.smtpserver | Id='1568945380' User='' Connection closed for 127.0.0.1
+INFO  00:18:01,527 | james.smtpserver | Id='1146609952' User='' Connection established from 127.0.0.1
+INFO  00:18:01,554 | james.smtpserver | Id='1146609952' User='' Successfully spooled mail Mail1493331481552-4df5ef88-27cc-4fda-97df-7f1235b5ba33 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:18:01,565 | james.smtpserver | Id='1146609952' User='' Connection closed for 127.0.0.1
+INFO  00:18:11,628 | james.smtpserver | Id='999791045' User='' Connection established from 127.0.0.1
+INFO  00:18:11,653 | james.smtpserver | Id='999791045' User='' Successfully spooled mail Mail1493331491651-4619104d-990d-4d0d-b6f1-f872a7faf1bb from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:18:11,657 | james.smtpserver | Id='999791045' User='' Connection closed for 127.0.0.1
+INFO  00:18:21,726 | james.smtpserver | Id='808946630' User='' Connection established from 127.0.0.1
+INFO  00:18:21,751 | james.smtpserver | Id='808946630' User='' Successfully spooled mail Mail1493331501748-b2c651fa-4eaa-4083-87d8-b9d88807d214 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:18:21,759 | james.smtpserver | Id='808946630' User='' Connection closed for 127.0.0.1
+INFO  00:18:31,824 | james.smtpserver | Id='890592231' User='' Connection established from 127.0.0.1
+INFO  00:18:31,852 | james.smtpserver | Id='890592231' User='' Successfully spooled mail Mail1493331511849-8b4fc374-63ea-47b0-975e-da0cfab8f5f7 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:18:31,858 | james.smtpserver | Id='890592231' User='' Connection closed for 127.0.0.1
+INFO  00:18:41,919 | james.smtpserver | Id='1674804910' User='' Connection established from 127.0.0.1
+INFO  00:18:41,941 | james.smtpserver | Id='1674804910' User='' Successfully spooled mail Mail1493331521940-8d29ce2e-da40-4c9a-b1c3-f0ead615cca8 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:18:41,945 | james.smtpserver | Id='1674804910' User='' Connection closed for 127.0.0.1
+INFO  00:18:52,007 | james.smtpserver | Id='319576804' User='' Connection established from 127.0.0.1
+INFO  00:18:52,032 | james.smtpserver | Id='319576804' User='' Successfully spooled mail Mail1493331532029-5a034520-7877-4cc7-b5c4-4ae8474c26e8 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:18:52,043 | james.smtpserver | Id='319576804' User='' Connection closed for 127.0.0.1
+INFO  00:19:02,104 | james.smtpserver | Id='834101028' User='' Connection established from 127.0.0.1
+INFO  00:19:02,127 | james.smtpserver | Id='834101028' User='' Successfully spooled mail Mail1493331542124-d60d5311-3713-48fe-8707-b5e7bc4faed5 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:19:02,134 | james.smtpserver | Id='834101028' User='' Connection closed for 127.0.0.1
+INFO  00:19:12,203 | james.smtpserver | Id='51380746' User='' Connection established from 127.0.0.1
+INFO  00:19:12,228 | james.smtpserver | Id='51380746' User='' Successfully spooled mail Mail1493331552225-33c6c4f9-6aa7-4115-a43a-63cc4e245cb7 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:19:12,232 | james.smtpserver | Id='51380746' User='' Connection closed for 127.0.0.1
+INFO  00:19:22,301 | james.smtpserver | Id='181115165' User='' Connection established from 127.0.0.1
+INFO  00:19:22,324 | james.smtpserver | Id='181115165' User='' Successfully spooled mail Mail1493331562322-77c40938-80e3-43f7-9392-8637b413c81a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:19:22,328 | james.smtpserver | Id='181115165' User='' Connection closed for 127.0.0.1
+INFO  00:19:32,386 | james.smtpserver | Id='775667293' User='' Connection established from 127.0.0.1
+INFO  00:19:32,413 | james.smtpserver | Id='775667293' User='' Successfully spooled mail Mail1493331572409-ca73448f-a9e7-4459-b1db-f7d6787e91fe from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:19:32,418 | james.smtpserver | Id='775667293' User='' Connection closed for 127.0.0.1
+INFO  00:19:42,479 | james.smtpserver | Id='207069009' User='' Connection established from 127.0.0.1
+INFO  00:19:42,502 | james.smtpserver | Id='207069009' User='' Successfully spooled mail Mail1493331582500-3acdb7a4-2927-48c4-99ef-5a50f38da7da from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:19:42,505 | james.smtpserver | Id='207069009' User='' Connection closed for 127.0.0.1
+INFO  00:19:52,569 | james.smtpserver | Id='359797058' User='' Connection established from 127.0.0.1
+INFO  00:19:52,594 | james.smtpserver | Id='359797058' User='' Successfully spooled mail Mail1493331592591-23d4a94f-6902-42ef-8d85-4a6ae9ab255c from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:19:52,597 | james.smtpserver | Id='359797058' User='' Connection closed for 127.0.0.1
+INFO  00:20:02,668 | james.smtpserver | Id='1746116056' User='' Connection established from 127.0.0.1
+INFO  00:20:02,693 | james.smtpserver | Id='1746116056' User='' Successfully spooled mail Mail1493331602692-c447caec-a275-459a-b804-a4ed0987e4c0 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:20:02,697 | james.smtpserver | Id='1746116056' User='' Connection closed for 127.0.0.1
+INFO  00:20:12,766 | james.smtpserver | Id='1334885974' User='' Connection established from 127.0.0.1
+INFO  00:20:12,790 | james.smtpserver | Id='1334885974' User='' Successfully spooled mail Mail1493331612787-fb5dcd4e-aad7-419e-afe6-4516aa29f343 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:20:12,803 | james.smtpserver | Id='1334885974' User='' Connection closed for 127.0.0.1
+INFO  00:20:22,859 | james.smtpserver | Id='307930544' User='' Connection established from 127.0.0.1
+INFO  00:20:22,882 | james.smtpserver | Id='307930544' User='' Successfully spooled mail Mail1493331622880-30d01c9b-3c25-4c7f-a668-bc511717a3e3 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:20:22,887 | james.smtpserver | Id='307930544' User='' Connection closed for 127.0.0.1
+INFO  00:20:32,949 | james.smtpserver | Id='2018368681' User='' Connection established from 127.0.0.1
+INFO  00:20:32,974 | james.smtpserver | Id='2018368681' User='' Successfully spooled mail Mail1493331632973-8c33450a-d11d-4584-a2e3-d41add51a494 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:20:32,979 | james.smtpserver | Id='2018368681' User='' Connection closed for 127.0.0.1
+INFO  00:20:43,046 | james.smtpserver | Id='1100971118' User='' Connection established from 127.0.0.1
+INFO  00:20:43,071 | james.smtpserver | Id='1100971118' User='' Successfully spooled mail Mail1493331643068-4699022d-e3fe-45a7-8383-f0854bf5ea4a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:20:43,074 | james.smtpserver | Id='1100971118' User='' Connection closed for 127.0.0.1
+INFO  00:20:53,138 | james.smtpserver | Id='1215188441' User='' Connection established from 127.0.0.1
+INFO  00:20:53,161 | james.smtpserver | Id='1215188441' User='' Successfully spooled mail Mail1493331653158-d579d4bf-a61f-41cc-abf0-67e93dd94ce9 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:20:53,164 | james.smtpserver | Id='1215188441' User='' Connection closed for 127.0.0.1
+INFO  00:21:03,227 | james.smtpserver | Id='227095215' User='' Connection established from 127.0.0.1
+INFO  00:21:03,252 | james.smtpserver | Id='227095215' User='' Successfully spooled mail Mail1493331663250-5350c79c-8d60-4f8d-a12c-fda4c88e09b5 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:21:03,256 | james.smtpserver | Id='227095215' User='' Connection closed for 127.0.0.1
+INFO  00:21:13,324 | james.smtpserver | Id='1794090988' User='' Connection established from 127.0.0.1
+INFO  00:21:13,349 | james.smtpserver | Id='1794090988' User='' Successfully spooled mail Mail1493331673346-66391329-f670-4058-b5e2-ae9a0657bd76 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:21:13,360 | james.smtpserver | Id='1794090988' User='' Connection closed for 127.0.0.1
+INFO  00:21:23,411 | james.smtpserver | Id='1662317293' User='' Connection established from 127.0.0.1
+INFO  00:21:23,436 | james.smtpserver | Id='1662317293' User='' Successfully spooled mail Mail1493331683432-2d0b3a28-592d-43bc-9785-2f53003ffbce from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:21:23,438 | james.smtpserver | Id='1662317293' User='' Connection closed for 127.0.0.1
+INFO  00:21:33,501 | james.smtpserver | Id='221942441' User='' Connection established from 127.0.0.1
+INFO  00:21:33,530 | james.smtpserver | Id='221942441' User='' Successfully spooled mail Mail1493331693525-5949ee34-fc0c-44d7-a6ca-907305677dc1 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:21:33,536 | james.smtpserver | Id='221942441' User='' Connection closed for 127.0.0.1
+INFO  00:21:54,154 | james.smtpserver | Id='192176214' User='' Connection established from 127.0.0.1
+INFO  00:21:54,205 | james.smtpserver | Id='192176214' User='' Successfully spooled mail Mail1493331714199-b40f174a-b0fc-4920-9342-a35862a4a8cb from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:21:54,211 | james.smtpserver | Id='192176214' User='' Connection closed for 127.0.0.1
+INFO  00:22:04,275 | james.smtpserver | Id='616508993' User='' Connection established from 127.0.0.1
+INFO  00:22:04,302 | james.smtpserver | Id='616508993' User='' Successfully spooled mail Mail1493331724298-87ee1a37-5538-4c1b-8371-b5f93288237c from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:22:04,311 | james.smtpserver | Id='616508993' User='' Connection closed for 127.0.0.1
+INFO  00:22:14,362 | james.smtpserver | Id='1476456276' User='' Connection established from 127.0.0.1
+INFO  00:22:14,384 | james.smtpserver | Id='1476456276' User='' Successfully spooled mail Mail1493331734382-1efe5e26-e8dc-4ba0-aafa-93d0d2cfdcbc from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:22:14,388 | james.smtpserver | Id='1476456276' User='' Connection closed for 127.0.0.1
+INFO  00:22:24,439 | james.smtpserver | Id='843768783' User='' Connection established from 127.0.0.1
+INFO  00:22:24,462 | james.smtpserver | Id='843768783' User='' Successfully spooled mail Mail1493331744460-7480e6ba-ac54-4ea0-adee-f57aa0a85cae from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:22:24,466 | james.smtpserver | Id='843768783' User='' Connection closed for 127.0.0.1
+INFO  00:22:40,129 | james.smtpserver | Id='1863166414' User='' Connection established from 127.0.0.1
+INFO  00:22:40,157 | james.smtpserver | Id='1863166414' User='' Successfully spooled mail Mail1493331760154-b2425e90-edcd-46f1-b9c8-ef369cfe582b from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:22:40,167 | james.smtpserver | Id='1863166414' User='' Connection closed for 127.0.0.1
+INFO  00:22:55,457 | james.smtpserver | Id='896736445' User='' Connection established from 127.0.0.1
+INFO  00:22:55,480 | james.smtpserver | Id='896736445' User='' Successfully spooled mail Mail1493331775478-07c68109-e10f-4b07-88f8-4614dfca618e from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:22:55,483 | james.smtpserver | Id='896736445' User='' Connection closed for 127.0.0.1
+INFO  00:23:05,555 | james.smtpserver | Id='1136159857' User='' Connection established from 127.0.0.1
+INFO  00:23:05,592 | james.smtpserver | Id='1136159857' User='' Successfully spooled mail Mail1493331785586-9f629204-df55-4510-8828-23a51c6d9196 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:23:05,597 | james.smtpserver | Id='1136159857' User='' Connection closed for 127.0.0.1
+INFO  00:23:27,205 | james.smtpserver | Id='675830481' User='' Connection established from 127.0.0.1
+INFO  00:23:27,228 | james.smtpserver | Id='675830481' User='' Successfully spooled mail Mail1493331807226-c6cd3312-ceda-4b56-a3a1-8d9f23ee317b from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:23:27,232 | james.smtpserver | Id='675830481' User='' Connection closed for 127.0.0.1
+INFO  00:23:37,283 | james.smtpserver | Id='647383419' User='' Connection established from 127.0.0.1
+INFO  00:23:37,305 | james.smtpserver | Id='647383419' User='' Successfully spooled mail Mail1493331817303-3d765ffa-c10d-4635-b9dc-d9322d90e89a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:23:37,310 | james.smtpserver | Id='647383419' User='' Connection closed for 127.0.0.1
+INFO  00:23:47,361 | james.smtpserver | Id='1347202131' User='' Connection established from 127.0.0.1
+INFO  00:23:47,384 | james.smtpserver | Id='1347202131' User='' Successfully spooled mail Mail1493331827381-8d9e1207-cf3b-4c98-b697-77c0b7e39231 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:23:47,395 | james.smtpserver | Id='1347202131' User='' Connection closed for 127.0.0.1
+INFO  00:23:57,443 | james.smtpserver | Id='152371062' User='' Connection established from 127.0.0.1
+INFO  00:23:57,471 | james.smtpserver | Id='152371062' User='' Successfully spooled mail Mail1493331837468-32198560-61c0-4c4a-80c5-b666e78e88eb from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:23:57,477 | james.smtpserver | Id='152371062' User='' Connection closed for 127.0.0.1
+INFO  00:24:07,527 | james.smtpserver | Id='1106388342' User='' Connection established from 127.0.0.1
+INFO  00:24:07,550 | james.smtpserver | Id='1106388342' User='' Successfully spooled mail Mail1493331847548-98c28ec9-4849-490c-8c26-f90e9e40e033 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:24:07,554 | james.smtpserver | Id='1106388342' User='' Connection closed for 127.0.0.1
+INFO  00:24:17,607 | james.smtpserver | Id='522145781' User='' Connection established from 127.0.0.1
+INFO  00:24:17,633 | james.smtpserver | Id='522145781' User='' Successfully spooled mail Mail1493331857630-81ce5d9b-1478-4c52-954d-494cc1d55e88 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:24:17,637 | james.smtpserver | Id='522145781' User='' Connection closed for 127.0.0.1
+INFO  00:24:27,687 | james.smtpserver | Id='1917726944' User='' Connection established from 127.0.0.1
+INFO  00:24:27,713 | james.smtpserver | Id='1917726944' User='' Successfully spooled mail Mail1493331867711-9447eadd-fa4f-42a3-b3fa-600ae65f4c27 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:24:27,717 | james.smtpserver | Id='1917726944' User='' Connection closed for 127.0.0.1
+INFO  00:24:46,713 | james.smtpserver | Id='1369206558' User='' Connection established from 127.0.0.1
+INFO  00:24:46,740 | james.smtpserver | Id='1369206558' User='' Successfully spooled mail Mail1493331886735-e6546de9-4b19-4973-b5d6-75c08d312e9f from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:24:46,744 | james.smtpserver | Id='1369206558' User='' Connection closed for 127.0.0.1
+INFO  00:24:56,829 | james.smtpserver | Id='1271574534' User='' Connection established from 127.0.0.1
+INFO  00:24:56,865 | james.smtpserver | Id='1271574534' User='' Successfully spooled mail Mail1493331896857-f1b2dfce-69fe-41d4-9053-d595981f8917 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:24:56,902 | james.smtpserver | Id='1271574534' User='' Connection closed for 127.0.0.1
+INFO  00:25:06,955 | james.smtpserver | Id='42610540' User='' Connection established from 127.0.0.1
+INFO  00:25:06,984 | james.smtpserver | Id='42610540' User='' Successfully spooled mail Mail1493331906982-97607e12-d8e0-453e-a867-5a602f38f4a0 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:25:06,987 | james.smtpserver | Id='42610540' User='' Connection closed for 127.0.0.1
+INFO  00:25:17,039 | james.smtpserver | Id='1444059669' User='' Connection established from 127.0.0.1
+INFO  00:25:17,063 | james.smtpserver | Id='1444059669' User='' Successfully spooled mail Mail1493331917061-bb5dcad5-badb-41b2-b3fd-e84ef107ee43 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:25:17,068 | james.smtpserver | Id='1444059669' User='' Connection closed for 127.0.0.1
+INFO  00:25:27,120 | james.smtpserver | Id='1462310753' User='' Connection established from 127.0.0.1
+INFO  00:25:27,149 | james.smtpserver | Id='1462310753' User='' Successfully spooled mail Mail1493331927143-e0893015-5459-41ff-a3e2-a32e9abd5673 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:25:27,155 | james.smtpserver | Id='1462310753' User='' Connection closed for 127.0.0.1
+INFO  00:25:37,211 | james.smtpserver | Id='1868129042' User='' Connection established from 127.0.0.1
+INFO  00:25:37,237 | james.smtpserver | Id='1868129042' User='' Successfully spooled mail Mail1493331937235-5c05f832-e353-4237-a675-dff9834e42fb from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:25:37,242 | james.smtpserver | Id='1868129042' User='' Connection closed for 127.0.0.1
+INFO  00:25:47,304 | james.smtpserver | Id='701010349' User='' Connection established from 127.0.0.1
+INFO  00:25:47,334 | james.smtpserver | Id='701010349' User='' Successfully spooled mail Mail1493331947328-f4dc5472-a68e-4b4b-85e3-df02c08ddf15 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:25:47,339 | james.smtpserver | Id='701010349' User='' Connection closed for 127.0.0.1
+INFO  00:25:57,396 | james.smtpserver | Id='1822536725' User='' Connection established from 127.0.0.1
+INFO  00:25:57,420 | james.smtpserver | Id='1822536725' User='' Successfully spooled mail Mail1493331957417-39972cc2-27b3-460b-b48b-251dd9986475 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:25:57,431 | james.smtpserver | Id='1822536725' User='' Connection closed for 127.0.0.1
+INFO  00:26:07,481 | james.smtpserver | Id='528669913' User='' Connection established from 127.0.0.1
+INFO  00:26:07,504 | james.smtpserver | Id='528669913' User='' Successfully spooled mail Mail1493331967502-61adc0c2-b016-494d-9ff4-ea40881bd580 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:26:07,508 | james.smtpserver | Id='528669913' User='' Connection closed for 127.0.0.1
+INFO  00:26:17,571 | james.smtpserver | Id='380737753' User='' Connection established from 127.0.0.1
+INFO  00:26:17,600 | james.smtpserver | Id='380737753' User='' Successfully spooled mail Mail1493331977597-71d2f344-be40-46f8-be79-3741e0caad8a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:26:17,611 | james.smtpserver | Id='380737753' User='' Connection closed for 127.0.0.1
+INFO  00:26:27,661 | james.smtpserver | Id='1050746445' User='' Connection established from 127.0.0.1
+INFO  00:26:27,686 | james.smtpserver | Id='1050746445' User='' Successfully spooled mail Mail1493331987683-99866ed1-9a4c-4eb0-946d-cd671bbe1fe2 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:26:27,691 | james.smtpserver | Id='1050746445' User='' Connection closed for 127.0.0.1
+INFO  00:26:37,739 | james.smtpserver | Id='1597994331' User='' Connection established from 127.0.0.1
+INFO  00:26:37,768 | james.smtpserver | Id='1597994331' User='' Successfully spooled mail Mail1493331997766-d0f74409-58cc-48f2-9dda-1c4023f40bc0 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:26:37,772 | james.smtpserver | Id='1597994331' User='' Connection closed for 127.0.0.1
+INFO  00:26:47,828 | james.smtpserver | Id='1023538610' User='' Connection established from 127.0.0.1
+INFO  00:26:47,851 | james.smtpserver | Id='1023538610' User='' Successfully spooled mail Mail1493332007849-9c8ea88c-2ce6-481a-b5b7-9858e73185bb from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:26:47,855 | james.smtpserver | Id='1023538610' User='' Connection closed for 127.0.0.1
+INFO  00:26:57,921 | james.smtpserver | Id='1323715804' User='' Connection established from 127.0.0.1
+INFO  00:26:57,950 | james.smtpserver | Id='1323715804' User='' Successfully spooled mail Mail1493332017946-da1ddc57-c295-444c-978f-5f97c8fc428a from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:26:57,956 | james.smtpserver | Id='1323715804' User='' Connection closed for 127.0.0.1
+INFO  00:27:13,370 | james.smtpserver | Id='1363022527' User='' Connection established from 127.0.0.1
+INFO  00:27:13,402 | james.smtpserver | Id='1363022527' User='' Successfully spooled mail Mail1493332033399-ef9cd1ab-fb65-4f87-a46b-d5d72c9fbf28 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:27:13,406 | james.smtpserver | Id='1363022527' User='' Connection closed for 127.0.0.1
+INFO  00:27:23,499 | james.smtpserver | Id='2081374575' User='' Connection established from 127.0.0.1
+INFO  00:27:23,531 | james.smtpserver | Id='2081374575' User='' Successfully spooled mail Mail1493332043523-12025c05-93f3-4b45-a5f6-f300de56f443 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:27:23,536 | james.smtpserver | Id='2081374575' User='' Connection closed for 127.0.0.1
+INFO  00:27:33,620 | james.smtpserver | Id='955818798' User='' Connection established from 127.0.0.1
+INFO  00:27:33,655 | james.smtpserver | Id='955818798' User='' Successfully spooled mail Mail1493332053647-424c0e34-d7e2-4bbd-97e7-48daad4b1303 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:27:33,662 | james.smtpserver | Id='955818798' User='' Connection closed for 127.0.0.1
+INFO  00:27:43,727 | james.smtpserver | Id='637170556' User='' Connection established from 127.0.0.1
+INFO  00:27:43,779 | james.smtpserver | Id='637170556' User='' Successfully spooled mail Mail1493332063770-6c563ea6-61b5-4b6b-b5c6-944f6fd446d8 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:27:43,784 | james.smtpserver | Id='637170556' User='' Connection closed for 127.0.0.1
+INFO  00:27:53,846 | james.smtpserver | Id='1452335571' User='' Connection established from 127.0.0.1
+INFO  00:27:53,869 | james.smtpserver | Id='1452335571' User='' Successfully spooled mail Mail1493332073867-c5ed897e-6bf8-4dc1-aac1-5717175ab2ec from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:27:53,872 | james.smtpserver | Id='1452335571' User='' Connection closed for 127.0.0.1
+INFO  00:28:03,937 | james.smtpserver | Id='1103939506' User='' Connection established from 127.0.0.1
+INFO  00:28:03,962 | james.smtpserver | Id='1103939506' User='' Successfully spooled mail Mail1493332083960-65c14e7f-c09a-4c28-9d04-68686ff7e075 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:28:03,968 | james.smtpserver | Id='1103939506' User='' Connection closed for 127.0.0.1
+INFO  00:28:14,043 | james.smtpserver | Id='1576057303' User='' Connection established from 127.0.0.1
+INFO  00:28:14,078 | james.smtpserver | Id='1576057303' User='' Successfully spooled mail Mail1493332094070-5239c0a6-2642-4f80-adac-bac1594fabac from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:28:14,097 | james.smtpserver | Id='1576057303' User='' Connection closed for 127.0.0.1
+INFO  00:28:27,165 | james.smtpserver | Id='344868674' User='' Connection established from 127.0.0.1
+INFO  00:28:27,187 | james.smtpserver | Id='344868674' User='' Successfully spooled mail Mail1493332107184-a238938a-6787-4a7d-a025-7dd812747bf4 from servis@nwtis.nastava.foi.hr on lmlicenses.wip4.adobe.com/127.0.0.1 for [admin@nwtis.nastava.foi.hr]
+INFO  00:28:27,190 | james.smtpserver | Id='344868674' User='' Connection closed for 127.0.0.1

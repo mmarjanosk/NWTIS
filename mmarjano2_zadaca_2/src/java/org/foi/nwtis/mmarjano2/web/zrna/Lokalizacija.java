@@ -26,7 +26,7 @@ public class Lokalizacija implements Serializable {
 
     private static final ArrayList<Izbornik> izbornikJezika = new ArrayList<>();
 
-    private String odabraniJezik;
+    private String odabraniJezik="hr";
     
     static {
         izbornikJezika.add(new Izbornik("hrvatski", "hr"));

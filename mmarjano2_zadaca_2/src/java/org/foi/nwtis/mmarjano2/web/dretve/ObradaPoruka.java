@@ -6,11 +6,18 @@
 package org.foi.nwtis.mmarjano2.web.dretve;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -25,6 +32,7 @@ import javax.mail.Store;
 import javax.servlet.ServletContext;
 import org.foi.nwtis.mmarjano2.konfiguracije.Konfiguracija;
 import org.foi.nwtis.mmarjano2.konfiguracije.bp.BP_Konfiguracija;
+import org.foi.nwtis.mmarjano2.web.SlanjeMaila;
 
 /**
  *
@@ -34,6 +42,7 @@ public class ObradaPoruka extends Thread {
 
     private boolean prekid_obrade = false;
     private ServletContext sc = null;
+    public Store store;
 
     @Override
     public void interrupt() {
@@ -44,12 +53,9 @@ public class ObradaPoruka extends Thread {
     @Override
     public void run() {
 
-        int trajanjeObrade = 0;
-        int brojPoruka = 0;
-        int brojDodanihIOT = 0;
-        int brojMjerenihTEMP = 0;
-        int brojIzvrsenihEVENT = 0;
-        int brojPogresaka = 0;
+        long vrijemePocetka;
+        long vrijemeZavrsetka;
+
         boolean isCreated;
 
         String sintaksaADD = "^ADD IoT (\\d{1,6}) \\\"(.{1,30})\\\" ?GPS: (-?\\d{1,3}\\.\\d{6}),(-?\\d{1,3}\\.\\d{6});$";
@@ -64,21 +70,34 @@ public class ObradaPoruka extends Thread {
         String folder_nevaljano = konf.dajPostavku("mail.folderOther");
         String lozinka = konf.dajPostavku("mail.passwordThread");
         int trajanjeCiklusa = Integer.parseInt(konf.dajPostavku("mail.timeSecThread"));
-
+        String statadr = konf.dajPostavku("mail.usernameStatistics");
+        String statsubject = konf.dajPostavku("mail.subjectStatistics");
         BP_Konfiguracija BPkonf = (BP_Konfiguracija) sc.getAttribute("BP_Konfig");
 
         int redniBrojCiklusa = 0;
+        SlanjeMaila slanjeMaila = new SlanjeMaila();
 
         while (!prekid_obrade) {
             // Start the session
-            java.util.Properties properties = System.getProperties();
-            properties.put("mail.smtp.host", server);
-            Session session = Session.getInstance(properties, null);
+
+            vrijemePocetka = System.currentTimeMillis();
+            int trajanjeObrade = 0;
+            int brojPoruka = 0;
+            int brojDodanihIOT = 0;
+            int brojMjerenihTEMP = 0;
+            int brojIzvrsenihEVENT = 0;
+            int brojPogresaka = 0;
 
             // Connect to the store
             try {
-                Store store = session.getStore("imap");
+
+                java.util.Properties properties = System.getProperties();
+                properties.put("mail.smtp.host", server);
+                Session session = Session.getInstance(properties, null);
+
+                store = session.getStore("imap");
                 store.connect(server, korisnik, lozinka);
+
                 Folder NWTIS = store.getFolder(folder_valjano);
                 Folder NWTISO = store.getFolder(folder_nevaljano);
 
@@ -111,7 +130,7 @@ public class ObradaPoruka extends Thread {
                 }
                 Folder folder = store.getFolder("INBOX");
                 folder.open(Folder.READ_WRITE);
-                
+
 //                NWTIS.open(Folder.READ_WRITE);    
 //                Message[] messages1 = NWTIS.getMessages();
 //                for (int i = 0; i < messages1.length; ++i) {
@@ -127,9 +146,6 @@ public class ObradaPoruka extends Thread {
 //                    message.setFlag(Flags.Flag.DELETED, true);
 //                                    NWTISO.expunge();
 //                }
-              
-                
-
                 //pripremazabazu
                 String connURL = BPkonf.getServerDatabase() + BPkonf.getUserDatabase();
                 Connection conn = null;
@@ -148,7 +164,7 @@ public class ObradaPoruka extends Thread {
                 Message[] messages = folder.getMessages();
                 for (int i = 0; i < messages.length; ++i) {
                     Message message = messages[i];
-                    
+
                     brojPoruka++;
 
                     String vrstaPoruke = message.getContentType();
@@ -171,7 +187,7 @@ public class ObradaPoruka extends Thread {
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
 
                             try {
-                                folder.copyMessages(messages, NWTIS);
+
                                 conn = DriverManager.getConnection(connURL, ua, ap);
                                 stmt = conn.createStatement();
                                 rs = stmt.executeQuery(sql);
@@ -180,22 +196,25 @@ public class ObradaPoruka extends Thread {
                                     System.out.println("OK!");
                                     sql = "insert into uredaji (id,naziv,latitude,longitude) values(" + m.group(1) + ",\"" + m.group(2) + "\"," + m.group(3) + "," + m.group(4) + ")";
                                     //System.out.println(sql);
-
-                                    
+                                    folder.copyMessages(messages, NWTIS);
                                     System.out.println("kopirano");
                                     stmt.execute(sql);
                                     message.setFlag(Flags.Flag.DELETED, true);
                                     folder.expunge();
-                                    //System.out.println("Poruka izbrisana");
-                                    brojMjerenihTEMP++;
+                                    System.out.println("Poruka izbrisana");
+                                    brojDodanihIOT++;
                                     flag = true;
                                 } else {
-                                    //System.out.println("Ima zapis");
+                                    folder.copyMessages(messages, NWTISO);
+                                    message.setFlag(Flags.Flag.DELETED, true);
+                                    folder.expunge();
+                                    flag = true;
+                                    brojPogresaka++;
+                                    
                                 }
                             } catch (SQLException ex) {
                                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
                             }
-                            brojDodanihIOT++;
                             status = false;
                         }
 
@@ -213,10 +232,10 @@ public class ObradaPoruka extends Thread {
                                 rs = stmt.executeQuery(sql);
                                 if (rs != null) {
                                     System.out.println("OK!");
-                                    sql = "insert into temparature (id,temp,vrijeme_mjerenja) values(" + m.group(1) + "," + m.group(10) + ",\"" + m.group(2) + "\")";
-                                          System.out.println(sql);
+                                    sql = "insert into temperature (id,temp,vrijeme_mjerenja) values(" + m.group(1) + "," + m.group(10) + ",\"" + m.group(2) + "\")";
+                                    System.out.println(sql);
                                     stmt.execute(sql);
-                                    
+
                                     message.setFlag(Flags.Flag.DELETED, true);
                                     folder.expunge();
                                     //     System.out.println("Poruka izbrisana");
@@ -238,22 +257,42 @@ public class ObradaPoruka extends Thread {
                             //System.out.println(m.group(1) + " " + m.group(2) + " " + m.group(3));
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
                             try {
-                                folder.copyMessages(messages, NWTIS);
+
                                 conn = DriverManager.getConnection(connURL, ua, ap);
                                 stmt = conn.createStatement();
                                 rs = stmt.executeQuery(sql);
+
                                 if (rs != null) {
-                                    //      System.out.println("OK!");
-                                    sql = "insert into dogadaji (id,vrsta,vrijeme_izvrsavanja) values(" + m.group(1) + "," + m.group(9) + ",\"" + m.group(2) + "\")";
-                                       System.out.println(sql);
-                                    stmt.execute(sql);
+
                                     
-                                    message.setFlag(Flags.Flag.DELETED, true);
-                                    folder.expunge();
-                                    //  System.out.println("Poruka izbrisana");
-                                    brojIzvrsenihEVENT++;
-                                    flag = true;
+                                    sql = "select vrsta from dogadaji_vrste where vrsta=" + m.group(9);
+                                    System.out.println(sql);
+                                    rs = stmt.executeQuery(sql);
+                                    if (rs.next()) {
+                                        sql = "insert into dogadaji (id,vrsta,vrijeme_izvrsavanja) values(" + m.group(1) + "," + m.group(9) + ",\"" + m.group(2) + "\")";
+//                                       System.out.println(sql);
+                                        stmt.execute(sql);
+                                        folder.copyMessages(messages, NWTIS);
+                                        message.setFlag(Flags.Flag.DELETED, true);
+                                        folder.expunge();
+                                        //  System.out.println("Poruka izbrisana");
+                                        brojIzvrsenihEVENT++;
+                                        flag = true;
+                                    } else {
+                                        folder.copyMessages(messages, NWTISO);
+                                        message.setFlag(Flags.Flag.DELETED, true);
+                                        folder.expunge();
+                                        flag = true;
+                                        brojPogresaka++;  
+                                    }
+                                } else {
+                                    folder.copyMessages(messages, NWTISO);
+                                        message.setFlag(Flags.Flag.DELETED, true);
+                                        folder.expunge();
+                                        flag = true;
+                                        brojPogresaka++;  
                                 }
+                                
                             } catch (SQLException ex) {
                                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -264,8 +303,7 @@ public class ObradaPoruka extends Thread {
                         if (flag == false) {
                             folder.copyMessages(messages, NWTISO);
                             System.out.println("kopirano");
-                            message.setFlag(Flags.Flag.DELETED, true);
-                            folder.expunge();
+
                             brojPogresaka++;
                         }
 
@@ -278,10 +316,52 @@ public class ObradaPoruka extends Thread {
 
                     }
                 }
-                redniBrojCiklusa++;
-                System.out.println("Obrada prouka u ciklusu: " + redniBrojCiklusa);
-                sleep(trajanjeCiklusa * 1000 - trajanjeObrade);
 
+                redniBrojCiklusa++;
+
+                trajanjeObrade = (int) System.currentTimeMillis() - (int) vrijemePocetka;
+                sleep(trajanjeCiklusa * 1000 - trajanjeObrade);
+                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy hh.mm.ss.zzz");
+                Date pocetak = new Date(vrijemePocetka);
+                sdf.format(pocetak);
+                System.out.println(pocetak);
+                vrijemeZavrsetka = System.currentTimeMillis();
+                Date kraj = new Date(vrijemeZavrsetka);
+                sdf.format(kraj);
+                System.out.println(kraj);
+                BigDecimal bd = new BigDecimal(redniBrojCiklusa);
+                store.close();
+                store.connect(server, statadr,
+                        "654321");
+                Folder folder2 = store.getFolder("INBOX");
+                int rednibroj = folder2.getMessageCount();
+                System.out.println(folder2.getMessageCount());
+                rednibroj++;
+                store.close();;
+
+                DecimalFormat formatter = (DecimalFormat) DecimalFormat.getInstance(new Locale("en_GB"));
+                DecimalFormatSymbols customSymbol = new DecimalFormatSymbols();
+                customSymbol.setDecimalSeparator('.');
+                customSymbol.setGroupingSeparator('.');
+                ((DecimalFormat) formatter).setDecimalFormatSymbols(customSymbol);
+                formatter.setGroupingUsed(true);
+                System.out.println(formatter.format(bd.longValue()));
+                String redniBroj = formatter.format(rednibroj);
+                System.out.println("Obrada poruka u ciklusu: " + redniBroj);
+
+                String subject = statsubject + " " + redniBroj;
+                String content = "Obrada započela u: " + pocetak + " "
+                        + "Obrada završila u: " + kraj + " "
+                        + "Trajanje obrade :" + trajanjeObrade + " "
+                        + "Broj poruka : " + brojPoruka + " "
+                        + "Broj dodanih Iot : " + brojDodanihIOT + " "
+                        + "Broj mjerenih TEMP: " + brojMjerenihTEMP + " "
+                        + "Broj izvrsenih EVENT: " + brojIzvrsenihEVENT + " "
+                        + "Broj pogresaka:" + brojPogresaka + " ";
+                slanjeMaila.salji(korisnik, statadr, subject, content);
+                System.out.println(subject);
+                System.out.println(content);
+                System.out.println("POSLANO");
             } catch (NoSuchProviderException ex) {
                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
             } catch (MessagingException | InterruptedException ex) {
@@ -289,7 +369,6 @@ public class ObradaPoruka extends Thread {
             } catch (IOException ex) {
                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
             }
-
         }
     }
 
@@ -301,4 +380,5 @@ public class ObradaPoruka extends Thread {
     public void setSc(ServletContext sc) {
         this.sc = sc;
     }
+
 }

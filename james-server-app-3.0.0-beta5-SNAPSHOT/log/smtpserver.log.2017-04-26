@@ -1,0 +1,8 @@
+INFO  19:35:01,836 | james.smtpserver | SMTP Service bound to: 0.0.0.0:25
+INFO  19:35:01,842 | james.smtpserver | SMTP Service is running on: DESKTOP-4FK5MIK
+INFO  19:35:01,844 | james.smtpserver | SMTP Service handler hello name is: DESKTOP-4FK5MIK
+INFO  19:35:01,847 | james.smtpserver | SMTP Service handler connection timeout is: 360
+INFO  19:35:01,849 | james.smtpserver | SMTP Service connection backlog is: 200
+INFO  19:35:01,869 | james.smtpserver | This SMTP server requires authentication.
+INFO  19:35:01,875 | james.smtpserver | No maximum message size is enforced for this server.
+INFO  19:35:02,585 | james.smtpserver | Init SMTP Service done

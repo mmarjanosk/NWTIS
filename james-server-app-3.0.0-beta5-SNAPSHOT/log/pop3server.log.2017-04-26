@@ -1,0 +1,6 @@
+INFO  19:35:02,628 | james.pop3server | POP3 Service bound to: 0.0.0.0:110
+INFO  19:35:02,637 | james.pop3server | POP3 Service is running on: DESKTOP-4FK5MIK
+INFO  19:35:02,640 | james.pop3server | POP3 Service handler hello name is: DESKTOP-4FK5MIK
+INFO  19:35:02,642 | james.pop3server | POP3 Service handler connection timeout is: 1200
+INFO  19:35:02,644 | james.pop3server | POP3 Service connection backlog is: 200
+INFO  19:35:02,816 | james.pop3server | Init POP3 Service done

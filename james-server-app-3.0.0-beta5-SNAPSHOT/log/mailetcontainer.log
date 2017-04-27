@@ -1,172 +1,162 @@
-INFO  09:06:36,559 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:36,591 | james.mailprocessor | Mailet PostmasterAlias instantiated.
-INFO  09:06:36,606 | james.mailprocessor | Matcher RelayLimit=30 instantiated.
-INFO  09:06:36,606 | james.mailprocessor | Mailet Null instantiated.
-INFO  09:06:36,606 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  09:06:36,622 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  09:06:36,622 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:36,622 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  09:06:37,216 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  09:06:37,231 | james.mailprocessor | Mailet SetMimeHeader instantiated.
-INFO  09:06:37,231 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  09:06:37,247 | james.mailprocessor | Mailet RecipientToLowerCase instantiated.
-INFO  09:06:37,247 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:37,294 | james.mailprocessor | Mailet RecipientRewriteTable instantiated.
-INFO  09:06:37,294 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  09:06:37,450 | james.mailprocessor | Mailet LocalDelivery instantiated.
-INFO  09:06:37,466 | james.mailprocessor | Matcher HostIsLocal instantiated.
-INFO  09:06:37,466 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  09:06:37,481 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:37,528 | james.mailetcontext | maxRetries is larger than total number of attempts specified.  Increasing last delayTime with 19 attempts 
-INFO  09:06:37,528 | james.mailetcontext | Delay of 21600000 msecs is now attempted: 20 times
-INFO  09:06:37,544 | james.mailprocessor | Mailet RemoteDelivery instantiated.
-INFO  09:06:38,309 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:38,372 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  09:06:38,481 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:38,497 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  09:06:38,622 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:38,653 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  09:06:38,809 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:38,841 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  09:06:38,934 | james.mailprocessor | Matcher All instantiated.
-INFO  09:06:38,981 | james.mailprocessor | Mailet DSNBounce instantiated.
-INFO  09:06:39,122 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler init...
-INFO  09:06:39,122 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler uses 20 Thread(s)
-INFO  09:06:39,122 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-1
-INFO  09:06:39,138 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-2
-INFO  09:06:39,138 | james.mailspooler | Queue=MailQueue:spool
-INFO  09:06:39,138 | james.mailspooler | Queue=MailQueue:spool
-INFO  10:35:31,282 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:31,313 | james.mailprocessor | Mailet PostmasterAlias instantiated.
-INFO  10:35:31,313 | james.mailprocessor | Matcher RelayLimit=30 instantiated.
-INFO  10:35:31,329 | james.mailprocessor | Mailet Null instantiated.
-INFO  10:35:31,344 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  10:35:31,344 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  10:35:31,344 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:31,344 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  10:35:32,103 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  10:35:32,117 | james.mailprocessor | Mailet SetMimeHeader instantiated.
-INFO  10:35:32,129 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  10:35:32,142 | james.mailprocessor | Mailet RecipientToLowerCase instantiated.
-INFO  10:35:32,159 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:32,199 | james.mailprocessor | Mailet RecipientRewriteTable instantiated.
-INFO  10:35:32,201 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  10:35:32,378 | james.mailprocessor | Mailet LocalDelivery instantiated.
-INFO  10:35:32,378 | james.mailprocessor | Matcher HostIsLocal instantiated.
-INFO  10:35:32,394 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  10:35:32,394 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:32,425 | james.mailetcontext | maxRetries is larger than total number of attempts specified.  Increasing last delayTime with 19 attempts 
-INFO  10:35:32,425 | james.mailetcontext | Delay of 21600000 msecs is now attempted: 20 times
-INFO  10:35:32,441 | james.mailprocessor | Mailet RemoteDelivery instantiated.
-INFO  10:35:33,165 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:33,212 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  10:35:33,319 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:33,351 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  10:35:33,460 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:33,476 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  10:35:33,601 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:33,616 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  10:35:33,755 | james.mailprocessor | Matcher All instantiated.
-INFO  10:35:33,802 | james.mailprocessor | Mailet DSNBounce instantiated.
-INFO  10:35:33,942 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler init...
-INFO  10:35:33,942 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler uses 20 Thread(s)
-INFO  10:35:33,942 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-1
-INFO  10:35:33,942 | james.mailspooler | Queue=MailQueue:spool
-INFO  10:35:33,942 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-2
-INFO  10:35:33,958 | james.mailspooler | Queue=MailQueue:spool
-INFO  10:49:05,487 | james.mailetcontext | Local delivered mail Mail1493110144874-2d80a3d0-4323-4aca-bec6-d83c57390ba9 sucessfully from msq@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  10:59:32,709 | james.mailetcontext | Local delivered mail Mail1493110772523-94abed2f-89d1-43dd-8720-a725180a2dad sucessfully from ne@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  11:08:33,958 | james.mailetcontext | Local delivered mail Mail1493111313816-44338886-5f9a-4f41-b27a-cfe994e8aa0b sucessfully from netko@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  11:11:54,113 | james.mailetcontext | Local delivered mail Mail1493111513950-69aa3dbc-6788-4c04-904d-602ca06820aa sucessfully from neto@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  11:20:20,532 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler dispose...
-INFO  11:20:20,533 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler thread shutdown completed.
-INFO  11:20:20,537 | james.mailspooler | Stop org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-1
-INFO  11:20:20,538 | james.mailspooler | Stop org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-2
-INFO  11:23:51,087 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:51,103 | james.mailprocessor | Mailet PostmasterAlias instantiated.
-INFO  11:23:51,119 | james.mailprocessor | Matcher RelayLimit=30 instantiated.
-INFO  11:23:51,119 | james.mailprocessor | Mailet Null instantiated.
-INFO  11:23:51,134 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  11:23:51,134 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  11:23:51,134 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:51,134 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  11:23:51,905 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  11:23:51,921 | james.mailprocessor | Mailet SetMimeHeader instantiated.
-INFO  11:23:51,936 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  11:23:51,952 | james.mailprocessor | Mailet RecipientToLowerCase instantiated.
-INFO  11:23:51,952 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:51,989 | james.mailprocessor | Mailet RecipientRewriteTable instantiated.
-INFO  11:23:51,989 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  11:23:52,224 | james.mailprocessor | Mailet LocalDelivery instantiated.
-INFO  11:23:52,239 | james.mailprocessor | Matcher HostIsLocal instantiated.
-INFO  11:23:52,255 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  11:23:52,255 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:52,302 | james.mailetcontext | maxRetries is larger than total number of attempts specified.  Increasing last delayTime with 19 attempts 
-INFO  11:23:52,302 | james.mailetcontext | Delay of 21600000 msecs is now attempted: 20 times
-INFO  11:23:52,333 | james.mailprocessor | Mailet RemoteDelivery instantiated.
-INFO  11:23:53,921 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:53,984 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  11:23:54,136 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:54,152 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  11:23:54,308 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:54,324 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  11:23:54,455 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:54,492 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  11:23:54,638 | james.mailprocessor | Matcher All instantiated.
-INFO  11:23:54,685 | james.mailprocessor | Mailet DSNBounce instantiated.
-INFO  11:23:54,826 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler init...
-INFO  11:23:54,826 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler uses 20 Thread(s)
-INFO  11:23:54,834 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-2
-INFO  11:23:54,835 | james.mailspooler | Queue=MailQueue:spool
-INFO  11:23:54,836 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-1
-INFO  11:23:54,852 | james.mailspooler | Queue=MailQueue:spool
-INFO  18:33:33,771 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:33,807 | james.mailprocessor | Mailet PostmasterAlias instantiated.
-INFO  18:33:33,818 | james.mailprocessor | Matcher RelayLimit=30 instantiated.
-INFO  18:33:33,829 | james.mailprocessor | Mailet Null instantiated.
-INFO  18:33:33,845 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  18:33:33,852 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  18:33:33,853 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:33,860 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  18:33:35,043 | james.mailprocessor | Matcher SMTPAuthSuccessful instantiated.
-INFO  18:33:35,072 | james.mailprocessor | Mailet SetMimeHeader instantiated.
-INFO  18:33:35,102 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  18:33:35,118 | james.mailprocessor | Mailet RecipientToLowerCase instantiated.
-INFO  18:33:35,133 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:35,184 | james.mailprocessor | Mailet RecipientRewriteTable instantiated.
-INFO  18:33:35,186 | james.mailprocessor | Matcher RecipientIsLocal instantiated.
-INFO  18:33:35,373 | james.mailprocessor | Mailet LocalDelivery instantiated.
-INFO  18:33:35,385 | james.mailprocessor | Matcher HostIsLocal instantiated.
-INFO  18:33:35,388 | james.mailprocessor | Mailet ToProcessor instantiated.
-INFO  18:33:35,390 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:35,440 | james.mailetcontext | maxRetries is larger than total number of attempts specified.  Increasing last delayTime with 19 attempts 
-INFO  18:33:35,441 | james.mailetcontext | Delay of 21600000 msecs is now attempted: 20 times
-INFO  18:33:35,462 | james.mailprocessor | Mailet RemoteDelivery instantiated.
-INFO  18:33:36,287 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:36,353 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  18:33:36,481 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:36,499 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  18:33:36,637 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:36,655 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  18:33:36,819 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:36,842 | james.mailprocessor | Mailet ToRepository instantiated.
-INFO  18:33:36,989 | james.mailprocessor | Matcher All instantiated.
-INFO  18:33:37,038 | james.mailprocessor | Mailet DSNBounce instantiated.
-INFO  18:33:37,199 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler init...
-INFO  18:33:37,200 | james.mailspooler | org.apache.james.mailetcontainer.impl.JamesMailSpooler uses 20 Thread(s)
-INFO  18:33:37,216 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-2
-INFO  18:33:37,220 | james.mailspooler | Queue=MailQueue:spool
-INFO  18:33:37,221 | james.mailspooler | Run org.apache.james.mailetcontainer.impl.JamesMailSpooler: dequeuer-1
-INFO  18:33:37,232 | james.mailspooler | Queue=MailQueue:spool
-INFO  21:27:54,228 | james.mailetcontext | Local delivered mail Mail1493148473917-87902478-64a0-4a56-bd08-c2ad29b8ef90 sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  21:29:45,955 | james.mailetcontext | Local delivered mail Mail1493148585785-ed7b3ee8-c9ac-4d56-a47d-f88c5c48e243 sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  21:33:13,198 | james.mailetcontext | Local delivered mail Mail1493148793001-8ed4559d-0f2b-4ae7-aa16-933abcf3fa40 sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  21:34:59,017 | james.mailetcontext | Local delivered mail Mail1493148898859-01d6a6b3-7448-4a89-8e0e-bbb4e94c7fdc sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:01:11,160 | james.mailetcontext | Local delivered mail Mail1493150471059-3055eb9f-607c-44b0-8263-1b59573f6342 sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:30:45,761 | james.mailetcontext | Local delivered mail Mail1493152245633-ee29fcd5-05cd-493c-95cc-9ef31a1bbd17 sucessfully from TEST1@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:31:33,825 | james.mailetcontext | Local delivered mail Mail1493152293665-886ca512-3342-43ce-ad83-ffa7c09e6a82 sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:36:49,231 | james.mailetcontext | Local delivered mail Mail1493152609077-1138632a-d662-4b54-af2f-0ffe28e718fe sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:39:24,791 | james.mailetcontext | Local delivered mail Mail1493152764679-c2c0eff9-c810-424a-ac67-d6c6817edb6d sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:39:49,049 | james.mailetcontext | Local delivered mail Mail1493152788932-32fe27e4-312e-49f1-a6b8-16701458919d sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:43:44,531 | james.mailetcontext | Local delivered mail Mail1493153024431-44b316ae-1ac3-4c40-be52-c4014667d804 sucessfully from mmarjano2@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
-INFO  22:47:27,712 | james.mailetcontext | Local delivered mail Mail1493153247572-3d780b36-d489-4da4-8874-64006164fa62 sucessfully from sds@localhost to servis@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:00:02,866 | james.mailetcontext | Local delivered mail Mail1493330402808-4aeb4b05-648e-47e5-b746-8e1ee280348d sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:00:12,979 | james.mailetcontext | Local delivered mail Mail1493330412903-71a492ba-9fb6-4c9b-a22a-153b89e23964 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:00:23,077 | james.mailetcontext | Local delivered mail Mail1493330423014-868b72cd-58ac-4a4c-be65-6220aad6dc33 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:00:33,164 | james.mailetcontext | Local delivered mail Mail1493330433100-45489e70-ed18-4351-822c-63c46ef9b432 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:00:43,258 | james.mailetcontext | Local delivered mail Mail1493330443194-2f1844a2-0b76-4386-b7e2-51521f301c61 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:00:53,390 | james.mailetcontext | Local delivered mail Mail1493330453296-a747b513-1b5d-45ad-8fbe-a57af1281781 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:01:17,785 | james.mailetcontext | Local delivered mail Mail1493330477696-9a886a30-4002-4e0f-91cf-9fa62e7d8d66 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:01:27,845 | james.mailetcontext | Local delivered mail Mail1493330487790-735ad874-a10d-4001-b673-5af91a3e14aa sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:01:37,923 | james.mailetcontext | Local delivered mail Mail1493330497873-94a5475b-ae06-4605-9389-394ecc04f090 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:01:48,021 | james.mailetcontext | Local delivered mail Mail1493330507963-a1b6c604-2924-4581-98a0-b62de7ca8662 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:01:58,141 | james.mailetcontext | Local delivered mail Mail1493330518069-6aca54ba-3672-4762-a767-3cca81a93274 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:02:08,246 | james.mailetcontext | Local delivered mail Mail1493330528186-45b742a8-eabc-44a8-a793-10389cb2a053 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:02:18,341 | james.mailetcontext | Local delivered mail Mail1493330538290-85feaee8-8887-4ac5-a689-8f92c0c3ddd3 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:02:28,438 | james.mailetcontext | Local delivered mail Mail1493330548386-e533fa12-00ce-4965-9f5b-5e49b05c46b2 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:02:38,562 | james.mailetcontext | Local delivered mail Mail1493330558484-0c112aec-8be7-4776-b105-e13da4c48821 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:02:48,636 | james.mailetcontext | Local delivered mail Mail1493330568588-fc245df9-bd92-4ede-b570-a17860492388 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:02:58,736 | james.mailetcontext | Local delivered mail Mail1493330578684-b5c23988-7b76-4ffa-9d39-2f5b1c8ea638 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:03:08,824 | james.mailetcontext | Local delivered mail Mail1493330588772-8992d58f-4e5d-41d9-af59-f1018b0ea588 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:03:18,914 | james.mailetcontext | Local delivered mail Mail1493330598868-2223b5c4-d49c-4821-99d8-6ddd85d9eb65 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:03:29,023 | james.mailetcontext | Local delivered mail Mail1493330608961-9e2aeea8-220a-4781-b0ba-d051c8738326 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:03:39,114 | james.mailetcontext | Local delivered mail Mail1493330619060-6fce22f6-7137-49f0-b170-5a97e1528ea8 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:03:49,210 | james.mailetcontext | Local delivered mail Mail1493330629164-ad779150-1e75-4553-a90f-a0335f8da2df sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:03:59,305 | james.mailetcontext | Local delivered mail Mail1493330639257-12d4626e-2030-4641-8dcb-dcdf9cd3ab59 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:04:09,437 | james.mailetcontext | Local delivered mail Mail1493330649375-22fb6a0d-5334-48f0-a0a7-af32513e47f9 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:04:19,543 | james.mailetcontext | Local delivered mail Mail1493330659483-00edad07-09f9-4e75-90b4-1580100f4f43 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:04:29,628 | james.mailetcontext | Local delivered mail Mail1493330669575-9918bb84-0871-4c45-a8fc-f20541fde426 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:04:39,717 | james.mailetcontext | Local delivered mail Mail1493330679663-948d19b2-b0c7-4170-bac9-be70c02919ac sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:04:49,830 | james.mailetcontext | Local delivered mail Mail1493330689780-6747b2a1-b67d-4a72-92f0-ebd5b209a9b0 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:04:59,946 | james.mailetcontext | Local delivered mail Mail1493330699877-df1efddf-3d29-4559-b4ed-76ad57b6aa5b sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:05:10,013 | james.mailetcontext | Local delivered mail Mail1493330709966-9ef322c4-9e63-4cf4-a07f-0d8d4801d044 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:05:20,115 | james.mailetcontext | Local delivered mail Mail1493330720060-a50e7b49-a71f-4552-9628-1f4e2de526d8 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:05:30,201 | james.mailetcontext | Local delivered mail Mail1493330730154-aaa8f0ff-d69b-496f-bb03-b9baf517565a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:05:40,322 | james.mailetcontext | Local delivered mail Mail1493330740254-e16e01ea-a3e9-416f-8ecf-6266169c5521 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:05:50,417 | james.mailetcontext | Local delivered mail Mail1493330750366-d022f030-0687-4634-977d-fd2a2ed8075c sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:06:00,507 | james.mailetcontext | Local delivered mail Mail1493330760460-996c8be8-4822-408b-9ebc-636f72c4565f sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:06:10,609 | james.mailetcontext | Local delivered mail Mail1493330770548-8fe325ab-a91b-49b9-84c1-b63a0836ed1a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:06:20,755 | james.mailetcontext | Local delivered mail Mail1493330780673-9bd81aa6-2343-40c8-b9c4-f3ff8fc6c022 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:06:30,835 | james.mailetcontext | Local delivered mail Mail1493330790783-092fd9eb-7de7-4ce6-a4c7-1f59424b38e4 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:06:40,945 | james.mailetcontext | Local delivered mail Mail1493330800864-ff6c8b3a-705d-42fd-ba70-0278b63e1a4f sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:06:51,036 | james.mailetcontext | Local delivered mail Mail1493330810963-a2df6507-e97e-4165-9801-ec44d42d066c sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:07:01,153 | james.mailetcontext | Local delivered mail Mail1493330821070-1259ec1d-d869-4acc-a811-0cd6001e0410 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:07:11,223 | james.mailetcontext | Local delivered mail Mail1493330831156-f6992243-c705-4178-8ff5-9928d251eed1 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:07:21,294 | james.mailetcontext | Local delivered mail Mail1493330841244-6d4702eb-e468-4d9f-baf9-d0a9d23c3a93 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:07:31,394 | james.mailetcontext | Local delivered mail Mail1493330851331-a8923336-911a-455a-8760-4072634aa4c2 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:07:41,481 | james.mailetcontext | Local delivered mail Mail1493330861419-d671d9e7-69ec-4197-8804-05a0e3d74449 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:07:51,559 | james.mailetcontext | Local delivered mail Mail1493330871506-3d0cb86b-82bd-45de-bc45-a28eea14213b sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:08:01,666 | james.mailetcontext | Local delivered mail Mail1493330881599-064ebf14-1a56-4278-bb7b-dd2b98ef2972 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:08:11,732 | james.mailetcontext | Local delivered mail Mail1493330891684-487b2693-3a84-4cf1-93d7-1378f6d3e8bf sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:08:21,834 | james.mailetcontext | Local delivered mail Mail1493330901779-4c33b5a5-717c-4199-a3f9-84cd50a8d619 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:08:31,931 | james.mailetcontext | Local delivered mail Mail1493330911869-feee8592-874a-4ec3-9d4b-5d98f81fc170 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:08:42,008 | james.mailetcontext | Local delivered mail Mail1493330921955-72241571-056f-4089-ac73-9d0f706037a6 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:08:52,095 | james.mailetcontext | Local delivered mail Mail1493330932043-1acd554f-8103-4b28-8878-dfb28235a41d sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:09:02,181 | james.mailetcontext | Local delivered mail Mail1493330942127-40db8840-1e00-4716-a06c-76d712272d33 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:09:12,257 | james.mailetcontext | Local delivered mail Mail1493330952207-c4ca075d-647c-404e-aec4-c0d946418635 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:09:22,335 | james.mailetcontext | Local delivered mail Mail1493330962288-f77ae05a-593c-4aff-a1a7-74f1d21181fa sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:09:32,425 | james.mailetcontext | Local delivered mail Mail1493330972374-e3a01c2b-d71e-446d-9c32-48e41b82719b sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:09:42,542 | james.mailetcontext | Local delivered mail Mail1493330982462-51d324cf-80db-4b78-be19-a00b18d5e897 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:09:52,601 | james.mailetcontext | Local delivered mail Mail1493330992551-349180a8-50da-4326-a596-f1e544e16fff sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:10:02,707 | james.mailetcontext | Local delivered mail Mail1493331002643-138ed9df-9384-4d6c-9914-9191eea10b4f sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:10:12,818 | james.mailetcontext | Local delivered mail Mail1493331012756-c8ef8f89-8bb5-4477-8223-736e000453e4 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:10:22,905 | james.mailetcontext | Local delivered mail Mail1493331022848-89803de0-8e85-44d0-abda-f4831b23b869 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:10:33,041 | james.mailetcontext | Local delivered mail Mail1493331032972-94d2b9cb-d55a-48d9-aaee-f2c5669336dd sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:10:43,124 | james.mailetcontext | Local delivered mail Mail1493331043067-09107dea-f218-48f2-8611-e1b46914e6bc sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:10:53,214 | james.mailetcontext | Local delivered mail Mail1493331053162-982cc5c3-6a8a-4bc8-898a-69d3837bbdce sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:11:03,330 | james.mailetcontext | Local delivered mail Mail1493331063257-0719e4f9-91a4-4705-9132-41837387f636 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:11:13,394 | james.mailetcontext | Local delivered mail Mail1493331073342-84d465d8-3621-486c-834b-0a8373242a2e sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:11:23,487 | james.mailetcontext | Local delivered mail Mail1493331083431-749a8678-2323-4001-bcfa-c98f6c59dd3a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:11:33,571 | james.mailetcontext | Local delivered mail Mail1493331093521-bbc87f2f-3129-4e2e-b55f-8a200a1d6baa sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:11:43,664 | james.mailetcontext | Local delivered mail Mail1493331103609-939986e7-bd06-440c-b64e-7261f76466b7 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:11:53,758 | james.mailetcontext | Local delivered mail Mail1493331113703-c2ca981f-23fd-47ce-83dd-13d4eb3cc6f5 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:12:03,862 | james.mailetcontext | Local delivered mail Mail1493331123802-fee7dd42-86a1-4850-aa2b-b5c765c419d1 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:12:13,952 | james.mailetcontext | Local delivered mail Mail1493331133889-a779eae7-e123-49f0-ad59-aa73ef4b0b1c sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:12:24,093 | james.mailetcontext | Local delivered mail Mail1493331143987-0daf533d-47d3-4f8d-ac5b-4bf16a151919 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:12:34,148 | james.mailetcontext | Local delivered mail Mail1493331154087-10503d45-67f2-4921-b242-e3f766105986 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:12:44,228 | james.mailetcontext | Local delivered mail Mail1493331164175-32094ba2-3cb2-4da6-8b2b-4989261bc5ba sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:12:54,313 | james.mailetcontext | Local delivered mail Mail1493331174260-e4fbf9b3-774e-44ab-b6ce-86f84ff51a06 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:13:04,414 | james.mailetcontext | Local delivered mail Mail1493331184346-b4153607-1976-4aa9-9462-b2c8e6b071c9 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:13:14,497 | james.mailetcontext | Local delivered mail Mail1493331194441-2d8b9110-c304-420c-9b90-9d607883c770 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:13:24,585 | james.mailetcontext | Local delivered mail Mail1493331204532-3710e499-1ec2-405e-af89-af2572a99d77 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:13:34,684 | james.mailetcontext | Local delivered mail Mail1493331214622-7d157b09-e04c-411b-938a-7dd56f60610f sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:13:44,804 | james.mailetcontext | Local delivered mail Mail1493331224720-a1c515ef-8a3b-47a6-917f-a2a7a2eaae4a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:13:54,866 | james.mailetcontext | Local delivered mail Mail1493331234811-82931a29-d65d-4a20-b918-fd5b401aa60f sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:14:04,949 | james.mailetcontext | Local delivered mail Mail1493331244894-0947469e-3c86-478b-80cb-6ee08229e5ac sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:14:15,042 | james.mailetcontext | Local delivered mail Mail1493331254978-95bf9f21-03ab-471e-b1c2-e03b32956660 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:14:25,125 | james.mailetcontext | Local delivered mail Mail1493331265064-0d03afd5-e1ce-4e57-ae6a-0e43d1befef1 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:14:35,216 | james.mailetcontext | Local delivered mail Mail1493331275158-0569bb10-2d93-4eec-af1a-ad91aa4b6593 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:14:45,305 | james.mailetcontext | Local delivered mail Mail1493331285249-86fcedcb-18dc-4972-be93-1fb0245cdb27 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:14:55,399 | james.mailetcontext | Local delivered mail Mail1493331295342-9efde243-b28f-413b-9699-25dcfefd5bde sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:15:05,482 | james.mailetcontext | Local delivered mail Mail1493331305424-a81411f6-fb04-4ff1-8854-eac605a69166 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:15:15,574 | james.mailetcontext | Local delivered mail Mail1493331315522-ccbe9bcd-04f0-4a31-8bf7-be777d45ebb4 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:15:25,659 | james.mailetcontext | Local delivered mail Mail1493331325611-abccfb4a-fe68-4f5e-9ff4-36a805b827a7 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:15:35,757 | james.mailetcontext | Local delivered mail Mail1493331335700-f6bf7fae-c5a2-435a-a2b2-f5b6e307f56d sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:15:45,839 | james.mailetcontext | Local delivered mail Mail1493331345789-7d8285b7-d112-42e2-a1b0-01a58136f7ec sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:15:55,926 | james.mailetcontext | Local delivered mail Mail1493331355877-6978c0e7-8742-4852-aad3-dd7147f373b1 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:16:06,024 | james.mailetcontext | Local delivered mail Mail1493331365964-79693fe2-6b0d-44d1-bb1f-0c87c4bc9573 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:16:30,689 | james.mailetcontext | Local delivered mail Mail1493331390634-2399b047-9122-4510-92e9-87230a09c507 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:16:40,812 | james.mailetcontext | Local delivered mail Mail1493331400754-d930ca35-7ba8-4a79-95ac-a77226dc6b5e sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:16:50,894 | james.mailetcontext | Local delivered mail Mail1493331410844-bbe8026f-c2b2-472f-8a75-bc39a13fba83 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:17:01,003 | james.mailetcontext | Local delivered mail Mail1493331420948-9cb743f6-028c-4115-8ca0-804e4b94a868 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:17:11,099 | james.mailetcontext | Local delivered mail Mail1493331431049-e850d043-60b3-4a4b-8a2e-884e73787717 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:17:21,223 | james.mailetcontext | Local delivered mail Mail1493331441152-9f3e5a85-9f03-4473-9d83-6710dd2ef177 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:17:31,312 | james.mailetcontext | Local delivered mail Mail1493331451254-eb360645-f754-4310-9297-bafd262aa522 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:17:41,405 | james.mailetcontext | Local delivered mail Mail1493331461356-a6cdc98c-3648-4f07-a740-da37e47c35dc sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:17:51,498 | james.mailetcontext | Local delivered mail Mail1493331471451-4983442a-f9f9-41da-b899-46664273537e sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:18:01,624 | james.mailetcontext | Local delivered mail Mail1493331481552-4df5ef88-27cc-4fda-97df-7f1235b5ba33 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:18:11,715 | james.mailetcontext | Local delivered mail Mail1493331491651-4619104d-990d-4d0d-b6f1-f872a7faf1bb sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:18:21,806 | james.mailetcontext | Local delivered mail Mail1493331501748-b2c651fa-4eaa-4083-87d8-b9d88807d214 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:18:31,902 | james.mailetcontext | Local delivered mail Mail1493331511849-8b4fc374-63ea-47b0-975e-da0cfab8f5f7 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:18:41,992 | james.mailetcontext | Local delivered mail Mail1493331521940-8d29ce2e-da40-4c9a-b1c3-f0ead615cca8 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:18:52,080 | james.mailetcontext | Local delivered mail Mail1493331532029-5a034520-7877-4cc7-b5c4-4ae8474c26e8 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:19:02,173 | james.mailetcontext | Local delivered mail Mail1493331542124-d60d5311-3713-48fe-8707-b5e7bc4faed5 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:19:12,277 | james.mailetcontext | Local delivered mail Mail1493331552225-33c6c4f9-6aa7-4115-a43a-63cc4e245cb7 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:19:22,389 | james.mailetcontext | Local delivered mail Mail1493331562322-77c40938-80e3-43f7-9392-8637b413c81a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:19:32,464 | james.mailetcontext | Local delivered mail Mail1493331572409-ca73448f-a9e7-4459-b1db-f7d6787e91fe sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:19:42,548 | james.mailetcontext | Local delivered mail Mail1493331582500-3acdb7a4-2927-48c4-99ef-5a50f38da7da sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:19:52,646 | james.mailetcontext | Local delivered mail Mail1493331592591-23d4a94f-6902-42ef-8d85-4a6ae9ab255c sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:20:02,742 | james.mailetcontext | Local delivered mail Mail1493331602692-c447caec-a275-459a-b804-a4ed0987e4c0 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:20:12,852 | james.mailetcontext | Local delivered mail Mail1493331612787-fb5dcd4e-aad7-419e-afe6-4516aa29f343 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:20:22,935 | james.mailetcontext | Local delivered mail Mail1493331622880-30d01c9b-3c25-4c7f-a668-bc511717a3e3 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:20:33,020 | james.mailetcontext | Local delivered mail Mail1493331632973-8c33450a-d11d-4584-a2e3-d41add51a494 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:20:43,129 | james.mailetcontext | Local delivered mail Mail1493331643068-4699022d-e3fe-45a7-8383-f0854bf5ea4a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:20:53,203 | james.mailetcontext | Local delivered mail Mail1493331653158-d579d4bf-a61f-41cc-abf0-67e93dd94ce9 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:21:03,299 | james.mailetcontext | Local delivered mail Mail1493331663250-5350c79c-8d60-4f8d-a12c-fda4c88e09b5 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:21:13,402 | james.mailetcontext | Local delivered mail Mail1493331673346-66391329-f670-4058-b5e2-ae9a0657bd76 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:21:23,490 | james.mailetcontext | Local delivered mail Mail1493331683432-2d0b3a28-592d-43bc-9785-2f53003ffbce sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:21:33,585 | james.mailetcontext | Local delivered mail Mail1493331693525-5949ee34-fc0c-44d7-a6ca-907305677dc1 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:21:54,261 | james.mailetcontext | Local delivered mail Mail1493331714199-b40f174a-b0fc-4920-9342-a35862a4a8cb sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:22:04,365 | james.mailetcontext | Local delivered mail Mail1493331724298-87ee1a37-5538-4c1b-8371-b5f93288237c sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:22:14,437 | james.mailetcontext | Local delivered mail Mail1493331734382-1efe5e26-e8dc-4ba0-aafa-93d0d2cfdcbc sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:22:24,507 | james.mailetcontext | Local delivered mail Mail1493331744460-7480e6ba-ac54-4ea0-adee-f57aa0a85cae sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:22:40,216 | james.mailetcontext | Local delivered mail Mail1493331760154-b2425e90-edcd-46f1-b9c8-ef369cfe582b sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:22:55,537 | james.mailetcontext | Local delivered mail Mail1493331775478-07c68109-e10f-4b07-88f8-4614dfca618e sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:23:05,646 | james.mailetcontext | Local delivered mail Mail1493331785586-9f629204-df55-4510-8828-23a51c6d9196 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:23:27,292 | james.mailetcontext | Local delivered mail Mail1493331807226-c6cd3312-ceda-4b56-a3a1-8d9f23ee317b sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:23:37,362 | james.mailetcontext | Local delivered mail Mail1493331817303-3d765ffa-c10d-4635-b9dc-d9322d90e89a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:23:47,440 | james.mailetcontext | Local delivered mail Mail1493331827381-8d9e1207-cf3b-4c98-b697-77c0b7e39231 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:23:57,532 | james.mailetcontext | Local delivered mail Mail1493331837468-32198560-61c0-4c4a-80c5-b666e78e88eb sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:24:07,599 | james.mailetcontext | Local delivered mail Mail1493331847548-98c28ec9-4849-490c-8c26-f90e9e40e033 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:24:17,690 | james.mailetcontext | Local delivered mail Mail1493331857630-81ce5d9b-1478-4c52-954d-494cc1d55e88 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:24:27,765 | james.mailetcontext | Local delivered mail Mail1493331867711-9447eadd-fa4f-42a3-b3fa-600ae65f4c27 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:24:46,825 | james.mailetcontext | Local delivered mail Mail1493331886735-e6546de9-4b19-4973-b5d6-75c08d312e9f sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:24:56,949 | james.mailetcontext | Local delivered mail Mail1493331896857-f1b2dfce-69fe-41d4-9053-d595981f8917 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:25:07,039 | james.mailetcontext | Local delivered mail Mail1493331906982-97607e12-d8e0-453e-a867-5a602f38f4a0 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:25:17,108 | james.mailetcontext | Local delivered mail Mail1493331917061-bb5dcad5-badb-41b2-b3fd-e84ef107ee43 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:25:27,193 | james.mailetcontext | Local delivered mail Mail1493331927143-e0893015-5459-41ff-a3e2-a32e9abd5673 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:25:37,283 | james.mailetcontext | Local delivered mail Mail1493331937235-5c05f832-e353-4237-a675-dff9834e42fb sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:25:47,395 | james.mailetcontext | Local delivered mail Mail1493331947328-f4dc5472-a68e-4b4b-85e3-df02c08ddf15 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:25:57,487 | james.mailetcontext | Local delivered mail Mail1493331957417-39972cc2-27b3-460b-b48b-251dd9986475 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:26:07,556 | james.mailetcontext | Local delivered mail Mail1493331967502-61adc0c2-b016-494d-9ff4-ea40881bd580 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:26:17,666 | james.mailetcontext | Local delivered mail Mail1493331977597-71d2f344-be40-46f8-be79-3741e0caad8a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:26:27,739 | james.mailetcontext | Local delivered mail Mail1493331987683-99866ed1-9a4c-4eb0-946d-cd671bbe1fe2 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:26:37,833 | james.mailetcontext | Local delivered mail Mail1493331997766-d0f74409-58cc-48f2-9dda-1c4023f40bc0 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:26:47,900 | james.mailetcontext | Local delivered mail Mail1493332007849-9c8ea88c-2ce6-481a-b5b7-9858e73185bb sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:26:58,006 | james.mailetcontext | Local delivered mail Mail1493332017946-da1ddc57-c295-444c-978f-5f97c8fc428a sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:27:13,454 | james.mailetcontext | Local delivered mail Mail1493332033399-ef9cd1ab-fb65-4f87-a46b-d5d72c9fbf28 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:27:23,580 | james.mailetcontext | Local delivered mail Mail1493332043523-12025c05-93f3-4b45-a5f6-f300de56f443 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:27:33,720 | james.mailetcontext | Local delivered mail Mail1493332053647-424c0e34-d7e2-4bbd-97e7-48daad4b1303 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:27:43,830 | james.mailetcontext | Local delivered mail Mail1493332063770-6c563ea6-61b5-4b6b-b5c6-944f6fd446d8 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:27:53,911 | james.mailetcontext | Local delivered mail Mail1493332073867-c5ed897e-6bf8-4dc1-aac1-5717175ab2ec sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:28:04,010 | james.mailetcontext | Local delivered mail Mail1493332083960-65c14e7f-c09a-4c28-9d04-68686ff7e075 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:28:14,130 | james.mailetcontext | Local delivered mail Mail1493332094070-5239c0a6-2642-4f80-adac-bac1594fabac sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
+INFO  00:28:27,244 | james.mailetcontext | Local delivered mail Mail1493332107184-a238938a-6787-4a7d-a025-7dd812747bf4 sucessfully from servis@nwtis.nastava.foi.hr to admin@nwtis.nastava.foi.hr in folder INBOX
