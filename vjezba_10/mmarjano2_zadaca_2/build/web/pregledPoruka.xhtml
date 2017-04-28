@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view locale="#{lokalizator.odabraniJezik}">
+        <h:head>
+            <title>#{m.index_pregledPoruka}</title>
+            <h:outputStylesheet library="css" name="displaytag.css"  />
+        </h:head>
+        <h:body>
+            <h:form>
+                <h:commandLink value="#{m.index_naslov}" action="#{slanjePoruke.pocetna}" /><br/>
+                <h:commandLink value="#{m.index_saljiPoruku}" action="#{lokalizator.saljiPoruku}" /><br/>
+                <h:outputLabel value="#{m.pregledPoruka_odaberiMapu}" />:
+                <h:selectOneMenu value="#{pregledPoruka.odabranaMapa}">
+                    <f:selectItems value="#{pregledPoruka.mape}" var="f" 
+                                   itemLabel="#{f.labela}" itemValue="#{f.vrijednost}"/>
+                </h:selectOneMenu>
+                <h:commandButton value="#{m.pregledPoruka_gumbPromjeniMapu}" action="#{pregledPoruka.promjenaMape()}"/>
+                <br/>
+                <h:outputLabel value="#{m.pregledPoruka_trazi}"/>:
+                <h:inputText value="#{pregledPoruka.traziPoruke}"/>
+                <h:commandButton value="#{m.pregledPoruka_gumbTrazi}" action="#{pregledPoruka.traziPoruke()}"/>
+                <h:commandButton value="#{m.index_ocistiPretragu}" action="#{pregledPoruka.setSeek(true)}" disabled="#{pregledPoruka.seek}"/>
+                <br/>
+                <h:dataTable value="#{pregledPoruka.poruke}" var="p">
+                    <h:column>
+                        <f:facet name="header">ID</f:facet>
+                        <h:outputText value="#{p.id}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{m.slanjePoruka_salje}</f:facet>
+                        <h:outputText value="#{p.salje}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{m.slanjePoruka_predmet}</f:facet>
+                        <h:outputText value="#{p.predmet}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{m.slanjePoruka_vrijeme}</f:facet>
+                         
+                         <h:outputText value="#{p.vrijemeSlanja}">
+                         <f:convertDateTime pattern="yyyy.MM.dd G 'at' HH:mm:ss z" type="date" />   
+                         </h:outputText>
+                        
+                    </h:column>
+                     <h:column>
+                         <f:facet name="header">#{m.slanjePoruka_sadrzaj}</f:facet>
+                         <h:outputText value="#{p.sadrzaj}" />
+                    </h:column>
+                </h:dataTable>
+                <br/>
+                <h:outputText value="#{m.pregledPoruka_ukupnoPoruka}"/>:
+                <h:outputText value="#{pregledPoruka.ukupupnoPorukaMapa}" />
+                <h:commandButton value="#{m.pregledPoruka_gumbPrethodnePoruke}" action="#{pregledPoruka.prethodnePoruke()}" disabled="#{pregledPoruka.min}"/>
+                <h:commandButton value="#{m.pregledPoruka_gumbSljedecePoruke}" action="#{pregledPoruka.sljedecePoruke()}" disabled="#{pregledPoruka.max}" />
+                                 
+                                 
+                
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+

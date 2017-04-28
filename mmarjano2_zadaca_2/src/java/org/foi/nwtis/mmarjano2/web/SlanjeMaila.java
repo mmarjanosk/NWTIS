@@ -38,7 +38,7 @@ public class SlanjeMaila {
             message.setText(text);
             message.setHeader("Content-type", "text/plain");
             Transport.send(message);
-            System.out.println("POSLANO");
+            
         } catch (AddressException ex) {
             Logger.getLogger(SlanjeMaila.class.getName()).log(Level.SEVERE, null, ex);
         }

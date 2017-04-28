@@ -3,12 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/web/pregledPoruka.xhtml</file>
-            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/src/java/org/foi/nwtis/mmarjano2/web/zrna/PregledPoruka.java</file>
-            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/src/java/org/foi/nwtis/mmarjano2/i18n_de.properties</file>
-            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/src/java/org/foi/nwtis/mmarjano2/i18n_en.properties</file>
-            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/web/slanjePoruke.xhtml</file>
-            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/src/java/org/foi/nwtis/mmarjano2/i18n_hr.properties</file>
+            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/src/java/org/foi/nwtis/mmarjano2/web/dretve/ObradaPoruka.java</file>
+            <file>file:/C:/Users/Matija/Documents/GitHub/NWTIS/mmarjano2_zadaca_2/src/java/org/foi/nwtis/mmarjano2/web/SlanjeMaila.java</file>
         </group>
     </open-files>
 </project-private>

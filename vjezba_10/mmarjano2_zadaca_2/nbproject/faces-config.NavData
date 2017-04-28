@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="index.xhtml" x="23" y="149" zoom="true"/>
+        <Node id="slanjePoruke.xhtml" x="212" y="652" zoom="true"/>
+        <Node id="pregledPoruka.xhtml" x="739" y="212" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

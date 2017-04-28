@@ -19,11 +19,16 @@
                 </h:selectOneMenu>
                 <h:commandButton value="#{m.pregledPoruka_gumbPromjeniMapu}" action="#{pregledPoruka.promjenaMape()}"/>
                 <br/>
+                
                 <h:outputLabel value="#{m.pregledPoruka_trazi}"/>:
                 <h:inputText value="#{pregledPoruka.traziPoruke}"/>
                 <h:commandButton value="#{m.pregledPoruka_gumbTrazi}" action="#{pregledPoruka.traziPoruke()}"/>
-                <h:commandButton value="#{m.index_ocistiPretragu}" action="#{pregledPoruka.setSeek(true)}" disabled="#{pregledPoruka.seek}"/>
+                <h:commandButton value="#{m.index_ocistiPretragu}" action="#{pregledPoruka.setSeek(true)}"/>
                 <br/>
+                
+                <h:outputText value="#{pregledPoruka.odabranaMapa}=#{pregledPoruka.ukupupnoPorukaMapa}" />
+                <br/>
+               
                 <h:dataTable value="#{pregledPoruka.poruke}" var="p">
                     <h:column>
                         <f:facet name="header">ID</f:facet>
@@ -41,7 +46,7 @@
                         <f:facet name="header">#{m.slanjePoruka_vrijeme}</f:facet>
                          
                          <h:outputText value="#{p.vrijemeSlanja}">
-                         <f:convertDateTime pattern="yyyy.MM.dd G 'at' HH:mm:ss z" type="date" />   
+                         <f:convertDateTime pattern="EEE, dd.MMM.yyyy. HH:mm:ss" type="date" />   
                          </h:outputText>
                         
                     </h:column>
@@ -51,9 +56,9 @@
                     </h:column>
                 </h:dataTable>
                 <br/>
-                <h:outputText value="#{m.pregledPoruka_ukupnoPoruka}"/>:
+                <h:outputText value="#{m.pregledPoruka_ukupnoPoruka}    "/>:
                 <h:outputText value="#{pregledPoruka.ukupupnoPorukaMapa}" />
-                <h:commandButton value="#{m.pregledPoruka_gumbPrethodnePoruke}" action="#{pregledPoruka.prethodnePoruke()}" disabled="#{pregledPoruka.min}"/>
+                <h:commandButton value="#{m.pregledPoruka_gumbPrethodnePoruke}   " action="#{pregledPoruka.prethodnePoruke()}" disabled="#{pregledPoruka.min}"/>
                 <h:commandButton value="#{m.pregledPoruka_gumbSljedecePoruke}" action="#{pregledPoruka.sljedecePoruke()}" disabled="#{pregledPoruka.max}" />
                                  
                                  

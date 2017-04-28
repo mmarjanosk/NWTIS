@@ -72,6 +72,7 @@ public class ObradaPoruka extends Thread {
         int trajanjeCiklusa = Integer.parseInt(konf.dajPostavku("mail.timeSecThread"));
         String statadr = konf.dajPostavku("mail.usernameStatistics");
         String statsubject = konf.dajPostavku("mail.subjectStatistics");
+        String nwtisSubject= konf.dajPostavku("mail.subject");
         BP_Konfiguracija BPkonf = (BP_Konfiguracija) sc.getAttribute("BP_Konfig");
 
         int redniBrojCiklusa = 0;
@@ -96,7 +97,7 @@ public class ObradaPoruka extends Thread {
                 Session session = Session.getInstance(properties, null);
 
                 store = session.getStore("imap");
-                store.connect(server, korisnik, lozinka);
+                store.connect(server, Integer.valueOf(port), korisnik, lozinka);
 
                 Folder NWTIS = store.getFolder(folder_valjano);
                 Folder NWTISO = store.getFolder(folder_nevaljano);
@@ -130,22 +131,33 @@ public class ObradaPoruka extends Thread {
                 }
                 Folder folder = store.getFolder("INBOX");
                 folder.open(Folder.READ_WRITE);
-
+//
 //                NWTIS.open(Folder.READ_WRITE);    
 //                Message[] messages1 = NWTIS.getMessages();
-//                for (int i = 0; i < messages1.length; ++i) {
-//                    Message message = messages1[i];
-//                    message.setFlag(Flags.Flag.DELETED, true);
-//                                    NWTIS.expunge();
+//                for (int i = 1; i < messages1.length; ++i) {
+//                    Message message=messages1[i];
+//                    messages1[i].setFlag(Flags.Flag.DELETED, true);
+//                    NWTIS.expunge();
+//                    System.out.println(NWTIS.getMessageCount());
+//              
 //                }
+//                NWTIS.expunge();
+//                NWTIS.getMessageCount();
+
+////                NWTIS.close(true);
+////                System.out.println("Prazan1");
 //                NWTISO.open(Folder.READ_WRITE);
 //                
 //                Message[] messages2 = NWTISO.getMessages();
-//                for (int i = 0; i < messages2.length; ++i) {
+//                for (int i = 1; i < messages2.length; ++i) {
 //                    Message message = messages2[i];
-//                    message.setFlag(Flags.Flag.DELETED, true);
-//                                    NWTISO.expunge();
+//                    messages2[i].setFlag(Flags.Flag.DELETED, true);
+//                    NWTISO.expunge();
+//                    System.out.println(NWTISO.getMessageCount());                 
 //                }
+//                NWTISO.expunge();
+//                NWTISO.close(true);
+//                System.out.println("Prazan2");
                 //pripremazabazu
                 String connURL = BPkonf.getServerDatabase() + BPkonf.getUserDatabase();
                 Connection conn = null;
@@ -171,8 +183,10 @@ public class ObradaPoruka extends Thread {
                     Pattern patternt = Pattern.compile(sintaksaTEXT);
                     Matcher mt = patternt.matcher(vrstaPoruke);
                     boolean textos = mt.matches();
-
-                    if (textos) {
+                    System.out.println(nwtisSubject);
+                    System.out.println(message.getSubject());
+                  
+                    if (textos && message.getSubject().equals(nwtisSubject)) {
                         String content = (String) message.getContent();
 
                         content = content.trim();
@@ -182,7 +196,7 @@ public class ObradaPoruka extends Thread {
                         Matcher m = pattern.matcher(content);
                         boolean status = m.matches();
                         if (status) {
-                            System.out.println("Sintaksa je ADD");
+                            System.out.println("SINTAKSA:ADD");
                             System.out.println(m.group(1));
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
 
@@ -197,23 +211,24 @@ public class ObradaPoruka extends Thread {
                                     sql = "insert into uredaji (id,naziv,latitude,longitude) values(" + m.group(1) + ",\"" + m.group(2) + "\"," + m.group(3) + "," + m.group(4) + ")";
                                     //System.out.println(sql);
                                     folder.copyMessages(messages, NWTIS);
-                                    System.out.println("kopirano");
+                                    System.out.println("KOPIRANO U NWTIS_PORUKE");
                                     stmt.execute(sql);
                                     message.setFlag(Flags.Flag.DELETED, true);
                                     folder.expunge();
-                                    System.out.println("Poruka izbrisana");
+                                    System.out.println("PORUKA IZBRISANA IZ INBOXA");
                                     brojDodanihIOT++;
                                     flag = true;
                                 } else {
+                                    System.out.println("VEĆ POSTOJI TAKAV  UREĐAJ");
                                     folder.copyMessages(messages, NWTISO);
                                     message.setFlag(Flags.Flag.DELETED, true);
                                     folder.expunge();
                                     flag = true;
                                     brojPogresaka++;
-                                    
+
                                 }
                             } catch (SQLException ex) {
-                                Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
+                                System.out.println("Pogreška kod upisa "+ex);
                             }
                             status = false;
                         }
@@ -222,25 +237,34 @@ public class ObradaPoruka extends Thread {
                         m = pattern.matcher(content);
                         status = m.matches();
                         if (status) {
-                            System.out.println("Sintaksa je TEMP");
-                            // System.out.println(m.group(1) + " " + m.group(2) + " " + m.group(3));
+                            System.out.println("SINTAKSA:TEMP");
+                            
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
                             try {
-                                folder.copyMessages(messages, NWTIS);
+                                
                                 conn = DriverManager.getConnection(connURL, ua, ap);
                                 stmt = conn.createStatement();
                                 rs = stmt.executeQuery(sql);
-                                if (rs != null) {
+                                if (rs.next()) {
                                     System.out.println("OK!");
                                     sql = "insert into temperature (id,temp,vrijeme_mjerenja) values(" + m.group(1) + "," + m.group(10) + ",\"" + m.group(2) + "\")";
-                                    System.out.println(sql);
+                                    folder.copyMessages(messages, NWTIS);
+                                    System.out.println("KOPIRANO U NWTIS_PORUKE");
                                     stmt.execute(sql);
-
                                     message.setFlag(Flags.Flag.DELETED, true);
                                     folder.expunge();
-                                    //     System.out.println("Poruka izbrisana");
+                                    System.out.println("PORUKA IZBRISANA IZ INBOXA");
                                     brojMjerenihTEMP++;
                                     flag = true;
+                                } else {
+                                    System.out.println("NE POSTOJI TAKAV  UREĐAJ");
+                                    folder.copyMessages(messages, NWTISO);
+                                    System.out.println("KOPIRANO U NWTISO_PORUKE");
+                                    message.setFlag(Flags.Flag.DELETED, true);
+                                    folder.expunge();
+                                    System.out.println("PORUKA IZBRISANA IZ INBOXA");
+                                    flag = true;
+                                    brojPogresaka++;
                                 }
                             } catch (SQLException ex) {
                                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
@@ -253,8 +277,7 @@ public class ObradaPoruka extends Thread {
                         m = pattern.matcher(content);
                         status = m.matches();
                         if (status) {
-                            //System.out.println("Sintaksa je EVENT");
-                            //System.out.println(m.group(1) + " " + m.group(2) + " " + m.group(3));
+                            System.out.println("SINTAKSA:EVENT");
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
                             try {
 
@@ -262,37 +285,39 @@ public class ObradaPoruka extends Thread {
                                 stmt = conn.createStatement();
                                 rs = stmt.executeQuery(sql);
 
-                                if (rs != null) {
+                                if (rs.next()) {
 
-                                    
                                     sql = "select vrsta from dogadaji_vrste where vrsta=" + m.group(9);
                                     System.out.println(sql);
                                     rs = stmt.executeQuery(sql);
                                     if (rs.next()) {
                                         sql = "insert into dogadaji (id,vrsta,vrijeme_izvrsavanja) values(" + m.group(1) + "," + m.group(9) + ",\"" + m.group(2) + "\")";
-//                                       System.out.println(sql);
+
                                         stmt.execute(sql);
                                         folder.copyMessages(messages, NWTIS);
+                                         System.out.println("KOPIRANO U NWTIS_PORUKE");
                                         message.setFlag(Flags.Flag.DELETED, true);
                                         folder.expunge();
-                                        //  System.out.println("Poruka izbrisana");
+                                        System.out.println("PORUKA IZBRISANA IZ INBOXA");
                                         brojIzvrsenihEVENT++;
                                         flag = true;
                                     } else {
+                                        System.out.println("NE POSTOJI TAKAV UREĐAJ");
                                         folder.copyMessages(messages, NWTISO);
                                         message.setFlag(Flags.Flag.DELETED, true);
                                         folder.expunge();
                                         flag = true;
-                                        brojPogresaka++;  
+                                        brojPogresaka++;
                                     }
                                 } else {
+                                    System.out.println("NE POSTOJI TAKAV DOGAĐAJ");
                                     folder.copyMessages(messages, NWTISO);
-                                        message.setFlag(Flags.Flag.DELETED, true);
-                                        folder.expunge();
-                                        flag = true;
-                                        brojPogresaka++;  
+                                    message.setFlag(Flags.Flag.DELETED, true);
+                                    folder.expunge();
+                                    flag = true;
+                                    brojPogresaka++;
                                 }
-                                
+
                             } catch (SQLException ex) {
                                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -302,14 +327,17 @@ public class ObradaPoruka extends Thread {
 
                         if (flag == false) {
                             folder.copyMessages(messages, NWTISO);
-                            System.out.println("kopirano");
-
+                            System.out.println("POGREŠNA SINTAKSA");
+                            System.out.println("KOPIRANO U NWTISO");
+                            message.setFlag(Flags.Flag.DELETED, true);
+                            folder.expunge();
                             brojPogresaka++;
                         }
 
                     } else {
                         folder.copyMessages(messages, NWTISO);
-                        System.out.println("kopirano");
+                        System.out.println("PORUKA NIJE U T/P FORMATU ILI SUBJEKT NIJE ISPRAVAN");
+                        System.out.println("KOPIRANO U NWTISO");
                         message.setFlag(Flags.Flag.DELETED, true);
                         folder.expunge();
                         brojPogresaka++;
@@ -324,30 +352,34 @@ public class ObradaPoruka extends Thread {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy hh.mm.ss.zzz");
                 Date pocetak = new Date(vrijemePocetka);
                 sdf.format(pocetak);
-                System.out.println(pocetak);
+               
                 vrijemeZavrsetka = System.currentTimeMillis();
                 Date kraj = new Date(vrijemeZavrsetka);
                 sdf.format(kraj);
-                System.out.println(kraj);
+               
                 BigDecimal bd = new BigDecimal(redniBrojCiklusa);
                 store.close();
-                store.connect(server, statadr,
+                store.connect(server, Integer.valueOf(port), statadr,
                         "654321");
                 Folder folder2 = store.getFolder("INBOX");
                 int rednibroj = folder2.getMessageCount();
-                System.out.println(folder2.getMessageCount());
+                
                 rednibroj++;
                 store.close();;
 
                 DecimalFormat formatter = (DecimalFormat) DecimalFormat.getInstance(new Locale("en_GB"));
+                formatter = new DecimalFormat("#,##0");
                 DecimalFormatSymbols customSymbol = new DecimalFormatSymbols();
                 customSymbol.setDecimalSeparator('.');
                 customSymbol.setGroupingSeparator('.');
                 ((DecimalFormat) formatter).setDecimalFormatSymbols(customSymbol);
+
                 formatter.setGroupingUsed(true);
-                System.out.println(formatter.format(bd.longValue()));
+
                 String redniBroj = formatter.format(rednibroj);
+                redniBroj = String.format("%1$4s", redniBroj);
                 System.out.println("Obrada poruka u ciklusu: " + redniBroj);
+                
 
                 String subject = statsubject + " " + redniBroj;
                 String content = "Obrada započela u: " + pocetak + " "
@@ -359,9 +391,7 @@ public class ObradaPoruka extends Thread {
                         + "Broj izvrsenih EVENT: " + brojIzvrsenihEVENT + " "
                         + "Broj pogresaka:" + brojPogresaka + " ";
                 slanjeMaila.salji(korisnik, statadr, subject, content);
-                System.out.println(subject);
-                System.out.println(content);
-                System.out.println("POSLANO");
+                
             } catch (NoSuchProviderException ex) {
                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
             } catch (MessagingException | InterruptedException ex) {

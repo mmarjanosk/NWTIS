@@ -48,7 +48,7 @@ public class PregledPoruka {
     private boolean min = true;
     private boolean max = false;
     private boolean seek = true;
-    private String traziPoruke;
+    private String traziPoruke = "";
 
     HttpServletRequest context = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
     ServletContext sc = context.getServletContext();
@@ -97,32 +97,43 @@ public class PregledPoruka {
     }
 
     void preuzmiPoruke(String mapa) throws NoSuchProviderException, MessagingException, IOException {
+
         poruke.clear();
         folder = store.getFolder(odabranaMapa);
         folder.open(Folder.READ_WRITE);
         ukupnoPorukaMapa = folder.getMessageCount();
-        
-        if (pozicijaDoPoruke >= folder.getMessageCount()) {
-            pozicijaDoPoruke = folder.getMessageCount();
-            setMax(true);
-        } else {
-            setMax(false);
-        }
-        if (str == 1) {
+
+        pozicijaOdPoruke = ukupnoPorukaMapa - (str * brojPrikazanihPoruka);
+        pozicijaDoPoruke = ukupnoPorukaMapa - ((str - 1) * brojPrikazanihPoruka);
+
+        if (pozicijaDoPoruke == ukupnoPorukaMapa) {
+
             setMin(true);
         } else {
             setMin(false);
         }
+        if (pozicijaOdPoruke <= 0) {
+            pozicijaOdPoruke = 1;
+            if (pozicijaDoPoruke == ukupnoPorukaMapa) {
+                pozicijaDoPoruke = ukupnoPorukaMapa;
+            } else {
+                pozicijaDoPoruke = ukupnoPorukaMapa % brojPrikazanihPoruka + 1;
+            }
+            setMax(true);
+        } else {
+            setMax(false);
+        }
 
         if (folder.getMessageCount() > 0) {
-            messages = folder.getMessages(pozicijaOdPoruke + 1, pozicijaDoPoruke);
+
+            messages = folder.getMessages(pozicijaOdPoruke, pozicijaDoPoruke - 1);
         }
         int br = brojPrikazanihPoruka * (str - 1);
         if (messages != null) {
 
             System.out.println(pozicijaOdPoruke);
             System.out.println(pozicijaDoPoruke);
-            for (int i = 0; i < messages.length; i++) {
+            for (int i = messages.length-1; i>=0 ; i--) {
                 Message message = messages[i];
                 Date sdat = message.getSentDate();
                 Date rdat = message.getReceivedDate();
@@ -133,21 +144,23 @@ public class PregledPoruka {
                 String sadrzaj = message.getContent().toString();
                 String predmet = message.getSubject();
                 String vrsta = message.getContentType();
-                if(!isSeek()){
-                    if(sadrzaj.contains(traziPoruke)){
-                         poruke.add(new Poruka(Integer.toString(br), rdat, sdat, salje, predmet, sadrzaj, vrsta));
+                if (!isSeek()) {
+                    if (sadrzaj.contains(traziPoruke)) {
+                        poruke.add(new Poruka(Integer.toString(br), rdat, sdat, salje, predmet, sadrzaj, vrsta));
                     }
                 } else {
-                     poruke.add(new Poruka(Integer.toString(br), rdat, sdat, salje, predmet, sadrzaj, vrsta));
+                    poruke.add(new Poruka(Integer.toString(br), rdat, sdat, salje, predmet, sadrzaj, vrsta));
+
                 }
-               
+
             }
         }
-        folder.close(true);
+
     }
 
     public String promjenaMape() throws MessagingException, NoSuchProviderException, IOException {
 
+        seek = true;
         this.pozicijaOdPoruke = 0;
         this.pozicijaDoPoruke = brojPrikazanihPoruka;
         this.str = 1;
@@ -163,20 +176,19 @@ public class PregledPoruka {
     public String prethodnePoruke() throws MessagingException, NoSuchProviderException, IOException {
         if (!min) {
             this.str--;
-            this.pozicijaOdPoruke = this.brojPrikazanihPoruka * (this.str - 1);
-            this.pozicijaDoPoruke = this.brojPrikazanihPoruka * this.str;
+
             this.preuzmiPoruke(odabranaMapa);
         }
         return "PrethodnePoruke";
     }
 
     public String sljedecePoruke() throws MessagingException, NoSuchProviderException, IOException {
+
         if (max) {
 
         } else {
             this.str++;
-            this.pozicijaOdPoruke = this.brojPrikazanihPoruka * (this.str - 1);
-            this.pozicijaDoPoruke = this.brojPrikazanihPoruka * this.str;
+
             this.preuzmiPoruke(odabranaMapa);
         }
         return "SljedecePoruke";
@@ -210,10 +222,11 @@ public class PregledPoruka {
         return traziPoruke;
     }
 
-    public void setTraziPoruke(String traziPoruke) throws MessagingException, NoSuchProviderException, IOException{
+    public void setTraziPoruke(String traziPoruke) throws MessagingException, NoSuchProviderException, IOException {
         this.traziPoruke = traziPoruke;
+
         preuzmiPoruke(odabranaMapa);
-        seek=false;
+        seek = false;
     }
 
     public ArrayList<Izbornik> getMape() {
@@ -249,9 +262,4 @@ public class PregledPoruka {
         preuzmiPoruke(odabranaMapa);
     }
 
-    
-    
-    
-    
-    
 }
