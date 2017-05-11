@@ -30,8 +30,9 @@ import org.foi.nwtis.mmarjano2.web.kontrole.Izbornik;
 import org.foi.nwtis.mmarjano2.web.kontrole.Poruka;
 
 /**
+ * Klasa za pregleda poruka
  *
- * @author grupa_2
+ * @author Matija
  */
 @Named(value = "pregledPoruka")
 @RequestScoped
@@ -63,7 +64,10 @@ public class PregledPoruka {
     java.util.Properties properties = System.getProperties();
 
     /**
-     * Creates a new instance of PregledPoruka
+     * Konstruktor klase Pregled Poruka
+     *
+     * @throws MessagingException
+     * @throws IOException
      */
     public PregledPoruka() throws MessagingException, IOException {
         properties.put("mail.smtp.host", server);
@@ -71,10 +75,7 @@ public class PregledPoruka {
         try {
             store = session.getStore("imap");
             store.connect(server, korisnik, lozinka);
-//            folder = store.getFolder(odabranaMapa);
-//            folder.open(Folder.READ_WRITE);
 
-            //messages = folder.getMessages();
             preuzmiMape(store);
             preuzmiPoruke(odabranaMapa);
 
@@ -84,18 +85,33 @@ public class PregledPoruka {
 
     }
 
+    /**
+     * Metoda za preuzimanje foldera iz store-a
+     *
+     * @param store - Store store iz kojeg se preuzimaju poruke
+     * @throws MessagingException
+     */
     void preuzmiMape(Store store) throws MessagingException {
         //TODO promjeni sa stvarnim preuzimanjem mapa
 
         Folder[] folders = store.getDefaultFolder().list();
         for (int i = 0; i < folders.length; ++i) {
             Folder folder = folders[i];
+            int brojpor = folder.getMessageCount();
 
-            mape.add(new Izbornik(folder.getName(), folder.getFullName()));
+            mape.add(new Izbornik(folder.getName(), folder.getFullName(), brojpor));
         }
 
     }
 
+    /**
+     * Metoda za prikazivanje poruka iz određene mape na određenoj stranici
+     *
+     * @param mapa - String mapa iz koje se prikazuju poruke
+     * @throws NoSuchProviderException
+     * @throws MessagingException
+     * @throws IOException
+     */
     void preuzmiPoruke(String mapa) throws NoSuchProviderException, MessagingException, IOException {
 
         poruke.clear();
@@ -131,9 +147,8 @@ public class PregledPoruka {
         int br = brojPrikazanihPoruka * (str - 1);
         if (messages != null) {
 
-            System.out.println(pozicijaOdPoruke);
-            System.out.println(pozicijaDoPoruke);
-            for (int i = messages.length-1; i>=0 ; i--) {
+          
+            for (int i = messages.length - 1; i >= 0; i--) {
                 Message message = messages[i];
                 Date sdat = message.getSentDate();
                 Date rdat = message.getReceivedDate();
@@ -158,6 +173,14 @@ public class PregledPoruka {
 
     }
 
+    /**
+     * Metoda za promjenu foldera iz kojeg se čitaju poruke
+     *
+     * @return String PromjenaMape
+     * @throws MessagingException
+     * @throws NoSuchProviderException
+     * @throws IOException
+     */
     public String promjenaMape() throws MessagingException, NoSuchProviderException, IOException {
 
         seek = true;
@@ -168,11 +191,27 @@ public class PregledPoruka {
         return "PromjenaMape";
     }
 
+    /**
+     * Metoda za pretragu sadržaja poruka s klljučnom riječi
+     *
+     * @return String Filtriraj poruke
+     * @throws MessagingException
+     * @throws NoSuchProviderException
+     * @throws IOException
+     */
     public String traziPoruke() throws MessagingException, NoSuchProviderException, IOException {
         this.preuzmiPoruke(odabranaMapa);
         return "FiltrirajPoruke";
     }
 
+    /**
+     * Metoda za vraćanje prethodne stranice ako postoji
+     *
+     * @return String PrethodnePoruke
+     * @throws MessagingException
+     * @throws NoSuchProviderException
+     * @throws IOException
+     */
     public String prethodnePoruke() throws MessagingException, NoSuchProviderException, IOException {
         if (!min) {
             this.str--;
@@ -182,6 +221,14 @@ public class PregledPoruka {
         return "PrethodnePoruke";
     }
 
+    /**
+     * Metoda za navigaciju na slijedeću stranicu
+     *
+     * @return String SljedećePoruke
+     * @throws MessagingException
+     * @throws NoSuchProviderException
+     * @throws IOException
+     */
     public String sljedecePoruke() throws MessagingException, NoSuchProviderException, IOException {
 
         if (max) {
@@ -194,34 +241,78 @@ public class PregledPoruka {
         return "SljedecePoruke";
     }
 
+    /**
+     * Metoda za navigaciju na str za promjenu jezika
+     *
+     * @return String PromjenaJezika
+     */
     public String promjenaJezika() {
         return "PromjenaJezika";
     }
 
+    /**
+     * Metoda za navigaciju na str za slanje poruke
+     *
+     * @return String SaljiPoruku
+     */
     public String saljiPoruku() {
         return "SaljiPoruku";
     }
 
+    /**
+     * Getter metoda za odabranu maput
+     *
+     * @return String odabrana mapa
+     */
     public String getOdabranaMapa() {
         return odabranaMapa;
     }
 
+    /**
+     * Setter Metoda za odrabranu mapu
+     *
+     * @param odabranaMapa String odabrana mapa
+     */
     public void setOdabranaMapa(String odabranaMapa) {
         this.odabranaMapa = odabranaMapa;
     }
 
+    /**
+     * Getter metoda za ukupam broj poruka u mapi
+     *
+     * @return int ukupno poruka u mapi
+     */
     public int getUkupupnoPorukaMapa() {
         return ukupnoPorukaMapa;
     }
 
+    /**
+     * Setter metoda za ukupan broj poruka u mapi
+     *
+     * @param ukupupnoPorukaMapa
+     */
     public void setUkupupnoPorukaMapa(int ukupupnoPorukaMapa) {
         this.ukupnoPorukaMapa = ukupupnoPorukaMapa;
     }
 
+    /**
+     * Getter za traženje poruka
+     *
+     * @return String traži poruke
+     */
     public String getTraziPoruke() {
         return traziPoruke;
     }
 
+    /**
+     * Setter za pretragu poruka
+     *
+     * @param traziPoruke - String varijabla s kojom se uspoređuju sadržaji
+     * poruka
+     * @throws MessagingException
+     * @throws NoSuchProviderException
+     * @throws IOException
+     */
     public void setTraziPoruke(String traziPoruke) throws MessagingException, NoSuchProviderException, IOException {
         this.traziPoruke = traziPoruke;
 
@@ -229,34 +320,77 @@ public class PregledPoruka {
         seek = false;
     }
 
+    /**
+     * Getter metoda za listu mapa
+     *
+     * @return ArrayList mape
+     */
     public ArrayList<Izbornik> getMape() {
         return mape;
     }
 
+    /**
+     * Getter metoda za poruke
+     *
+     * @return ArrayList poruka
+     */
     public ArrayList<Poruka> getPoruke() {
         return poruke;
     }
 
+    /**
+     * Metoda koja provjerava je li u pitanju prva stranica
+     *
+     * @return true ako je prva stranica, false ako nije
+     */
     public boolean isMin() {
         return min;
     }
 
+    /**
+     * Setter metoda za provjeru prve stranice
+     *
+     * @param min Boolean - true ako je prva, false ako niej
+     */
     public void setMin(boolean min) {
         this.min = min;
     }
 
+    /**
+     * Metoda koja provjerava je li trenutna stranica zadnja
+     *
+     * @return true ako je zadnja, false ako nije zadnja stranica
+     */
     public boolean isMax() {
         return max;
     }
 
+    /**
+     * Metoda koja postavlja vrijednost zadnje stranice
+     *
+     * @param max Boolean, true ako je zadnja, false ako nije
+     */
     public void setMax(boolean max) {
         this.max = max;
     }
 
+    /**
+     * Metoda koja postavlja flag seek, koji daje uvid je li pretraga uključena
+     *
+     * @return boolean seek - true ako je uključena pretraga, false ako nije
+     */
     public boolean isSeek() {
         return seek;
     }
 
+    /**
+     * Metoda za postavljanja flaga za pretragu
+     *
+     * @param seek - boolean true ako je pretraga uključena, false ako nije
+     * @throws MessagingException
+     * @throws NoSuchProviderException
+     * @throws IOException
+     */
     public void setSeek(boolean seek) throws MessagingException, NoSuchProviderException, IOException {
         this.seek = seek;
         preuzmiPoruke(odabranaMapa);

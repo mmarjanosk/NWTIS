@@ -14,7 +14,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -35,13 +34,19 @@ import org.foi.nwtis.mmarjano2.konfiguracije.bp.BP_Konfiguracija;
 import org.foi.nwtis.mmarjano2.web.SlanjeMaila;
 
 /**
+ * Klasa za obradu nadolazećih poruka. U skladu s sadržajem poruke i predmetom,
+ * poruke se spremaju u odgovarajuće foldere koji ako ne postoje, kreiraju se.
+ * Segmenti koda su objašnjeni kroz klasu
  *
- * @author grupa_2
  */
 public class ObradaPoruka extends Thread {
 
     private boolean prekid_obrade = false;
     private ServletContext sc = null;
+
+    /**
+     * Store na koji se dretva spaja
+     */
     public Store store;
 
     @Override
@@ -58,6 +63,7 @@ public class ObradaPoruka extends Thread {
 
         boolean isCreated;
 
+        //Početne postavke vezane za sintaksu koja se provjerava te podaci iz konf datoteke
         String sintaksaADD = "^ADD IoT (\\d{1,6}) \\\"(.{1,30})\\\" ?GPS: (-?\\d{1,3}\\.\\d{6}),(-?\\d{1,3}\\.\\d{6});$";
         String sintaksaTEMP = "^TEMP IoT ([0-9]{1,6}) T: ((\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])) ((?:(?:([01]?\\d|2[0-3]):)?([0-5]?\\d):)?([0-5]?\\d))) C: (\\d*\\.?\\d);$";
         String sintaksaEVENT = "^EVENT IoT ([0-9]{1,6}) T: ((\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])) (?:(?:([01]?\\d|2[0-3]):)?([0-5]?\\d):)?([0-5]?\\d)) F: (\\d*);$";
@@ -72,15 +78,15 @@ public class ObradaPoruka extends Thread {
         int trajanjeCiklusa = Integer.parseInt(konf.dajPostavku("mail.timeSecThread"));
         String statadr = konf.dajPostavku("mail.usernameStatistics");
         String statsubject = konf.dajPostavku("mail.subjectStatistics");
-        String nwtisSubject= konf.dajPostavku("mail.subject");
+        String nwtisSubject = konf.dajPostavku("mail.subject");
         BP_Konfiguracija BPkonf = (BP_Konfiguracija) sc.getAttribute("BP_Konfig");
 
         int redniBrojCiklusa = 0;
         SlanjeMaila slanjeMaila = new SlanjeMaila();
 
         while (!prekid_obrade) {
-            // Start the session
 
+            //Podaci za statistiku
             vrijemePocetka = System.currentTimeMillis();
             int trajanjeObrade = 0;
             int brojPoruka = 0;
@@ -89,76 +95,26 @@ public class ObradaPoruka extends Thread {
             int brojIzvrsenihEVENT = 0;
             int brojPogresaka = 0;
 
-            // Connect to the store
             try {
 
+                //Pokretanje sesije
                 java.util.Properties properties = System.getProperties();
                 properties.put("mail.smtp.host", server);
                 Session session = Session.getInstance(properties, null);
 
+                //Spajanje na store i foldere
                 store = session.getStore("imap");
                 store.connect(server, Integer.valueOf(port), korisnik, lozinka);
 
-                Folder NWTIS = store.getFolder(folder_valjano);
                 Folder NWTISO = store.getFolder(folder_nevaljano);
+                Folder NWTIS = store.getFolder(folder_valjano);
 
-                if (!NWTIS.exists()) {
-                    try {
-                        Folder parent = store.getDefaultFolder();
-                        NWTIS = parent.getFolder(folder_valjano);
-                        isCreated = NWTIS.create(Folder.HOLDS_MESSAGES);
-                        System.out.println("created: " + isCreated);
+                provjeriFolder(store, NWTISO, folder_valjano);
+                provjeriFolder(store, NWTISO, folder_nevaljano);
 
-                    } catch (Exception e) {
-                        System.out.println("Error creating folder: " + e.getMessage());
-                        e.printStackTrace();
-                        isCreated = false;
-                    }
-                }
-
-                if (!NWTISO.exists()) {
-                    try {
-                        Folder parent = store.getDefaultFolder();
-                        NWTISO = parent.getFolder(folder_valjano);
-                        isCreated = NWTIS.create(Folder.HOLDS_MESSAGES);
-                        System.out.println("created: " + isCreated);
-
-                    } catch (Exception e) {
-                        System.out.println("Error creating folder: " + e.getMessage());
-                        e.printStackTrace();
-                        isCreated = false;
-                    }
-                }
                 Folder folder = store.getFolder("INBOX");
                 folder.open(Folder.READ_WRITE);
-//
-//                NWTIS.open(Folder.READ_WRITE);    
-//                Message[] messages1 = NWTIS.getMessages();
-//                for (int i = 1; i < messages1.length; ++i) {
-//                    Message message=messages1[i];
-//                    messages1[i].setFlag(Flags.Flag.DELETED, true);
-//                    NWTIS.expunge();
-//                    System.out.println(NWTIS.getMessageCount());
-//              
-//                }
-//                NWTIS.expunge();
-//                NWTIS.getMessageCount();
 
-////                NWTIS.close(true);
-////                System.out.println("Prazan1");
-//                NWTISO.open(Folder.READ_WRITE);
-//                
-//                Message[] messages2 = NWTISO.getMessages();
-//                for (int i = 1; i < messages2.length; ++i) {
-//                    Message message = messages2[i];
-//                    messages2[i].setFlag(Flags.Flag.DELETED, true);
-//                    NWTISO.expunge();
-//                    System.out.println(NWTISO.getMessageCount());                 
-//                }
-//                NWTISO.expunge();
-//                NWTISO.close(true);
-//                System.out.println("Prazan2");
-                //pripremazabazu
                 String connURL = BPkonf.getServerDatabase() + BPkonf.getUserDatabase();
                 Connection conn = null;
                 Statement stmt = null;
@@ -179,13 +135,14 @@ public class ObradaPoruka extends Thread {
 
                     brojPoruka++;
 
+                    //Provjera sadržaja poruke je li TEXT/PLAIN
                     String vrstaPoruke = message.getContentType();
                     Pattern patternt = Pattern.compile(sintaksaTEXT);
                     Matcher mt = patternt.matcher(vrstaPoruke);
                     boolean textos = mt.matches();
                     System.out.println(nwtisSubject);
                     System.out.println(message.getSubject());
-                  
+
                     if (textos && message.getSubject().equals(nwtisSubject)) {
                         String content = (String) message.getContent();
 
@@ -197,7 +154,7 @@ public class ObradaPoruka extends Thread {
                         boolean status = m.matches();
                         if (status) {
                             System.out.println("SINTAKSA:ADD");
-                            System.out.println(m.group(1));
+                            
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
 
                             try {
@@ -228,7 +185,7 @@ public class ObradaPoruka extends Thread {
 
                                 }
                             } catch (SQLException ex) {
-                                System.out.println("Pogreška kod upisa "+ex);
+                                System.out.println("Pogreška kod upisa " + ex);
                             }
                             status = false;
                         }
@@ -238,10 +195,10 @@ public class ObradaPoruka extends Thread {
                         status = m.matches();
                         if (status) {
                             System.out.println("SINTAKSA:TEMP");
-                            
+
                             String sql = "SELECT * from uredaji where id=" + m.group(1);
                             try {
-                                
+
                                 conn = DriverManager.getConnection(connURL, ua, ap);
                                 stmt = conn.createStatement();
                                 rs = stmt.executeQuery(sql);
@@ -288,21 +245,21 @@ public class ObradaPoruka extends Thread {
                                 if (rs.next()) {
 
                                     sql = "select vrsta from dogadaji_vrste where vrsta=" + m.group(9);
-                                    System.out.println(sql);
+                                    
                                     rs = stmt.executeQuery(sql);
                                     if (rs.next()) {
                                         sql = "insert into dogadaji (id,vrsta,vrijeme_izvrsavanja) values(" + m.group(1) + "," + m.group(9) + ",\"" + m.group(2) + "\")";
 
                                         stmt.execute(sql);
                                         folder.copyMessages(messages, NWTIS);
-                                         System.out.println("KOPIRANO U NWTIS_PORUKE");
+                                        System.out.println("KOPIRANO U NWTIS_PORUKE");
                                         message.setFlag(Flags.Flag.DELETED, true);
                                         folder.expunge();
                                         System.out.println("PORUKA IZBRISANA IZ INBOXA");
                                         brojIzvrsenihEVENT++;
                                         flag = true;
                                     } else {
-                                        System.out.println("NE POSTOJI TAKAV UREĐAJ");
+                                        System.out.println("NE POSTOJI TAKAV DOGAĐAJ");
                                         folder.copyMessages(messages, NWTISO);
                                         message.setFlag(Flags.Flag.DELETED, true);
                                         folder.expunge();
@@ -310,7 +267,7 @@ public class ObradaPoruka extends Thread {
                                         brojPogresaka++;
                                     }
                                 } else {
-                                    System.out.println("NE POSTOJI TAKAV DOGAĐAJ");
+                                    System.out.println("NE POSTOJI TAKAV UREĐAJ");
                                     folder.copyMessages(messages, NWTISO);
                                     message.setFlag(Flags.Flag.DELETED, true);
                                     folder.expunge();
@@ -352,18 +309,18 @@ public class ObradaPoruka extends Thread {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy hh.mm.ss.zzz");
                 Date pocetak = new Date(vrijemePocetka);
                 sdf.format(pocetak);
-               
+
                 vrijemeZavrsetka = System.currentTimeMillis();
                 Date kraj = new Date(vrijemeZavrsetka);
                 sdf.format(kraj);
-               
-                BigDecimal bd = new BigDecimal(redniBrojCiklusa);
                 store.close();
+
+                //Napomena - admin password je hardkodiran jer ga nije bilo u konfig. datoteci
                 store.connect(server, Integer.valueOf(port), statadr,
                         "654321");
                 Folder folder2 = store.getFolder("INBOX");
                 int rednibroj = folder2.getMessageCount();
-                
+
                 rednibroj++;
                 store.close();;
 
@@ -379,7 +336,6 @@ public class ObradaPoruka extends Thread {
                 String redniBroj = formatter.format(rednibroj);
                 redniBroj = String.format("%1$4s", redniBroj);
                 System.out.println("Obrada poruka u ciklusu: " + redniBroj);
-                
 
                 String subject = statsubject + " " + redniBroj;
                 String content = "Obrada započela u: " + pocetak + " "
@@ -391,7 +347,7 @@ public class ObradaPoruka extends Thread {
                         + "Broj izvrsenih EVENT: " + brojIzvrsenihEVENT + " "
                         + "Broj pogresaka:" + brojPogresaka + " ";
                 slanjeMaila.salji(korisnik, statadr, subject, content);
-                
+
             } catch (NoSuchProviderException ex) {
                 Logger.getLogger(ObradaPoruka.class.getName()).log(Level.SEVERE, null, ex);
             } catch (MessagingException | InterruptedException ex) {
@@ -407,8 +363,42 @@ public class ObradaPoruka extends Thread {
         super.start(); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * Metoda koja postavlja servlet kontekst
+     *
+     * @param sc - servlet kontekst
+     */
     public void setSc(ServletContext sc) {
         this.sc = sc;
+    }
+
+    /**
+     * Metoda koja provjerava postoji li folder i ako ne postoji kreira ga
+     *
+     * @param store - store u kojem se provjerava folder
+     * @param folder -folder koji se traži/kreira
+     * @param ime -ime foldera koji se traži/kreira
+     * @return isCreated - true ako je folder kreiran , false ako već postoji
+     * @throws MessagingException
+     */
+    public boolean provjeriFolder(Store store, Folder folder, String ime) throws MessagingException {
+        folder = store.getFolder(ime);
+        boolean isCreated = false;
+        if (!folder.exists()) {
+            try {
+                Folder parent = store.getDefaultFolder();
+                folder = parent.getFolder(ime);
+                isCreated = folder.create(Folder.HOLDS_MESSAGES);
+                System.out.println("created: " + isCreated);
+
+            } catch (Exception e) {
+                System.out.println("Error creating folder: " + e.getMessage());
+                e.printStackTrace();
+                isCreated = false;
+            }
+        }
+
+        return isCreated;
     }
 
 }

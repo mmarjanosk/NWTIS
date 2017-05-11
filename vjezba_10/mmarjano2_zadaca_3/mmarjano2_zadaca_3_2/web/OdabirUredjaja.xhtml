@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Odabir Uređaja</title>
+    </h:head>
+    <h:body>
+        Odabir Uređaja
+        <h:form>
+
+            <h:dataTable value="#{odabirUredjaja}">
+                <h:column>
+                    <h:selectManyListbox value="#{odabirUredjaja.odabrani}" size="5">
+                        <f:selectItems value="#{odabirUredjaja.uredjaji}"
+                                       var="uredaj"
+                                       itemLabel="#{uredaj.naziv} ID : #{uredaj.id}"
+                                       itemValue="#{uredaj.id}" />
+                    </h:selectManyListbox>
+                    <br/>           
+                    <h:outputLabel value="Od: " />
+                    <h:inputText value="#{odabirUredjaja.from}" pt:placeholder="yyyy-mm-dd hh:mm:ss.zzz" />
+
+                    <br/>
+                    <h:outputLabel value="Do: " />
+                    <h:inputText value="#{odabirUredjaja.to}" pt:placeholder="yyyy-mm-dd hh:mm:ss.zzz" /> 
+                </h:column>
+                <h:column>
+                    <h:commandButton value="Preuzmi REST" action="#{odabirUredjaja.preuzmiREST()}" />
+                    <br/>
+                    <h:commandButton value="Preuzmi SOAP" action="#{odabirUredjaja.preuzmiSOAP()}"  />
+                </h:column>
+                <br/>
+            </h:dataTable>
+
+
+            <h:dataTable value="#{odabirUredjaja}">
+                <h:column>
+                    <h:outputLabel value="Naziv: " />
+                    <h:inputText value="#{odabirUredjaja.naziv}" />
+                    <br/>
+                    <h:outputLabel value="Adresa: " />
+                    <h:inputText value="#{odabirUredjaja.adresa}" />         
+                </h:column>
+                <h:column>
+                    <h:commandButton value="UpisiSOAP" action="#{odabirUredjaja.upisiSOAP()}" />
+                    <br/>
+                    <h:commandButton value="UpisiREST" action="#{odabirUredjaja.upisiREST()}" />  
+                </h:column>
+            </h:dataTable>
+        </h:form>
+
+        <h:outputText value="#{odabirUredjaja.error}" />
+        <br/>
+
+
+        <h:panelGroup rendered="#{odabirUredjaja.visibleREST}">
+            
+            
+            <h:outputText value="Zadnji podaci" />
+
+            <h:dataTable value="#{odabirUredjaja.zadnji}" var="zd" border="1"  >
+                
+                
+                
+                
+                
+                <h:column>
+                    <f:facet name="header"> Temperatura </f:facet>
+                    <h:outputText value=" #{zd.temperatureValue}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMin </f:facet>
+                    <h:outputText value=" #{zd.temperatureMin}" />     
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMax </f:facet>
+                    <h:outputText value="#{zd.temperatureMax}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vlaga </f:facet>
+                    <h:outputText value="#{zd.humidityValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Tlak </f:facet>
+                    <h:outputText value="#{zd.pressureValue}" />      
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"> Preuzeto: </f:facet>
+                    <h:outputText value="#{odabirUredjaja.toDate(zd.lastUpdate)}" >      
+
+                    </h:outputText>
+
+                </h:column>
+                
+            </h:dataTable>
+             <br/>
+            
+            <h:outputText value="REST popis uređaja" />
+            <h:dataTable value="#{odabirUredjaja.uredjajiREST}" var="ur" border="1"  >
+
+                <h:column>
+                    <f:facet name="header"> ID </f:facet>
+                    <h:outputText value=" #{ur.id}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Naziv </f:facet>
+                    <h:outputText value=" #{ur.naziv}" />     
+                </h:column>
+            </h:dataTable>
+            
+        </h:panelGroup>
+
+
+
+        <h:panelGroup rendered="#{odabirUredjaja.visible}">
+            <h:outputText value="Zadnji podaci za #{odabirUredjaja.ime}" />
+
+            <h:dataTable value="#{odabirUredjaja.zadnji}" var="zd" border="1"  >
+                
+                
+                
+                
+                <h:column>
+                    <f:facet name="header"> Vrijeme </f:facet>
+                    <h:outputText value=" #{zd.weatherNumber}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vrijeme-opis </f:facet>
+                    <h:outputText value=" #{zd.weatherValue}" />    
+
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"> Temperatura </f:facet>
+                    <h:outputText value=" #{zd.temperatureValue}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMin </f:facet>
+                    <h:outputText value=" #{zd.temperatureMin}" />     
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMax </f:facet>
+                    <h:outputText value="#{zd.temperatureMax}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vlaga </f:facet>
+                    <h:outputText value="#{zd.humidityValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Tlak </f:facet>
+                    <h:outputText value="#{zd.pressureValue}" />      
+
+                </h:column>
+                 <h:column>
+                    <f:facet name="header"> Vjetar </f:facet>
+                    <h:outputText value="#{zd.windSpeedValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vjetar smjer </f:facet>
+                    <h:outputText value=" #{zd.windDirectionValue}" />      
+
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"> Preuzeto: </f:facet>
+                    <h:outputText value="#{odabirUredjaja.toDate(zd.lastUpdate)}" >      
+
+                    </h:outputText>
+
+                </h:column>
+
+            </h:dataTable>
+            <h:outputText value="Podaci o minimalnim i maksimalnim vrijednostima za #{odabirUredjaja.ime}" />
+            <h:dataTable value="#{odabirUredjaja}"  border="1" >
+
+                
+                
+                
+                
+                <h:column>
+                    <f:facet name="header"> TemperaturaMax </f:facet>
+                    <h:outputText value="#{odabirUredjaja.tempmax}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMin </f:facet>
+                    <h:outputText value="#{odabirUredjaja.tempmin}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TlakMax </f:facet>
+                    <h:outputText value="#{odabirUredjaja.tlakmax}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TlakMin </f:facet>
+                    <h:outputText value="#{odabirUredjaja.tlakmin}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> VlagaMax </f:facet>
+                    <h:outputText value="#{odabirUredjaja.vlagamax}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> VlagaMin </f:facet>
+                    <h:outputText value="#{odabirUredjaja.vlagamin}" />      
+
+                </h:column>
+
+            </h:dataTable>
+
+            <h:outputText value="Podaci između datuma" />
+
+            <h:dataTable value="#{odabirUredjaja.mp}" var="mp" border="1" >
+
+               
+                
+                <h:column>
+                    <f:facet name="header"> Vrijeme </f:facet>
+                    <h:outputText value=" #{mp.weatherNumber}" />    
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vrijeme-opis </f:facet>
+                    <h:outputText value=" #{mp.weatherValue}" />    
+
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"> Temperatura </f:facet>
+                    <h:outputText value="#{mp.temperatureValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMin </f:facet>
+                    <h:outputText value="#{mp.temperatureMin}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> TemperaturaMax </f:facet>
+                    <h:outputText value="#{mp.temperatureMax}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vlaga </f:facet>
+                    <h:outputText value="#{mp.humidityValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Tlak </f:facet>
+                    <h:outputText value=" #{mp.pressureValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vjetar </f:facet>
+                    <h:outputText value="#{mp.windSpeedValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Vjetar smjer </f:facet>
+                    <h:outputText value=" #{mp.windDirectionValue}" />      
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Preuzeto: </f:facet>     
+                    <h:outputText value="#{odabirUredjaja.toDate(mp.lastUpdate)}" >  
+
+                    </h:outputText>
+                </h:column>
+
+            </h:dataTable>
+        </h:panelGroup>
+    </h:body>
+</html>
+

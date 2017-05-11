@@ -10,12 +10,12 @@
         </h:head>
         <h:body>
             <h:form>
-                <h:commandLink value="#{m.index_naslov}" action="#{slanjePoruke.pocetna}" /><br/>
+                <h:commandLink value="#{m.index_naslov}" action="#{slanjePoruke.pocetna}" />
                 <h:commandLink value="#{m.index_saljiPoruku}" action="#{lokalizator.saljiPoruku}" /><br/>
                 <h:outputLabel value="#{m.pregledPoruka_odaberiMapu}" />:
                 <h:selectOneMenu value="#{pregledPoruka.odabranaMapa}">
                     <f:selectItems value="#{pregledPoruka.mape}" var="f" 
-                                   itemLabel="#{f.labela}" itemValue="#{f.vrijednost}"/>
+                                   itemLabel="#{f.labela} - #{f.brojPor}" itemValue="#{f.vrijednost}"/>
                 </h:selectOneMenu>
                 <h:commandButton value="#{m.pregledPoruka_gumbPromjeniMapu}" action="#{pregledPoruka.promjenaMape()}"/>
                 <br/>
@@ -26,7 +26,7 @@
                 <h:commandButton value="#{m.index_ocistiPretragu}" action="#{pregledPoruka.setSeek(true)}"/>
                 <br/>
                 
-                <h:outputText value="#{pregledPoruka.odabranaMapa}=#{pregledPoruka.ukupupnoPorukaMapa}" />
+               
                 <br/>
                
                 <h:dataTable value="#{pregledPoruka.poruke}" var="p">

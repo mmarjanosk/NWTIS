@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.6-1b01  svn-revision#13094. --><xs:schema xmlns:tns="http://serveri.ws.mmarjano2.nwtis.foi.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://serveri.ws.mmarjano2.nwtis.foi.org/">
+
+<xs:element name="dajPosljednjePodatke" type="tns:dajPosljednjePodatke"/>
+
+<xs:element name="dajPosljednjePodatkeResponse" type="tns:dajPosljednjePodatkeResponse"/>
+
+<xs:element name="dajSveMeteoPodatkeZaUredjaj" type="tns:dajSveMeteoPodatkeZaUredjaj"/>
+
+<xs:element name="dajSveMeteoPodatkeZaUredjajResponse" type="tns:dajSveMeteoPodatkeZaUredjajResponse"/>
+
+<xs:element name="dajSveuredaje" type="tns:dajSveuredaje"/>
+
+<xs:element name="dajSveuredajeResponse" type="tns:dajSveuredajeResponse"/>
+
+<xs:element name="dodajUredaj" type="tns:dodajUredaj"/>
+
+<xs:element name="dodajUredajResponse" type="tns:dodajUredajResponse"/>
+
+<xs:element name="minMaxTemp" type="tns:minMaxTemp"/>
+
+<xs:element name="minMaxTempResponse" type="tns:minMaxTempResponse"/>
+
+<xs:element name="minMaxTlak" type="tns:minMaxTlak"/>
+
+<xs:element name="minMaxTlakResponse" type="tns:minMaxTlakResponse"/>
+
+<xs:element name="minMaxVlaga" type="tns:minMaxVlaga"/>
+
+<xs:element name="minMaxVlagaResponse" type="tns:minMaxVlagaResponse"/>
+
+<xs:complexType name="dodajUredaj">
+<xs:sequence>
+<xs:element name="naziv" type="xs:string" minOccurs="0"/>
+<xs:element name="adresa" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dodajUredajResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="minMaxTemp">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="from" type="xs:long"/>
+<xs:element name="to" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="minMaxTempResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajPosljednjePodatke">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajPosljednjePodatkeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:meteoPodaci" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="meteoPodaci">
+<xs:sequence>
+<xs:element name="cloudsName" type="xs:string" minOccurs="0"/>
+<xs:element name="cloudsValue" type="xs:int"/>
+<xs:element name="humidityUnit" type="xs:string" minOccurs="0"/>
+<xs:element name="humidityValue" type="xs:float" minOccurs="0"/>
+<xs:element name="lastUpdate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="precipitationMode" type="xs:string" minOccurs="0"/>
+<xs:element name="precipitationUnit" type="xs:string" minOccurs="0"/>
+<xs:element name="precipitationValue" type="xs:float" minOccurs="0"/>
+<xs:element name="pressureUnit" type="xs:string" minOccurs="0"/>
+<xs:element name="pressureValue" type="xs:float" minOccurs="0"/>
+<xs:element name="sunRise" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="sunSet" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="temperatureMax" type="xs:float" minOccurs="0"/>
+<xs:element name="temperatureMin" type="xs:float" minOccurs="0"/>
+<xs:element name="temperatureUnit" type="xs:string" minOccurs="0"/>
+<xs:element name="temperatureValue" type="xs:float" minOccurs="0"/>
+<xs:element name="visibility" type="xs:string" minOccurs="0"/>
+<xs:element name="weatherIcon" type="xs:string" minOccurs="0"/>
+<xs:element name="weatherNumber" type="xs:int"/>
+<xs:element name="weatherValue" type="xs:string" minOccurs="0"/>
+<xs:element name="windDirectionCode" type="xs:string" minOccurs="0"/>
+<xs:element name="windDirectionName" type="xs:string" minOccurs="0"/>
+<xs:element name="windDirectionValue" type="xs:float" minOccurs="0"/>
+<xs:element name="windSpeedName" type="xs:string" minOccurs="0"/>
+<xs:element name="windSpeedValue" type="xs:float" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="minMaxTlak">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="from" type="xs:long"/>
+<xs:element name="to" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="minMaxTlakResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="minMaxVlaga">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="from" type="xs:long"/>
+<xs:element name="to" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="minMaxVlagaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSveMeteoPodatkeZaUredjaj">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="from" type="xs:long"/>
+<xs:element name="to" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSveMeteoPodatkeZaUredjajResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:meteoPodaci" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSveuredaje">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="dajSveuredajeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:uredjaj" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uredjaj">
+<xs:sequence>
+<xs:element name="geoloc" type="tns:lokacija" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="naziv" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lokacija">
+<xs:sequence>
+<xs:element name="latitude" type="xs:string" minOccurs="0"/>
+<xs:element name="longitude" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

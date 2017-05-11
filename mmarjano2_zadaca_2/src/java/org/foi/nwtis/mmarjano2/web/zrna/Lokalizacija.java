@@ -17,8 +17,9 @@ import javax.faces.context.FacesContext;
 import org.foi.nwtis.mmarjano2.web.kontrole.Izbornik;
 
 /**
+ * Zrno za lokalizaciju, tj promjenu jezika UI-a
  *
- * @author grupa_2
+ * @author Matija
  */
 @Named(value = "lokalizator")
 @SessionScoped
@@ -26,48 +27,80 @@ public class Lokalizacija implements Serializable {
 
     private static final ArrayList<Izbornik> izbornikJezika = new ArrayList<>();
 
-    private String odabraniJezik="hr";
-    
+    private String odabraniJezik = "hr";
+
     static {
         izbornikJezika.add(new Izbornik("hrvatski", "hr"));
         izbornikJezika.add(new Izbornik("engleski", "en"));
         izbornikJezika.add(new Izbornik("njemački", "de"));
     }
-    
+
     /**
-     * Creates a new instance of Lokalizacija
+     * Konstruktor zrna Lokalizacija
      */
     public Lokalizacija() {
-        
+
     }
 
+    /**
+     * Getter metoda za odabrani jezik
+     *
+     * @return String odabrani jezik
+     */
     public String getOdabraniJezik() {
         //FacesContext FC = FacesContext.getCurrentInstance();
         UIViewRoot UVIR = FacesContext.getCurrentInstance().getViewRoot();
-        if(UVIR != null){
+        if (UVIR != null) {
             Locale lokalniJezik = FacesContext.getCurrentInstance().getViewRoot().getLocale();
             odabraniJezik = lokalniJezik.getLanguage();
         }
         return odabraniJezik;
     }
 
+    /**
+     * Setter metoda za odabrani jezik
+     *
+     * @param odabraniJezik odabrani jezik
+     */
     public void setOdabraniJezik(String odabraniJezik) {
         this.odabraniJezik = odabraniJezik;
         Locale lokalniJezik = new Locale(odabraniJezik);
         FacesContext.getCurrentInstance().getViewRoot().setLocale(lokalniJezik);
     }
-    
+
+    /**
+     * Getter metoda za izbornik jezika
+     *
+     * @return ArrayList izbornika jezika
+     */
     public ArrayList<Izbornik> getIzbornikJezika() {
         return izbornikJezika;
     }
-    
+
+    /**
+     * Metoda za odabiranje jezika
+     *
+     * @return Object
+     */
     public Object odaberiJezik() {
         setOdabraniJezik(odabraniJezik);
         return "PromjenaJezika";
     }
+
+    /**
+     * Metoda koja vraća objekt za slanje poruka
+     *
+     * @return Object
+     */
     public Object saljiPoruku() {
         return "saljiPoruku";
     }
+
+    /**
+     * Metoda koja vrtaćća objekt za pregled poruka
+     *
+     * @return Object
+     */
     public Object pregledPoruka() {
         return "pregledPoruka";
     }
